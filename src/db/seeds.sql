@@ -1,0 +1,1 @@
+INSERT INTO progress_bars (points) VALUES (0)
