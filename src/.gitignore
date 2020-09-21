@@ -1,0 +1,32 @@
+const PORT = process.env.PORT || 8001;
+import ENV from "./environment";
+import * as http from "http";
+import * as WebSocket from "ws";
+
+import * as app from "./application")(ENV, { updateAppointment });
+const server = http.createServer(app);
+
+const wss = new WebSocket.Server({ server });
+
+wss.on("connection", (ws: WebSocket) => {
+  wss.onmessage = (message: string) => {
+    if (message === "ping") {
+      wss.send(JSON.stringify("pong"));
+    }
+  };
+});
+
+function updateAppointment(points: number) {
+  wss.clients.forEach(function eachClient(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(
+        JSON.stringify({
+          type: "SET_POINTS",
+          points,
+        })
+      );
+    }
+  });
+}
+
+server.listen(PORT, () => {});
