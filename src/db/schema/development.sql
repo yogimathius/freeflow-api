@@ -349,3 +349,155 @@ insert into comments
   (post_id, commenter_id, text_body)
 values
   (7, 1, 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.');
+
+
+
+-- ************************************************************
+-- user_profiles table
+-- ************************************************************
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (1, '11/25/1978', 'Edmonton', false, true, true);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (2, '4/14/1975', 'Calgary', true, false, true);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (3, '1/17/1980', 'Edmonton', true, true, true);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (4, '2/10/1978', 'Edmonton', true, false, true);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (5, '1/16/1980', 'Victoria', true, false, false);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (6, '12/30/1980', 'Calgary', true, false, true);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (7, '8/26/1985', 'Calgary', false, true, false);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (8, '5/8/1996', 'Edmonton', false, false, false);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (9, '6/6/1976', 'Edmonton', false, false, false);
+insert into user_profiles
+  (user_id, dob, location, is_mentor, is_student, active)
+values
+  (10, '3/26/1978', 'Victoria', false, true, true);
+
+
+
+-- ************************************************************
+-- tutor_experiences table
+-- ************************************************************
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (4, 7, 7, 8, 'Nunc nisl.', 'Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', '2020-03-01T08:20:47Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (2, 8, 4, 5, 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2020-07-05T01:17:08Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (9, 4, 1, 8, 'Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.', 'Duis consequat dui nec nisi volutpat eleifend.', '2020-07-13T22:04:56Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (6, 9, 3, 5, 'In blandit ultrices enim.', 'Curabitur convallis.', '2020-02-03T01:02:07Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (3, 4, 6, 10, 'Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 'In congue.', '2020-06-18T23:32:23Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (3, 1, 6, 5, 'Suspendisse potenti. In eleifend quam a odio.', 'Duis ac nibh.', '2020-05-26T06:26:00Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (8, 7, 6, 6, 'Aenean fermentum.', 'Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.', '2020-02-20T12:20:53Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (7, 3, 1, 6, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.', 'Quisque ut erat. Curabitur gravida nisi at nibh.', '2020-06-06T15:43:58Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (5, 9, 1, 2, 'Cras non velit nec nisi vulputate nonummy.', 'Morbi a ipsum.', '2020-07-14T20:20:51Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (9, 8, 9, 5, 'Aliquam non mauris. Morbi non lectus.', 'Suspendisse potenti.', '2020-03-21T18:39:41Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (4, 5, 2, 7, 'Etiam faucibus cursus urna. Ut tellus.', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', '2020-02-10T00:59:00Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (8, 5, 7, 8, 'Mauris lacinia sapien quis libero.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.', '2019-09-30T21:24:55Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (2, 3, 2, 10, 'Nullam molestie nibh in lectus. Pellentesque at nulla.', 'Sed accumsan felis.', '2020-06-10T13:07:43Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (3, 1, 5, 7, 'Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.', '2020-02-08T15:51:50Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (8, 9, 4, 4, 'Pellentesque at nulla. Suspendisse potenti.', 'Nam nulla.', '2019-12-22T13:24:43Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (6, 9, 8, 5, 'Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.', 'In hac habitasse platea dictumst.', '2020-09-02T14:08:15Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (5, 8, 5, 8, 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 'In blandit ultrices enim.', '2020-02-23T10:37:19Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (7, 4, 1, 4, 'Pellentesque viverra pede ac diam.', 'Nulla facilisi. Cras non velit nec nisi vulputate nonummy.', '2020-06-10T23:55:49Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (10, 1, 2, 4, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.', 'Aenean sit amet justo. Morbi ut odio.', '2020-06-10T09:55:40Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (3, 4, 6, 6, 'Duis mattis egestas metus.', 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', '2020-06-24T10:48:23Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (8, 7, 10, 2, 'Nunc rhoncus dui vel sem.', 'Ut tellus.', '2019-12-19T07:33:16Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (2, 8, 6, 7, 'Sed ante.', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.', '2020-07-25T16:12:36Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (7, 3, 5, 3, 'Phasellus in felis. Donec semper sapien a libero.', 'Pellentesque at nulla. Suspendisse potenti.', '2020-08-09T07:55:27Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (6, 8, 2, 1, 'Donec quis orci eget orci vehicula condimentum.', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '2020-09-08T09:05:58Z');
+insert into tutor_experiences
+  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+values
+  (5, 3, 8, 4, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', 'Fusce consequat.', '2019-12-31T20:54:07Z');
