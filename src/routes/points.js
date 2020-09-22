@@ -3,7 +3,7 @@ const router = require("express").Router();
 module.exports = (db) => {
   router.get("/points", (request, response) => {
     db.query(`SELECT points FROM progress_bars`).then(({ rows: points }) => {
-      console.log("points: ", points);
+      // console.log("points: ", points);
       response.json(points);
     });
   });
@@ -14,18 +14,19 @@ module.exports = (db) => {
       return;
     }
 
-    const { points } = request.body.points;
-    console.log("points: ", points);
+    const { points } = request.body;
+    console.log("put points: ", points);
+    const newPoints = Number(points) + 1;
+
+    console.log("new points: ", newPoints);
 
     db.query(
       `
-      UPDATE progress_bars SET points = points + 1;
+      UPDATE progress_bars SET points = ${newPoints};
       `
     )
       .then(() => {
-        setTimeout(() => {
-          response.status(204).json({});
-        }, 1000);
+        response.send({ points: newPoints }).status(204);
       })
       .catch((error) => console.log(error));
   });

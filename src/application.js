@@ -10,7 +10,7 @@ const app = express();
 
 const db = require("./db");
 
-const points = require("./routes/progress_bar");
+const points = require("./routes/points");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -35,7 +35,7 @@ module.exports = function application(
   app.use(helmet());
   app.use(bodyparser.json());
 
-  app.use("/points", points(db));
+  app.use("/api", points(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
