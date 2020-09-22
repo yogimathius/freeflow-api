@@ -11,6 +11,8 @@ const app = express();
 const db = require("./db");
 
 const points = require("./routes/progress_bar");
+const users = require('./routes/users');
+const messages = require('./routes/messages');
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -29,13 +31,15 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => {} }
+  actions = { updateAppointment: () => { } }
 ) {
   app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
 
   app.use("/points", points(db));
+  app.use('/api', users(db));
+  app.use('/api', messages(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
@@ -57,7 +61,7 @@ module.exports = function application(
       });
   }
 
-  app.close = function () {
+  app.close = function() {
     return db.end();
   };
 
