@@ -14,6 +14,10 @@ DROP TABLE IF EXISTS user_profiles
 CASCADE;
 DROP TABLE IF EXISTS tutor_experiences
 CASCADE;
+DROP TABLE IF EXISTS mentor_stack
+CASCADE;
+DROP TABLE IF EXISTS student_stack
+CASCADE;
 
 
 
@@ -119,4 +123,25 @@ CREATE TABLE tutor_experiences
   mentor_comments TEXT,
   student_comments TEXT,
   date_interacted DATE NOT NULL
+);
+
+
+-- ************************************************************
+-- mentor_stack table
+-- ************************************************************
+CREATE TABLE mentor_stack
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_profile_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  name VARCHAR(255) NOT NULL
+);
+
+-- ************************************************************
+-- student_stack table
+-- ************************************************************
+CREATE TABLE student_stack
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_profile_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  name VARCHAR(255) NOT NULL
 );

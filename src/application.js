@@ -18,6 +18,8 @@ const likes = require('./routes/likes');
 const comments = require('./routes/comments');
 const userProfiles = require('./routes/user_profiles');
 const tutorExperiences = require('./routes/tutor_experiences');
+const mentorStack = require('./routes/mentor_stack');
+const studentStack = require('./routes/student_stack');
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -50,6 +52,8 @@ module.exports = function application(
   app.use('/api', comments(db));
   app.use('/api', userProfiles(db));
   app.use('/api', tutorExperiences(db));
+  app.use('/api', mentorStack(db));
+  app.use('/api', studentStack(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([

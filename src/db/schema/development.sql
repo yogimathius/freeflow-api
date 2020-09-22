@@ -501,3 +501,217 @@ insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
   (5, 3, 8, 4, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', 'Fusce consequat.', '2019-12-31T20:54:07Z');
+
+
+
+
+
+-- ************************************************************
+-- mentor_stack table
+-- ************************************************************
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (5, 'React');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (1, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (9, 'React');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (4, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (3, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (10, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (4, 'Rails');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (7, 'Ruby');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (5, 'Javascript');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (6, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (9, 'SQL');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (3, 'Rails');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (4, 'Ruby');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (2, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (8, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (10, 'Rails');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (9, 'Rails');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (1, 'Javascript');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (6, 'SQL');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (9, 'Node.js');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (10, 'React');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (10, 'Ruby');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (1, 'React');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (4, 'React');
+insert into mentor_stack
+  (user_profile_id, name)
+values
+  (2, 'Javascript');
+
+
+
+-- ************************************************************
+-- student_stack table
+-- ************************************************************
+insert into student_stack
+  (user_profile_id, name)
+values
+  (5, 'React');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (1, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (9, 'React');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (4, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (3, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (10, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (4, 'Rails');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (7, 'Ruby');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (5, 'Javascript');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (6, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (9, 'SQL');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (3, 'Rails');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (4, 'Ruby');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (2, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (8, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (10, 'Rails');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (9, 'Rails');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (1, 'Javascript');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (6, 'SQL');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (9, 'Node.js');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (10, 'React');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (10, 'Ruby');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (1, 'React');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (4, 'React');
+insert into student_stack
+  (user_profile_id, name)
+values
+  (2, 'Javascript');
