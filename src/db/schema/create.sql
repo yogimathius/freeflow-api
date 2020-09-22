@@ -4,6 +4,8 @@ DROP TABLE IF EXISTS users
 CASCADE;
 DROP TABLE IF EXISTS messages
 CASCADE;
+DROP TABLE IF EXISTS posts
+CASCADE;
 
 
 
@@ -39,3 +41,18 @@ CREATE TABLE messages
   time_sent TIMESTAMP NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
+
+
+-- ************************************************************
+--  posts table
+-- ************************************************************
+CREATE TABLE posts
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  text_body TEXT NOT NULL,
+  time_posted TIMESTAMP NOT NULL,
+  is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
+  is_student BOOLEAN NOT NULL DEFAULT FALSE,
+  active BOOLEAN NOT NULL DEFAULT TRUE
+);  

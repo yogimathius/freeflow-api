@@ -13,6 +13,7 @@ const db = require("./db");
 const points = require("./routes/progress_bar");
 const users = require('./routes/users');
 const messages = require('./routes/messages');
+const posts = require('./routes/posts');
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -40,6 +41,7 @@ module.exports = function application(
   app.use("/points", points(db));
   app.use('/api', users(db));
   app.use('/api', messages(db));
+  app.use('/api', posts(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([

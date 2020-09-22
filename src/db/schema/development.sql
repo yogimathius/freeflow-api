@@ -133,3 +133,48 @@ insert into messages
 values
   (1, 2, 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', '2020-09-17T20:10:58Z', true);
 
+
+
+-- ************************************************************
+-- posts table
+-- ************************************************************
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (5, 'Etiam justo.', '2020-08-29T04:45:11Z', true, false, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (6, 'Mauris lacinia sapien quis libero.', '2020-09-19T08:03:13Z', false, true, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (1, 'Nullam porttitor lacus at turpis.', '2020-08-22T23:46:08Z', false, true, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', '2020-08-30T07:53:19Z', false, true, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (7, 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '2020-08-09T21:06:59Z', true, false, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (2, 'Fusce consequat.', '2020-08-06T16:29:48Z', false, true, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (1, 'Integer a nibh. In quis justo.', '2020-08-07T22:04:47Z', true, false, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (6, 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', '2020-08-28T22:55:33Z', true, false, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (2, 'Quisque ut erat.', '2020-08-21T09:36:33Z', false, true, true);
+insert into posts
+  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+values
+  (8, 'Fusce consequat. Nulla nisl.', '2020-08-15T16:10:27Z', true, false, true);
