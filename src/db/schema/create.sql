@@ -6,6 +6,10 @@ DROP TABLE IF EXISTS messages
 CASCADE;
 DROP TABLE IF EXISTS posts
 CASCADE;
+DROP TABLE IF EXISTS likes
+CASCADE;
+DROP TABLE IF EXISTS comments
+CASCADE;
 
 
 
@@ -44,7 +48,7 @@ CREATE TABLE messages
 
 
 -- ************************************************************
---  posts table
+-- posts table
 -- ************************************************************
 CREATE TABLE posts
 (
@@ -55,4 +59,29 @@ CREATE TABLE posts
   is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
   is_student BOOLEAN NOT NULL DEFAULT FALSE,
   active BOOLEAN NOT NULL DEFAULT TRUE
-);  
+);
+
+
+-- ************************************************************
+-- likes table
+-- ************************************************************
+
+CREATE TABLE likes
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
+  liker_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+-- ************************************************************
+-- comments table
+-- ************************************************************
+
+CREATE TABLE comments
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
+  commenter_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  text_body TEXT NOT NULL
+);

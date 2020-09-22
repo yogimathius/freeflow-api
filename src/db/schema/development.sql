@@ -178,3 +178,174 @@ insert into posts
   (owner_id, text_body, time_posted, is_mentor, is_student, active)
 values
   (8, 'Fusce consequat. Nulla nisl.', '2020-08-15T16:10:27Z', true, false, true);
+
+
+
+-- ************************************************************
+-- likes table
+-- ************************************************************
+insert into likes
+  (post_id, liker_id)
+values
+  (10, 5);
+insert into likes
+  (post_id, liker_id)
+values
+  (6, 1);
+insert into likes
+  (post_id, liker_id)
+values
+  (3, 2);
+insert into likes
+  (post_id, liker_id)
+values
+  (7, 5);
+insert into likes
+  (post_id, liker_id)
+values
+  (4, 4);
+insert into likes
+  (post_id, liker_id)
+values
+  (2, 9);
+insert into likes
+  (post_id, liker_id)
+values
+  (8, 5);
+insert into likes
+  (post_id, liker_id)
+values
+  (7, 1);
+insert into likes
+  (post_id, liker_id)
+values
+  (4, 2);
+insert into likes
+  (post_id, liker_id)
+values
+  (7, 8);
+insert into likes
+  (post_id, liker_id)
+values
+  (3, 3);
+insert into likes
+  (post_id, liker_id)
+values
+  (2, 4);
+insert into likes
+  (post_id, liker_id)
+values
+  (5, 2);
+insert into likes
+  (post_id, liker_id)
+values
+  (9, 6);
+insert into likes
+  (post_id, liker_id)
+values
+  (9, 5);
+insert into likes
+  (post_id, liker_id)
+values
+  (1, 8);
+insert into likes
+  (post_id, liker_id)
+values
+  (4, 7);
+insert into likes
+  (post_id, liker_id)
+values
+  (8, 2);
+insert into likes
+  (post_id, liker_id)
+values
+  (5, 7);
+insert into likes
+  (post_id, liker_id)
+values
+  (3, 9);
+insert into likes
+  (post_id, liker_id)
+values
+  (5, 10);
+insert into likes
+  (post_id, liker_id)
+values
+  (6, 2);
+insert into likes
+  (post_id, liker_id)
+values
+  (5, 4);
+insert into likes
+  (post_id, liker_id)
+values
+  (9, 8);
+insert into likes
+  (post_id, liker_id)
+values
+  (8, 7);
+
+
+-- ************************************************************
+-- comments table
+-- ************************************************************
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (1, 10, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (10, 5, 'Aenean sit amet justo.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (7, 8, 'In quis justo.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (2, 8, 'Nulla facilisi.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (2, 7, 'Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (5, 6, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (3, 1, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (5, 3, 'Vestibulum sed magna at nunc commodo placerat.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (3, 2, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (7, 4, 'Aliquam non mauris. Morbi non lectus.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (1, 4, 'Fusce consequat. Nulla nisl.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (7, 6, 'Fusce consequat.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (4, 2, 'In congue.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (5, 5, 'Sed vel enim sit amet nunc viverra dapibus.');
+insert into comments
+  (post_id, commenter_id, text_body)
+values
+  (7, 1, 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.');
