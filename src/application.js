@@ -10,7 +10,6 @@ const app = express();
 
 const db = require("./db");
 
-const points = require("./routes/points");
 const users = require("./routes/users");
 const messages = require("./routes/messages");
 const posts = require("./routes/posts");
@@ -48,7 +47,7 @@ module.exports = function application(
   app.use("/api", messages(db));
   app.use("/api", posts(db));
   app.use("/api", likes(db));
-  app.use("/api", comments(db));
+  app.use("/api/comments", comments(db));
   app.use("/api", userProfiles(db));
   app.use("/api", tutorExperiences(db));
   app.use("/api", mentorStack(db));
