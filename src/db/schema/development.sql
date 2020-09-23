@@ -420,11 +420,11 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
-  (3, 4, 6, 10, 'Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 'In congue.', '2020-06-18T23:32:23Z');
+  (3, 4, 5, 10, 'Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 'In congue.', '2020-06-18T23:32:23Z');
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
-  (3, 1, 6, 5, 'Suspendisse potenti. In eleifend quam a odio.', 'Duis ac nibh.', '2020-05-26T06:26:00Z');
+  (3, 1, 5, 5, 'Suspendisse potenti. In eleifend quam a odio.', 'Duis ac nibh.', '2020-05-26T06:26:00Z');
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
@@ -432,7 +432,7 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
-  (7, 3, 1, 6, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.', 'Quisque ut erat. Curabitur gravida nisi at nibh.', '2020-06-06T15:43:58Z');
+  (7, 3, 1, 10, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.', 'Quisque ut erat. Curabitur gravida nisi at nibh.', '2020-06-06T15:43:58Z');
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
@@ -480,7 +480,7 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
-  (3, 4, 6, 6, 'Duis mattis egestas metus.', 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', '2020-06-24T10:48:23Z');
+  (3, 4, 5, 6, 'Duis mattis egestas metus.', 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', '2020-06-24T10:48:23Z');
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
@@ -492,7 +492,7 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
-  (7, 3, 5, 3, 'Phasellus in felis. Donec semper sapien a libero.', 'Pellentesque at nulla. Suspendisse potenti.', '2020-08-09T07:55:27Z');
+  (7, 3, 5, 10, 'Phasellus in felis. Donec semper sapien a libero.', 'Pellentesque at nulla. Suspendisse potenti.', '2020-08-09T07:55:27Z');
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
@@ -500,7 +500,7 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
 values
-  (5, 3, 8, 4, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', 'Fusce consequat.', '2019-12-31T20:54:07Z');
+  (5, 3, 8, 10, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', 'Fusce consequat.', '2019-12-31T20:54:07Z');
 
 
 
