@@ -10,20 +10,16 @@ const app = express();
 
 const db = require("./db");
 
-<<<<<<< HEAD
 const points = require("./routes/points");
-=======
-const points = require("./routes/progress_bar");
-const users = require('./routes/users');
-const messages = require('./routes/messages');
-const posts = require('./routes/posts');
-const likes = require('./routes/likes');
-const comments = require('./routes/comments');
-const userProfiles = require('./routes/user_profiles');
-const tutorExperiences = require('./routes/tutor_experiences');
-const mentorStack = require('./routes/mentor_stack');
-const studentStack = require('./routes/student_stack');
->>>>>>> 2728c872c0e68a35e9049a102babaee9f319b4cc
+const users = require("./routes/users");
+const messages = require("./routes/messages");
+const posts = require("./routes/posts");
+const likes = require("./routes/likes");
+const comments = require("./routes/comments");
+const userProfiles = require("./routes/user_profiles");
+const tutorExperiences = require("./routes/tutor_experiences");
+const mentorStack = require("./routes/mentor_stack");
+const studentStack = require("./routes/student_stack");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -42,21 +38,21 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => { } }
+  actions = { updateAppointment: () => {} }
 ) {
   app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
 
-  app.use('/api', users(db));
-  app.use('/api', messages(db));
-  app.use('/api', posts(db));
-  app.use('/api', likes(db));
-  app.use('/api', comments(db));
-  app.use('/api', userProfiles(db));
-  app.use('/api', tutorExperiences(db));
-  app.use('/api', mentorStack(db));
-  app.use('/api', studentStack(db));
+  app.use("/api", users(db));
+  app.use("/api", messages(db));
+  app.use("/api", posts(db));
+  app.use("/api", likes(db));
+  app.use("/api", comments(db));
+  app.use("/api", userProfiles(db));
+  app.use("/api", tutorExperiences(db));
+  app.use("/api", mentorStack(db));
+  app.use("/api", studentStack(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
@@ -78,7 +74,7 @@ module.exports = function application(
       });
   }
 
-  app.close = function() {
+  app.close = function () {
     return db.end();
   };
 
