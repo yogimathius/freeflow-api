@@ -7,7 +7,7 @@ module.exports = (db) => {
     });
   });
 
-  router.get("/user_profiles/mentor_points/:id", (req, res) => {
+  router.get("/user_profiles/mentor_points/", (req, res) => {
     // ********
     // const userId = req.body.userId;
     // ********
@@ -19,8 +19,7 @@ module.exports = (db) => {
       `
       SELECT SUM(mentor_rating) as mentorRating
       FROM tutor_experiences
-      JOIN users ON mentor_id = users.id
-      WHERE users.id = $1;
+      JOIN users ON mentor_id = users.id;
     `,
       [userId]
     ).then((data) => {
@@ -30,7 +29,7 @@ module.exports = (db) => {
     });
   });
 
-  router.get("/user_profiles/student_points/:id", (req, res) => {
+  router.get("/user_profiles/student_points/", (req, res) => {
     // ********
     // const userId = req.body.userId;
     // ********

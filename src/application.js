@@ -10,15 +10,17 @@ const app = express();
 
 const db = require("./db");
 
-const users = require("./routes/users");
+const comments = require("./routes/comments");
+const likes = require("./routes/likes");
+// const mentorPoints = require("./routes/mentor_points");
+const mentorStack = require("./routes/mentor_stack");
 const messages = require("./routes/messages");
 const posts = require("./routes/posts");
-const likes = require("./routes/likes");
-const comments = require("./routes/comments");
-const userProfiles = require("./routes/user_profiles");
-const tutorExperiences = require("./routes/tutor_experiences");
-const mentorStack = require("./routes/mentor_stack");
+const studentPoints = require("./routes/student_points");
 const studentStack = require("./routes/student_stack");
+const tutorExperiences = require("./routes/tutor_experiences");
+const userProfiles = require("./routes/user_profiles");
+const users = require("./routes/users");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -43,15 +45,17 @@ module.exports = function application(
   app.use(helmet());
   app.use(bodyparser.json());
 
-  app.use("/api", users(db));
+  app.use("/api", comments(db));
+  app.use("/api", likes(db));
+  // app.use("/api", mentorPoints);
+  app.use("/api", mentorStack(db));
   app.use("/api", messages(db));
   app.use("/api", posts(db));
-  app.use("/api", likes(db));
-  app.use("/api/comments", comments(db));
-  app.use("/api", userProfiles(db));
-  app.use("/api", tutorExperiences(db));
-  app.use("/api", mentorStack(db));
+  app.use("/api", studentPoints);
   app.use("/api", studentStack(db));
+  app.use("/api", tutorExperiences(db));
+  app.use("/api", userProfiles(db));
+  app.use("/api", users(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
