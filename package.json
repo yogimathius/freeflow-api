@@ -4,17 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-||||||| merged common ancestors
-    "start": "node ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
     "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "reset": "psql -U finaler -d finalproject < ./src/db/schema/create.sql && psql -U finaler -d finalproject < ./src/db/schema/development.sql"
->>>>>>> b59a45f0086bf8689995f82fa7b60ebb24de9e25
   },
   "keywords": [],
   "author": "",
@@ -37,14 +29,6 @@
     "router": "^1.3.5",
     "typescript": "^4.0.3",
     "ws": "^7.3.1"
-<<<<<<< HEAD
-  }
-}
-||||||| merged common ancestors
-  }
-}
-=======
   },
   "proxy": "http://localhost:8001"
 }
->>>>>>> b59a45f0086bf8689995f82fa7b60ebb24de9e25
