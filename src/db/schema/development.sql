@@ -9,7 +9,7 @@
 insert into users
   (username, email, password, active)
 values
-  ('fp', 'pblann0@pagesperso-orange.fr', '5QPpOBVh', true);
+  ('mathluvr', 'pblann0@pagesperso-orange.fr', '5QPpOBVh', true);
 insert into users
   (username, email, password, active)
 values
@@ -55,7 +55,7 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (1, 1, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', '2020-08-23T00:05:39Z', true);
+  (1, 2, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', '2020-08-23T00:05:39Z', true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active)
 values
@@ -132,6 +132,68 @@ insert into messages
   (sender_id, receiver_id, text_body, time_sent, active)
 values
   (1, 2, 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', '2020-09-17T20:10:58Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.', '2020-05-03T10:11:07Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'Quisque porta volutpat erat.', '2020-06-17T01:51:18Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'Proin eu mi. Nulla ac enim.', '2020-02-23T12:25:18Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Sed ante.', '2020-09-16T01:15:54Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Curabitur in libero ut massa volutpat convallis.', '2020-06-03T11:43:50Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'Vestibulum sed magna at nunc commodo placerat. Praesent blandit.', '2020-07-04T14:22:43Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'Quisque porta volutpat erat.', '2019-11-04T16:04:22Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Phasellus id sapien in sapien iaculis congue.', '2020-09-09T01:03:02Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Donec dapibus. Duis at velit eu est congue elementum.', '2020-02-11T06:34:20Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', '2020-03-09T16:47:09Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Nullam molestie nibh in lectus. Pellentesque at nulla.', '2020-08-23T04:03:10Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'Duis mattis egestas metus. Aenean fermentum.', '2020-01-16T01:55:35Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (3, 2, 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.', '2020-04-10T04:27:26Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Morbi ut odio.', '2020-07-04T15:34:01Z', true);
+insert into messages
+  (sender_id, receiver_id, text_body, time_sent, active)
+values
+  (2, 3, 'Morbi porttitor lorem id ligula.', '2020-02-05T03:08:01Z', true);
+
+
 
 
 
@@ -356,45 +418,46 @@ values
 -- user_profiles table
 -- ************************************************************
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (1, '11/25/1978', 'Edmonton', false, true, true);
+  (1, '4/30/2000', 'Vancouver', false, true, 'https://robohash.org/voluptatemvoluptasaut.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (2, '4/14/1975', 'Calgary', true, false, true);
+  (2, '1/17/1997', 'Calgary', true, true, 'https://robohash.org/eaexplicabodeserunt.jpg?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (3, '1/17/1980', 'Edmonton', true, true, true);
+  (3, '3/27/1997', 'Edmonton', false, true, 'https://robohash.org/eligendivoluptatesodit.jpg?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (4, '2/10/1978', 'Edmonton', true, false, true);
+  (4, '10/7/1981', 'Edmonton', false, true, 'https://robohash.org/sedeaquenulla.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (5, '1/16/1980', 'Victoria', true, false, false);
+  (5, '12/3/1979', 'Vancouver', false, true, 'https://robohash.org/evenietvelitest.jpg?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (6, '12/30/1980', 'Calgary', true, false, true);
+  (6, '3/23/1976', 'Calgary', false, true, 'https://robohash.org/possimusvoluptasomnis.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (7, '8/26/1985', 'Calgary', false, true, false);
+  (7, '11/9/1996', 'Edmonton', false, true, 'https://robohash.org/voluptatemdoloremtotam.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (8, '5/8/1996', 'Edmonton', false, false, false);
+  (8, '4/18/1981', 'Calgary', true, true, 'https://robohash.org/iurerepellatnesciunt.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (9, '6/6/1976', 'Edmonton', false, false, false);
+  (9, '5/5/1982', 'Edmonton', true, false, 'https://robohash.org/nullaautemquis.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, active)
+  (user_id, dob, location, is_mentor, is_student, avatar, active)
 values
-  (10, '3/26/1978', 'Victoria', false, true, true);
+  (10, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true);
+
 
 
 

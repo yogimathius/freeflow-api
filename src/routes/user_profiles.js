@@ -24,8 +24,8 @@ module.exports = db => {
       WHERE users.id = $1;
     `, [userId])
       .then((data) => {
-        console.log('mentorPoints', data.rows)
-        console.log(userId);
+        // console.log('mentorPoints', data.rows)
+        // console.log(userId);
         res.json(data.rows);
       });
   });
@@ -46,8 +46,8 @@ module.exports = db => {
       WHERE users.id = $1;
     `, [userId])
       .then((data) => {
-        console.log('studentPoints', data.rows)
-        console.log(userId);
+        // console.log('studentPoints', data.rows)
+        // console.log(userId);
         res.json(data.rows);
       });
   });
