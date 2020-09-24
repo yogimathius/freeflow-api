@@ -12,7 +12,7 @@ const db = require("./db");
 
 const comments = require("./routes/comments");
 const likes = require("./routes/likes");
-// const mentorPoints = require("./routes/mentor_points");
+const mentorPoints = require("./routes/mentor_points");
 const mentorStack = require("./routes/mentor_stack");
 const messages = require("./routes/messages");
 const posts = require("./routes/posts");
@@ -47,11 +47,11 @@ module.exports = function application(
 
   app.use("/api", comments(db));
   app.use("/api", likes(db));
-  // app.use("/api", mentorPoints);
+  app.use("/api", mentorPoints(db));
   app.use("/api", mentorStack(db));
   app.use("/api", messages(db));
   app.use("/api", posts(db));
-  app.use("/api", studentPoints);
+  app.use("/api", studentPoints(db));
   app.use("/api", studentStack(db));
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));

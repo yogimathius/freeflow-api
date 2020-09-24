@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "reset": "psql -U finaler -d finalproject < ./src/db/schema/create.sql && psql -U finaler -d finalproject < ./src/db/schema/development.sql"
   },
@@ -15,6 +15,7 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "nodemon": "^2.0.4",
     "pg": "^8.3.3",
     "tslint": "^6.1.3"
   },

@@ -19,12 +19,11 @@ module.exports = (db) => {
       `
       SELECT SUM(mentor_rating) as mentorRating
       FROM tutor_experiences
-      JOIN users ON mentor_id = users.id;
+      JOIN users ON mentor_id = users.id
+      WHERE users.id = $1;
     `,
       [userId]
     ).then((data) => {
-      console.log("mentorPoints", data.rows);
-      console.log(userId);
       res.json(data.rows);
     });
   });
@@ -41,7 +40,8 @@ module.exports = (db) => {
       `
       SELECT SUM(student_rating) as studentRating
       FROM tutor_experiences
-      JOIN users ON student_id = users.id;
+      JOIN users ON student_id = users.id
+      WHERE users.id = $1;
     `,
       [userId]
     ).then((data) => {

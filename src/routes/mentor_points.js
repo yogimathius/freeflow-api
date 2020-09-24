@@ -1,26 +1,20 @@
-// const router = require("express").Router();
+const router = require("express").Router();
 
-// module.exports = (db) => {
-//   router.get("/user_profiles/mentor_points/", (req, res) => {
-//     // ********
-//     // const userId = req.body.userId;
-//     // ********
+module.exports = (db) => {
+  router.get("/mentor_points", (req, res) => {
+    // ********
+    // const userId = req.body.userId;
+    // ********
 
-//     // hard coded for now...
-//     const userId = 4;
+    // hard coded for now...
 
-//     db.query(
-//       `
-// 			SELECT SUM(mentor_rating) as mentorRating
-// 			FROM tutor_experiences
-// 			JOIN users ON mentor_id = users.id;
-// 		`,
-//       [userId]
-//     ).then((data) => {
-//       console.log("mentorPoints", data.rows);
-//       console.log(userId);
-//       res.json(data.rows);
-//     });
-//   });
-//   return router;
-// };
+    db.query(
+      `
+      SELECT username, SUM(student_rating) as mentorRating from users JOIN tutor_experiences ON users.id = mentor_id GROUP BY username;
+		`
+    ).then((data) => {
+      res.json(data.rows);
+    });
+  });
+  return router;
+};
