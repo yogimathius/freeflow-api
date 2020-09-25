@@ -8,14 +8,13 @@ module.exports = db => {
   //     });
   // });
 
-  router.get('/messages', (req, res) => {
+  router.post('/messages/', (req, res) => {
 
-    // ********
-    // const userId = req.session.user_id;
-    // ********
+    // console.log('userID', req.body);
 
-    // hard coded for now...
-    const userId = 2;
+    const userId = Number(req.body.userID);
+
+    // const userId = 2;
 
     db.query(`
       SELECT
@@ -32,6 +31,28 @@ module.exports = db => {
       .then(data => {
         res.json({ userId, data: data.rows });
       });
+  })
+
+  router.post('/messages/new', (req, res) => {
+
+    const { receiverID, textInput, senderID } = req.body;
+
+    // const senderID = 2;
+
+    const dateNow = new Date().toISOString();
+
+    db.query(`
+      INSERT INTO messages
+        (sender_id, receiver_id, text_body, time_sent, active)
+      VALUES
+        ($1, $2, $3, $4, true)
+      RETURNING *;
+    `, [senderID, receiverID, textInput, dateNow])
+      .then(data => {
+        res.json({ data: data.rows });
+      });
+
+
   })
 
   return router;
