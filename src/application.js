@@ -20,6 +20,7 @@ const userProfiles = require("./routes/user_profiles");
 const tutorExperiences = require("./routes/tutor_experiences");
 const mentorStack = require("./routes/mentor_stack");
 const studentStack = require("./routes/student_stack");
+const index = require("./routes/index");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -38,7 +39,7 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => {} }
+  actions = { updateAppointment: () => { } }
 ) {
   app.use(cors());
   app.use(helmet());
@@ -53,6 +54,7 @@ module.exports = function application(
   app.use("/api", tutorExperiences(db));
   app.use("/api", mentorStack(db));
   app.use("/api", studentStack(db));
+  app.use('/api', index());
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
@@ -74,7 +76,7 @@ module.exports = function application(
       });
   }
 
-  app.close = function () {
+  app.close = function() {
     return db.end();
   };
 
