@@ -8,7 +8,7 @@ module.exports = (db) => {
   });
 
   router.get("/posts/:id", (req, res) => {
-    const queryParams = [4];
+    const queryParams = [5];
     db.query(
       `
     SELECT *
@@ -28,13 +28,10 @@ module.exports = (db) => {
   //   const queryString = `
   //   INSERT INTO
   //   posts
-  //   ()
+  //   (owner_id, text_body, time_posted, is_mentor, is_student, active)
   //   VALUES
   //     ()
-  //   RETURNING
-  //     stories.id as story_id
   // `;
-  //   const queryParams = 1;
   //   db.query(queryString, queryParams).then((data) => {
   //     res.json(data.rows);
   //   });
