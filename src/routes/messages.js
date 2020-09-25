@@ -38,6 +38,8 @@ module.exports = db => {
 
   router.post('/messages/new', (req, res) => {
 
+    console.log('session userID', req.session.user_id);
+
     const { receiverID, textInput } = req.body;
 
     // hard coded for now...

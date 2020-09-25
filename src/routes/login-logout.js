@@ -1,9 +1,10 @@
 const router = require('express').Router();
 
 module.exports = () => {
-  router.get('/login', (req, res) => {
+  router.post('/login', (req, res) => {
 
-
+    console.log(req.cookies)
+    console.log(req.signedCookies);
 
   });
 

@@ -7,6 +7,8 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const app = express();
+const cookieParser = require('cookie-parser');
+app.use(cookieParser())
 
 const db = require("./db");
 
@@ -21,6 +23,7 @@ const tutorExperiences = require("./routes/tutor_experiences");
 const mentorStack = require("./routes/mentor_stack");
 const studentStack = require("./routes/student_stack");
 const index = require("./routes/index");
+const login = require('./routes/login-logout');
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -55,6 +58,7 @@ module.exports = function application(
   app.use("/api", mentorStack(db));
   app.use("/api", studentStack(db));
   app.use('/api', index());
+  app.use('/api', login());
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
