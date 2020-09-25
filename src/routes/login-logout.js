@@ -1,10 +1,23 @@
 const router = require('express').Router();
 
-module.exports = () => {
+module.exports = (db) => {
   router.post('/login', (req, res) => {
 
-    console.log(req.cookies)
-    console.log(req.signedCookies);
+    console.log(req.body);
+
+    const userID = Number(req.body.userID);
+
+    db.query(`
+      SELECT *
+      FROM users
+      WHERE id = $1;
+    `, [userID])
+      .then(data => {
+        res.json(data.rows);
+      })
+      .catch(err => {
+        console.log(err);
+      })
 
   });
 
