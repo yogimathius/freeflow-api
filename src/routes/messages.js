@@ -15,6 +15,8 @@ module.exports = db => {
     // ********
 
     // hard coded for now...
+
+    console.log(req.session);
     const userId = 2;
 
     db.query(`
@@ -32,6 +34,37 @@ module.exports = db => {
       .then(data => {
         res.json({ userId, data: data.rows });
       });
+  })
+
+  router.post('/messages/new', (req, res) => {
+
+    console.log('session userID', req.session.user_id);
+
+    const { receiverID, textInput } = req.body;
+
+    // hard coded for now...
+    const senderID = 2;
+
+    const dateNow = new Date().toISOString();
+
+    console.log(dateNow)
+    // insert into messages
+    // (sender_id, receiver_id, text_body, time_sent, active)
+    // values
+    //   (1, 2, 'Maecenas rhoncus aliquam lacus.', '2020-08-25T11:21:04Z', true);
+
+    db.query(`
+      INSERT INTO messages
+        (sender_id, receiver_id, text_body, time_sent, active)
+      VALUES
+        ($1, $2, $3, $4, true)
+      RETURNING *;
+    `, [senderID, receiverID, textInput, dateNow])
+      .then(data => {
+        res.json({ data: data.rows });
+      });
+
+
   })
 
   return router;
