@@ -55,9 +55,7 @@ module.exports = (db) => {
 
   router.get("/user_profiles/:id", (req, res) => {
     // const queryString = ;
-    const queryParams = req.body.userId;
-    console.log("user id in profile route: ", queryParams);
-
+    const queryParams = [4];
     db.query(
       `Select * from user_profiles where user_id = $1`,
       queryParams
