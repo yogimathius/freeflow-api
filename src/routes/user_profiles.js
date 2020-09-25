@@ -17,13 +17,15 @@ module.exports = (db) => {
 
     db.query(
       `
-      SELECT SUM(mentor_rating) as mentorRating
+      SELECT SUM(mentor_rating) as mentorRating, avatar
       FROM tutor_experiences
       JOIN users ON mentor_id = users.id
       WHERE users.id = $1;
     `,
       [userId]
     ).then((data) => {
+      // console.log('mentorPoints', data.rows)
+      // console.log(userId);
       res.json(data.rows);
     });
   });
@@ -45,8 +47,8 @@ module.exports = (db) => {
     `,
       [userId]
     ).then((data) => {
-      console.log("studentPoints", data.rows);
-      console.log(userId);
+      // console.log('studentPoints', data.rows)
+      // console.log(userId);
       res.json(data.rows);
     });
   });

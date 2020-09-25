@@ -2,15 +2,12 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/student_points", (req, res) => {
-    // ********
-    // const userId = req.body.userId;
-    // ********
-
-    // hard coded for now...
-
     db.query(
       `
-      SELECT username, SUM(student_rating) as studentRating from users JOIN tutor_experiences ON users.id = student_id GROUP BY username;
+      SELECT username, avatar, SUM(student_rating) as studentRating from users JOIN tutor_experiences ON users.id = student_id 
+      JOIN user_profiles ON user_profiles.id = users.id
+      GROUP BY username, student_id, avatar
+      ORDER BY username;
 		`
     ).then((data) => {
       res.json(data.rows);
