@@ -58,7 +58,7 @@ module.exports = function application(
   app.use("/api", studentPoints(db));
   app.use("/api", studentStack(db));
   app.use('/api', index());
-  app.use('/api', login());
+  app.use('/api', login(db));
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
