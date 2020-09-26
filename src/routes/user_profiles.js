@@ -2,7 +2,11 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/user_profiles", (req, res) => {
-    db.query(`SELECT * FROM user_profiles;`).then((data) => {
+    db.query(`
+    SELECT users.username, avatar, users.id 
+    FROM user_profiles
+    JOIN users ON user_id = users.id;
+    `).then((data) => {
       res.json(data.rows);
     });
   });

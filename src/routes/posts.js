@@ -4,7 +4,16 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/posts", (req, res) => {
-    db.query(`SELECT * FROM posts;`).then((data) => {
+    db.query(
+      `
+      SELECT text_body, time_posted, username, avatar, users.active
+      FROM posts
+      JOIN user_profiles ON user_profiles.id = owner_id
+      JOIN users on users.id = owner_id
+      GROUP BY owner_id, posts.id, user_profiles.id, users.id
+      ORDER BY time_posted;
+      `
+    ).then((data) => {
       res.json(data.rows);
     });
   });
