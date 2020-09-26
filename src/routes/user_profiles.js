@@ -57,7 +57,7 @@ module.exports = (db) => {
     // const queryString = ;
     const queryParams = [4];
     db.query(
-      `SELECT avatar,location, is_mentor, is_student, users.username 
+      `SELECT users.id,avatar,location, is_mentor, is_student, users.username 
     FROM user_profiles 
     JOIN users on  user_profiles.user_id = users.id
     where user_profiles.user_id = $1`,
