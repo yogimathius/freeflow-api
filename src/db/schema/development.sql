@@ -573,103 +573,103 @@ values
 -- mentor_stack table
 -- ************************************************************
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (7, 'Ruby');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'Javascript');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'SQL');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Ruby');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (8, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Javascript');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'SQL');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Ruby');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Javascript');
 
@@ -679,102 +679,293 @@ values
 -- student_stack table
 -- ************************************************************
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (7, 'Ruby');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'Javascript');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'SQL');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Ruby');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (8, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Javascript');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'SQL');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Ruby');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Javascript');
+
+
+-- ************************************************************
+-- stack_preferences table
+-- ************************************************************
+insert into stack_preferences
+  (name)
+values
+  ('HTML');
+insert into stack_preferences
+  (name)
+values
+  ('CSS');
+insert into stack_preferences
+  (name)
+values
+  ('Javascript');
+insert into stack_preferences
+  (name)
+values
+  ('React.js');
+insert into stack_preferences
+  (name)
+values
+  ('Node.js');
+insert into stack_preferences
+  (name)
+values
+  ('SQL');
+insert into stack_preferences
+  (name)
+values
+  ('SASS');
+insert into stack_preferences
+  (name)
+values
+  ('Python');
+insert into stack_preferences
+  (name)
+values
+  ('Django');
+insert into stack_preferences
+  (name)
+values
+  ('Flask');
+insert into stack_preferences
+  (name)
+values
+  ('Ruby');
+insert into stack_preferences
+  (name)
+values
+  ('Ruby/Rails');
+insert into stack_preferences
+  (name)
+values
+  ('Java');
+insert into stack_preferences
+  (name)
+values
+  ('C++');
+insert into stack_preferences
+  (name)
+values
+  ('C');
+
+
+
+-- ************************************************************
+-- posts_stacks table
+-- ************************************************************
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (8, 9);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (11, 8);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (14, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (12, 4);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (10, 9);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (12, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (6, 8);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (6, 1);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (6, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (8, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (4, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (15, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 4);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (5, 5);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 4);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (9, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (3, 9);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (8, 2);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (3, 2);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (4, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (7, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (5, 5);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (10, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (12, 1);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (10, 2);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 6);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (15, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (7, 5);
