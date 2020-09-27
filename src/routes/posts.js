@@ -6,7 +6,7 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
-      SELECT text_body, time_posted, username, avatar, users.active
+      SELECT users.id, text_body, time_posted, username, avatar, users.active
       FROM posts
       JOIN user_profiles ON user_profiles.id = owner_id
       JOIN users on users.id = owner_id
@@ -19,7 +19,7 @@ module.exports = (db) => {
   });
 
   router.get("/posts/:id", (req, res) => {
-    const queryParams = [5];
+    const queryParams = [4];
     db.query(
       `
     SELECT active, is_mentor,is_student,owner_id,text_body,time_posted
@@ -36,7 +36,6 @@ module.exports = (db) => {
   });
 
   router.post("/posts", (req, res) => {
-    //console.log(req.body.post);
     const {
       text_body,
       time_posted,
@@ -44,24 +43,27 @@ module.exports = (db) => {
       is_student,
       active,
     } = req.body.post;
-    const param = [4, text_body, time_posted, is_mentor, is_student, active];
+    const param = [
+      4,
+      text_body,
+      time_posted,
+      is_mentor,
+      is_student,
+      "active",
+      active,
+    ];
     // const queryString =;
-    console.log(4, text_body, time_posted, is_mentor, is_student, active);
-
+    console.log(param);
     db.query(
       `INSERT INTO posts
-    (owner_id, text_body, time_posted, is_mentor, is_student, active)
+    (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
     VALUES
-    ($1,$2,$3,$4,$5,$6)
+    ($1,$2,$3,$4,$5,$6,$7)
     RETURNING *;`,
       param
-    )
-      .then((data) => {
-        res.json(data.rows);
-      })
-      .catch((errr) => {
-        console.log("ERRRROOOOO");
-      });
+    ).then((data) => {
+      res.json(data.rows);
+    });
   });
 
   return router;
