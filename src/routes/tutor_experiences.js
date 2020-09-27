@@ -13,15 +13,18 @@ module.exports = (db) => {
   router.put('/tutor_experiences/accept', (req, res) => {
 
     const tutorExperienceID = req.body.tutorSessionID;
+    const dateNow = new Date().toISOString();
+    console.log('datanow', dateNow)
+
     // console.log(tutorExperienceID);
 
     db.query(`
       UPDATE tutor_experiences
-      SET date_accepted = Now(),
+      SET date_accepted = $2,
         status = 'in-progress'
       WHERE id = $1
       RETURNING *;
-    `, [tutorExperienceID])
+    `, [tutorExperienceID, dateNow])
       .then(data => {
         res.json(data);
       })
@@ -40,7 +43,26 @@ module.exports = (db) => {
       .then(data => {
         res.json(data);
       })
-  })
+  });
+
+  router.put('/tutor_experiences/complete', (req, res) => {
+
+    const tutorExperienceID = req.body.tutorSessionID;
+    const dateNow = new Date().toISOString();
+    console.log('datanow', dateNow)
+    // console.log(tutorExperienceID);
+
+    db.query(`
+      UPDATE tutor_experiences
+      SET date_completed = $2,
+        status = 'completed'
+      WHERE id = $1
+      RETURNING *;
+    `, [tutorExperienceID, dateNow])
+      .then(data => {
+        res.json(data);
+      })
+  });
 
   return router;
 };
