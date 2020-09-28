@@ -47,18 +47,39 @@ module.exports = (db) => {
 
   router.put('/tutor_experiences/complete', (req, res) => {
 
-    const tutorExperienceID = req.body.tutorSessionID;
+    const { tutorSessionID, isMentor, rating, comments } = req.body;
     const dateNow = new Date().toISOString();
-    console.log('datanow', dateNow)
-    // console.log(tutorExperienceID);
+    console.log('datEnow', dateNow)
+    console.log(tutorSessionID);
+    console.log(isMentor);
+    console.log(rating);
+    console.log(comments);
+
+    let mentorRating, mentorComments, studentRating, studentComments;
+
+    if (isMentor) {
+      mentorRating = rating;
+      mentorComments = comments;
+      studentRating = null;
+      studentComments = null;
+    } else {
+      mentorRating = null;
+      mentorComments = null;
+      studentRating = rating;
+      studentComments = comments;
+    }
 
     db.query(`
       UPDATE tutor_experiences
       SET date_completed = $2,
+        mentor_rating = $3,
+        mentor_comments = $4,
+        student_rating = $5,
+        student_comments = $6,
         status = 'completed'
       WHERE id = $1
       RETURNING *;
-    `, [tutorExperienceID, dateNow])
+    `, [tutorSessionID, dateNow, mentorRating, mentorComments, studentRating, studentComments])
       .then(data => {
         res.json(data);
       })
