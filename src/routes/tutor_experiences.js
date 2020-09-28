@@ -114,7 +114,7 @@ module.exports = (db) => {
       db.query(`
         UPDATE tutor_experiences
         SET mentor_rating = $2,
-          mentor_comments = $3,
+          mentor_comments = $3
         WHERE id = $1
         RETURNING *;
       `, [tutorSessionID, rating, comments])
