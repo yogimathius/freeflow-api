@@ -124,11 +124,15 @@ CREATE TABLE tutor_experiences
   id SERIAL PRIMARY KEY NOT NULL,
   mentor_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   student_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  mentor_rating INTEGER NOT NULL DEFAULT 0,
-  student_rating INTEGER NOT NULL DEFAULT 0,
-  mentor_comments TEXT,
-  student_comments TEXT,
-  date_interacted DATE NOT NULL
+  creator_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  mentor_rating INTEGER DEFAULT NULL,
+  student_rating INTEGER DEFAULT NULL,
+  mentor_comments TEXT DEFAULT NULL,
+  student_comments TEXT DEFAULT NULL,
+  status VARCHAR(255) NOT NULL,
+  date_initiated DATE,
+  date_accepted DATE,
+  date_completed DATE
 );
 
 
