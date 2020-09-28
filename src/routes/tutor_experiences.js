@@ -64,5 +64,24 @@ module.exports = (db) => {
       })
   });
 
+  router.post('/tutor_experiences/new', (req, res) => {
+
+    const { mentorID, studentID, creatorID } = req.body;
+    const dateNow = new Date().toISOString();
+    const status = 'pending';
+
+    db.query(`
+      INSERT INTO tutor_experiences
+        (mentor_id, student_id, creator_id, date_initiated, status)
+      VALUES
+        ($1, $2, $3, $4, $5)
+      RETURNING *;
+    `, [mentorID, studentID, creatorID, dateNow, status])
+      .then(data => {
+        res.json(data);
+      })
+
+  })
+
   return router;
 };
