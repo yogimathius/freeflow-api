@@ -104,5 +104,38 @@ module.exports = (db) => {
 
   })
 
+  router.put('/tutor_experiences/complete-other', (req, res) => {
+
+    const { isMentorRating, rating, comments, tutorSessionID } = req.body;
+    console.log(isMentorRating, rating, comments, tutorSessionID);
+
+    if (isMentorRating) {
+
+      db.query(`
+        UPDATE tutor_experiences
+        SET mentor_rating = $2,
+          mentor_comments = $3,
+        WHERE id = $1
+        RETURNING *;
+      `, [tutorSessionID, rating, comments])
+        .then(data => {
+          res.json(data)
+        })
+
+    } else {
+      db.query(`
+        UPDATE tutor_experiences
+        SET student_rating = $2,
+          student_comments = $3
+        WHERE id = $1
+        RETURNING *;
+      `, [tutorSessionID, rating, comments])
+        .then(data => {
+          res.json(data)
+        })
+    }
+  })
+
+
   return router;
 };
