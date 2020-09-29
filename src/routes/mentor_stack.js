@@ -13,7 +13,7 @@ module.exports = (db) => {
     db.query(
       `SELECT *
     FROM mentor_stack 
-    where user_profile_id = $1`,
+    where user_id = $1`,
       queryParams
     ).then((data) => {
       res.json(data.rows);

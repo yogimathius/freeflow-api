@@ -22,11 +22,7 @@ DROP TABLE IF EXISTS stack_preferences
 CASCADE;
 DROP TABLE IF EXISTS posts_stacks
 CASCADE;
--- CREATE TABLE progress_bars
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   points BIGINT
--- );
+
 -- ************************************************************
 -- users table
 -- ************************************************************
@@ -133,6 +129,7 @@ CREATE TABLE student_stack
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL
 );
+
 -- ************************************************************
 -- stack_preferences table
 -- ************************************************************
@@ -141,6 +138,7 @@ CREATE TABLE stack_preferences
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL
 );
+
 -- ************************************************************
 -- stack_preferences table
 -- ************************************************************

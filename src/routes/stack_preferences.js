@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 module.exports = (db) => {
   router.get("/stack_preferences", (req, res) => {
     db.query(
@@ -9,5 +10,6 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
+
   return router;
 };

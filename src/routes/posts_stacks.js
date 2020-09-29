@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 module.exports = (db) => {
   router.get("/posts_stacks", (req, res) => {
     //I need the params here
@@ -10,6 +11,7 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
+
   router.post("/posts_stacks", (req, res) => {
     //I need the params here
     db.query(
@@ -23,5 +25,6 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
+
   return router;
 };
