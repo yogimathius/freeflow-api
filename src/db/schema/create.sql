@@ -18,16 +18,6 @@ DROP TABLE IF EXISTS mentor_stack
 CASCADE;
 DROP TABLE IF EXISTS student_stack
 CASCADE;
-
-
-
--- CREATE TABLE progress_bars
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   points BIGINT
--- );
-
-
 -- ************************************************************
 -- users table
 -- ************************************************************
@@ -39,8 +29,6 @@ CREATE TABLE users
   password VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- messages table
 -- ************************************************************
@@ -53,8 +41,6 @@ CREATE TABLE messages
   time_sent TIMESTAMP NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- posts table
 -- ************************************************************
@@ -68,8 +54,6 @@ CREATE TABLE posts
   is_student BOOLEAN NOT NULL DEFAULT FALSE,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- likes table
 -- ************************************************************
@@ -80,8 +64,6 @@ CREATE TABLE likes
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
   liker_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
-
-
 -- ************************************************************
 -- comments table
 -- ************************************************************
@@ -91,10 +73,10 @@ CREATE TABLE comments
   id SERIAL PRIMARY KEY NOT NULL,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
   commenter_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  slug VARCHAR(255) NOT NULL,
+  parent_comment_id INTEGER,
   text_body TEXT NOT NULL
 );
-
-
 -- ************************************************************
 -- user_profiles table
 -- ************************************************************
@@ -110,7 +92,6 @@ CREATE TABLE user_profiles
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
 
-
 -- ************************************************************
 -- tutor_experiences table
 -- ************************************************************
@@ -125,7 +106,6 @@ CREATE TABLE tutor_experiences
   student_comments TEXT,
   date_interacted DATE NOT NULL
 );
-
 
 -- ************************************************************
 -- mentor_stack table
