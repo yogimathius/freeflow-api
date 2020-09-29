@@ -4,29 +4,14 @@ module.exports = (db) => {
   router.get("/user_profiles", (req, res) => {
     db.query(
       `
-    SELECT users.username, avatar, users.id 
-    FROM user_profiles
-    JOIN users ON user_id = users.id;
+      SELECT users.id,avatar,location, is_mentor, is_student, users.username
+      FROM user_profiles
+      JOIN users on  user_profiles.user_id = users.id;
     `
     ).then((data) => {
       res.json(data.rows);
     });
   });
-
-  // router.get("/user_profiles/profile", (req, res) => {
-  //   // const queryParams = [4];
-  //   db.query(
-  //     `SELECT users.id,avatar,location, is_mentor, is_student, users.username
-  //   FROM user_profiles
-  //   JOIN users on  user_profiles.user_id = users.id;`
-  //   )
-  //     .then((data) => {
-  //       res.json(data.rows);
-  //     })
-  //     .catch((err) => {
-  //       console.log("error from users");
-  //     });
-  // });
 
   router.get("/user_profiles/mentor_points/:id", (req, res) => {
     // ********
