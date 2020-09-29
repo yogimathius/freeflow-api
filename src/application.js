@@ -7,8 +7,8 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const app = express();
-const cookieParser = require('cookie-parser');
-app.use(cookieParser())
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 
 const db = require("./db");
 
@@ -21,10 +21,12 @@ const posts = require("./routes/posts");
 const studentPoints = require("./routes/student_points");
 const studentStack = require("./routes/student_stack");
 const index = require("./routes/index");
-const login = require('./routes/login-logout');
+const login = require("./routes/login-logout");
 const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
+const stackPreferences = require("./routes/stack_preferences");
+const postStacks = require("./routes/posts_stacks");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -43,7 +45,7 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => { } }
+  actions = { updateAppointment: () => {} }
 ) {
   app.use(cors());
   app.use(helmet());
@@ -57,11 +59,13 @@ module.exports = function application(
   app.use("/api", posts(db));
   app.use("/api", studentPoints(db));
   app.use("/api", studentStack(db));
-  app.use('/api', index());
-  app.use('/api', login(db));
+  app.use("/api", stackPreferences(db));
+  app.use("/api", index());
+  app.use("/api", login(db));
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
+  app.use("/api", postStacks(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
@@ -83,7 +87,7 @@ module.exports = function application(
       });
   }
 
-  app.close = function() {
+  app.close = function () {
     return db.end();
   };
 

@@ -2,7 +2,13 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/user_profiles", (req, res) => {
-    db.query(`SELECT * FROM user_profiles;`).then((data) => {
+    db.query(
+      `
+      SELECT users.id,avatar,location, is_mentor, is_student, users.username
+      FROM user_profiles
+      JOIN users on  user_profiles.user_id = users.id;
+    `
+    ).then((data) => {
       res.json(data.rows);
     });
   });
@@ -50,21 +56,6 @@ module.exports = (db) => {
       // console.log('studentPoints', data.rows)
       // console.log(userId);
       res.json(data.rows);
-    });
-  });
-
-  router.get("/user_profiles/:id", (req, res) => {
-    // const queryString = ;
-    const queryParams = [4];
-    db.query(
-      `SELECT avatar,location, is_mentor, is_student, users.username 
-    FROM user_profiles 
-    JOIN users on  user_profiles.user_id = users.id
-    where user_profiles.user_id = $1`,
-      queryParams
-    ).then((data) => {
-      res.json(data.rows);
-      console.log("data from users", data);
     });
   });
 
