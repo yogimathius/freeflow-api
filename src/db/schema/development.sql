@@ -201,45 +201,45 @@ values
 -- posts table
 -- ************************************************************
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (5, 'Etiam justo.', '2020-08-29T04:45:11Z', true, false, true);
+  (5, 'Etiam justo.', '2020-08-29T04:45:11Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (6, 'Mauris lacinia sapien quis libero.', '2020-09-19T08:03:13Z', false, true, true);
+  (6, 'Mauris lacinia sapien quis libero.', '2020-09-19T08:03:13Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (1, 'Nullam porttitor lacus at turpis.', '2020-08-22T23:46:08Z', false, true, true);
+  (1, 'Nullam porttitor lacus at turpis.', '2020-08-22T23:46:08Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', '2020-08-30T07:53:19Z', false, true, true);
+  (3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', '2020-08-30T07:53:19Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (7, 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '2020-08-09T21:06:59Z', true, false, true);
+  (7, 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '2020-08-09T21:06:59Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (2, 'Fusce consequat.', '2020-08-06T16:29:48Z', false, true, true);
+  (2, 'Fusce consequat.', '2020-08-06T16:29:48Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (1, 'Integer a nibh. In quis justo.', '2020-08-07T22:04:47Z', true, false, true);
+  (1, 'Integer a nibh. In quis justo.', '2020-08-07T22:04:47Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (6, 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', '2020-08-28T22:55:33Z', true, false, true);
+  (6, 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', '2020-08-28T22:55:33Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (2, 'Quisque ut erat.', '2020-08-21T09:36:33Z', false, true, true);
+  (2, 'Quisque ut erat.', '2020-08-21T09:36:33Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, active)
+  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (8, 'Fusce consequat. Nulla nisl.', '2020-08-15T16:10:27Z', true, false, true);
+  (8, 'Fusce consequat. Nulla nisl.', '2020-08-15T16:10:27Z', true, false, 'active', true);
 
 
 
@@ -465,211 +465,184 @@ values
 -- tutor_experiences table
 -- ************************************************************
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (4, 7, 7, 8, 'Nunc nisl.', 'Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', '2020-03-01T08:20:47Z');
+  (2, 4, 4, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 8, 4, 5, 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2020-07-05T01:17:08Z');
+  (2, 4, 4, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (9, 4, 1, 8, 'Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.', 'Duis consequat dui nec nisi volutpat eleifend.', '2020-07-13T22:04:56Z');
+  (2, 4, 4, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (6, 9, 3, 5, 'In blandit ultrices enim.', 'Curabitur convallis.', '2020-02-03T01:02:07Z');
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (3, 4, 5, 10, 'Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 'In congue.', '2020-06-18T23:32:23Z');
+  (2, 4, 2, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (3, 1, 5, 5, 'Suspendisse potenti. In eleifend quam a odio.', 'Duis ac nibh.', '2020-05-26T06:26:00Z');
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 7, 6, 6, 'Aenean fermentum.', 'Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.', '2020-02-20T12:20:53Z');
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (7, 3, 1, 10, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.', 'Quisque ut erat. Curabitur gravida nisi at nibh.', '2020-06-06T15:43:58Z');
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (5, 9, 1, 2, 'Cras non velit nec nisi vulputate nonummy.', 'Morbi a ipsum.', '2020-07-14T20:20:51Z');
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (9, 8, 9, 5, 'Aliquam non mauris. Morbi non lectus.', 'Suspendisse potenti.', '2020-03-21T18:39:41Z');
+  (8, 1, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (4, 5, 2, 7, 'Etiam faucibus cursus urna. Ut tellus.', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', '2020-02-10T00:59:00Z');
+  (8, 3, 8, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 5, 7, 8, 'Mauris lacinia sapien quis libero.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.', '2019-09-30T21:24:55Z');
+  (9, 7, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 3, 2, 10, 'Nullam molestie nibh in lectus. Pellentesque at nulla.', 'Sed accumsan felis.', '2020-06-10T13:07:43Z');
+  (10, 6, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (3, 1, 5, 7, 'Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.', '2020-02-08T15:51:50Z');
+  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 9, 4, 4, 'Pellentesque at nulla. Suspendisse potenti.', 'Nam nulla.', '2019-12-22T13:24:43Z');
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (6, 9, 8, 5, 'Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.', 'In hac habitasse platea dictumst.', '2020-09-02T14:08:15Z');
+  (9, 5, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (5, 8, 5, 8, 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 'In blandit ultrices enim.', '2020-02-23T10:37:19Z');
+  (2, 5, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (7, 4, 1, 4, 'Pellentesque viverra pede ac diam.', 'Nulla facilisi. Cras non velit nec nisi vulputate nonummy.', '2020-06-10T23:55:49Z');
+  (9, 8, 3, 8, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (10, 1, 2, 4, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.', 'Aenean sit amet justo. Morbi ut odio.', '2020-06-10T09:55:40Z');
-insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
-values
-  (3, 4, 5, 6, 'Duis mattis egestas metus.', 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', '2020-06-24T10:48:23Z');
-insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
-values
-  (8, 7, 10, 2, 'Nunc rhoncus dui vel sem.', 'Ut tellus.', '2019-12-19T07:33:16Z');
-insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
-values
-  (2, 8, 6, 7, 'Sed ante.', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.', '2020-07-25T16:12:36Z');
-insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
-values
-  (7, 3, 5, 10, 'Phasellus in felis. Donec semper sapien a libero.', 'Pellentesque at nulla. Suspendisse potenti.', '2020-08-09T07:55:27Z');
-insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
-values
-  (6, 8, 2, 1, 'Donec quis orci eget orci vehicula condimentum.', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '2020-09-08T09:05:58Z');
-insert into tutor_experiences
-  (mentor_id, student_id, mentor_rating, student_rating, mentor_comments, student_comments, date_interacted)
-values
-  (5, 3, 8, 10, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', 'Fusce consequat.', '2019-12-31T20:54:07Z');
-
-
-
+  (10, 6, 4, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 
 
 -- ************************************************************
 -- mentor_stack table
 -- ************************************************************
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (7, 'Ruby');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'Javascript');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'SQL');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Ruby');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (8, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Rails');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Javascript');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'SQL');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Node.js');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Ruby');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'React');
 insert into mentor_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Javascript');
 
@@ -679,102 +652,293 @@ values
 -- student_stack table
 -- ************************************************************
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (7, 'Ruby');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (5, 'Javascript');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'SQL');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (3, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'Ruby');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (8, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Rails');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'Javascript');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (6, 'SQL');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (9, 'Node.js');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (10, 'Ruby');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (1, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (4, 'React');
 insert into student_stack
-  (user_profile_id, name)
+  (user_id, name)
 values
   (2, 'Javascript');
+
+
+-- ************************************************************
+-- stack_preferences table
+-- ************************************************************
+insert into stack_preferences
+  (name)
+values
+  ('HTML');
+insert into stack_preferences
+  (name)
+values
+  ('CSS');
+insert into stack_preferences
+  (name)
+values
+  ('Javascript');
+insert into stack_preferences
+  (name)
+values
+  ('React.js');
+insert into stack_preferences
+  (name)
+values
+  ('Node.js');
+insert into stack_preferences
+  (name)
+values
+  ('SQL');
+insert into stack_preferences
+  (name)
+values
+  ('SASS');
+insert into stack_preferences
+  (name)
+values
+  ('Python');
+insert into stack_preferences
+  (name)
+values
+  ('Django');
+insert into stack_preferences
+  (name)
+values
+  ('Flask');
+insert into stack_preferences
+  (name)
+values
+  ('Ruby');
+insert into stack_preferences
+  (name)
+values
+  ('Ruby/Rails');
+insert into stack_preferences
+  (name)
+values
+  ('Java');
+insert into stack_preferences
+  (name)
+values
+  ('C++');
+insert into stack_preferences
+  (name)
+values
+  ('C');
+
+
+
+-- ************************************************************
+-- posts_stacks table
+-- ************************************************************
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (8, 9);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (11, 8);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (14, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (12, 4);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (10, 9);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (12, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (6, 8);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (6, 1);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (6, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (8, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (4, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (15, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 4);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (5, 5);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 4);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (9, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (3, 9);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (8, 2);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (3, 2);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (4, 7);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (7, 3);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (5, 5);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (10, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (12, 1);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (10, 2);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (2, 6);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (15, 10);
+insert into posts_stacks
+  (stack_preference_id, post_id)
+values
+  (7, 5);

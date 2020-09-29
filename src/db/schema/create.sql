@@ -18,6 +18,15 @@ DROP TABLE IF EXISTS mentor_stack
 CASCADE;
 DROP TABLE IF EXISTS student_stack
 CASCADE;
+DROP TABLE IF EXISTS stack_preferences
+CASCADE;
+DROP TABLE IF EXISTS posts_stacks
+CASCADE;
+-- CREATE TABLE progress_bars
+-- (
+--   id SERIAL PRIMARY KEY NOT NULL,
+--   points BIGINT
+-- );
 -- ************************************************************
 -- users table
 -- ************************************************************
@@ -52,12 +61,12 @@ CREATE TABLE posts
   time_posted TIMESTAMP NOT NULL,
   is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
   is_student BOOLEAN NOT NULL DEFAULT FALSE,
+  status_field VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
 -- ************************************************************
 -- likes table
 -- ************************************************************
-
 CREATE TABLE likes
 (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -67,14 +76,11 @@ CREATE TABLE likes
 -- ************************************************************
 -- comments table
 -- ************************************************************
-
 CREATE TABLE comments
 (
   id SERIAL PRIMARY KEY NOT NULL,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
   commenter_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  slug VARCHAR(255) NOT NULL,
-  parent_comment_id INTEGER,
   text_body TEXT NOT NULL
 );
 -- ************************************************************
@@ -91,7 +97,6 @@ CREATE TABLE user_profiles
   avatar VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
 -- ************************************************************
 -- tutor_experiences table
 -- ************************************************************
@@ -100,29 +105,48 @@ CREATE TABLE tutor_experiences
   id SERIAL PRIMARY KEY NOT NULL,
   mentor_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   student_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  mentor_rating INTEGER NOT NULL DEFAULT 0,
-  student_rating INTEGER NOT NULL DEFAULT 0,
-  mentor_comments TEXT,
-  student_comments TEXT,
-  date_interacted DATE NOT NULL
+  creator_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  mentor_rating INTEGER DEFAULT NULL,
+  student_rating INTEGER DEFAULT NULL,
+  mentor_comments TEXT DEFAULT NULL,
+  student_comments TEXT DEFAULT NULL,
+  status VARCHAR(255) NOT NULL,
+  date_initiated DATE,
+  date_accepted DATE,
+  date_completed DATE
 );
-
 -- ************************************************************
 -- mentor_stack table
 -- ************************************************************
 CREATE TABLE mentor_stack
 (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_profile_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL
 );
-
 -- ************************************************************
 -- student_stack table
 -- ************************************************************
 CREATE TABLE student_stack
 (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_profile_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL
+);
+-- ************************************************************
+-- stack_preferences table
+-- ************************************************************
+CREATE TABLE stack_preferences
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+-- ************************************************************
+-- stack_preferences table
+-- ************************************************************
+CREATE TABLE posts_stacks
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  stack_preference_id INTEGER REFERENCES stack_preferences(id) ON DELETE CASCADE,
+  post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
 );

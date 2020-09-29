@@ -30,6 +30,8 @@ const useComments = require("./routes/comments");
 const createComment = require("./routes/comments");
 // const updateComment = require("./routes/comments/:id");
 // const deleteComment = require("./routes/comments/:id");
+const stackPreferences = require("./routes/stack_preferences");
+const postStacks = require("./routes/posts_stacks");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -71,6 +73,8 @@ module.exports = function application(
   app.use("/api", createComment(db));
   // app.use("/api", updateComment(db));
   // app.use("/api", deleteComment(db));
+  app.use("/api", stackPreferences(db));
+  app.use("/api", postStacks(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
