@@ -25,6 +25,11 @@ const login = require("./routes/login-logout");
 const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
+const useComments = require("./routes/comments");
+// const getCommentsBySlug = require("./routes/comments/:slug");
+const createComment = require("./routes/comments");
+// const updateComment = require("./routes/comments/:id");
+// const deleteComment = require("./routes/comments/:id");
 const stackPreferences = require("./routes/stack_preferences");
 const postStacks = require("./routes/posts_stacks");
 
@@ -65,6 +70,11 @@ module.exports = function application(
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
+  // app.use("/api", getCommentsBySlug(db));
+  app.use("/api", createComment(db));
+  // app.use("/api", updateComment(db));
+  // app.use("/api", deleteComment(db));
+  app.use("/api", stackPreferences(db));
   app.use("/api", postStacks(db));
 
   if (ENV === "development" || ENV === "test") {

@@ -492,8 +492,54 @@ insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
   (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-
-
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (8, 1, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (8, 3, 8, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (9, 7, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (10, 6, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (9, 5, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 5, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (9, 8, 3, 8, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (10, 6, 4, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 
 -- ************************************************************
 -- mentor_stack table
