@@ -23,15 +23,6 @@ CASCADE;
 DROP TABLE IF EXISTS posts_stacks
 CASCADE;
 
-
-
--- CREATE TABLE progress_bars
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   points BIGINT
--- );
-
-
 -- ************************************************************
 -- users table
 -- ************************************************************
@@ -43,8 +34,6 @@ CREATE TABLE users
   password VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- messages table
 -- ************************************************************
@@ -57,8 +46,6 @@ CREATE TABLE messages
   time_sent TIMESTAMP NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- posts table
 -- ************************************************************
@@ -73,24 +60,18 @@ CREATE TABLE posts
   status_field VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- likes table
 -- ************************************************************
-
 CREATE TABLE likes
 (
   id SERIAL PRIMARY KEY NOT NULL,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
   liker_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
-
-
 -- ************************************************************
 -- comments table
 -- ************************************************************
-
 CREATE TABLE comments
 (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -98,8 +79,6 @@ CREATE TABLE comments
   commenter_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   text_body TEXT NOT NULL
 );
-
-
 -- ************************************************************
 -- user_profiles table
 -- ************************************************************
@@ -114,8 +93,6 @@ CREATE TABLE user_profiles
   avatar VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- tutor_experiences table
 -- ************************************************************
@@ -134,8 +111,6 @@ CREATE TABLE tutor_experiences
   date_accepted DATE,
   date_completed DATE
 );
-
-
 -- ************************************************************
 -- mentor_stack table
 -- ************************************************************
@@ -145,7 +120,6 @@ CREATE TABLE mentor_stack
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL
 );
-
 -- ************************************************************
 -- student_stack table
 -- ************************************************************
@@ -156,7 +130,6 @@ CREATE TABLE student_stack
   name VARCHAR(255) NOT NULL
 );
 
-
 -- ************************************************************
 -- stack_preferences table
 -- ************************************************************
@@ -165,7 +138,6 @@ CREATE TABLE stack_preferences
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL
 );
-
 
 -- ************************************************************
 -- stack_preferences table

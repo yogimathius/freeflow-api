@@ -21,6 +21,7 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
+
       SELECT posts.id as post_id, owner_id, text_body, time_posted, status_field, posts.active, avatar, username, users.active,name,stack_preferences.id as stack_id
       FROM posts
       JOIN user_profiles ON user_profiles.id = owner_id
