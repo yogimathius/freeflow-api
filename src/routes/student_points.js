@@ -4,9 +4,9 @@ module.exports = (db) => {
   router.get("/student_points", (req, res) => {
     db.query(
       `
-      SELECT student_id, username, avatar, SUM(student_rating) as studentRating from users JOIN tutor_experiences ON users.id = student_id 
+      SELECT student_id, users.id, username, avatar, SUM(student_rating) as studentRating, users.active from users JOIN tutor_experiences ON users.id = student_id 
       JOIN user_profiles ON user_profiles.id = users.id
-      GROUP BY username, student_id, avatar
+      GROUP BY username, student_id, avatar, users.id
       ORDER BY student_id;
 		`
     ).then((data) => {
