@@ -25,6 +25,7 @@ const login = require("./routes/login-logout");
 const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
+<<<<<<< HEAD
 const useComments = require("./routes/comments");
 // const getCommentsBySlug = require("./routes/comments/:slug");
 const createComment = require("./routes/comments");
@@ -32,6 +33,10 @@ const createComment = require("./routes/comments");
 // const deleteComment = require("./routes/comments/:id");
 const stackPreferences = require("./routes/stack_preferences");
 const postStacks = require("./routes/posts_stacks");
+||||||| merged common ancestors
+=======
+const register = require('./routes/register');
+>>>>>>> safety/sept-29
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -70,12 +75,17 @@ module.exports = function application(
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
+<<<<<<< HEAD
   // app.use("/api", getCommentsBySlug(db));
   app.use("/api", createComment(db));
   // app.use("/api", updateComment(db));
   // app.use("/api", deleteComment(db));
   app.use("/api", stackPreferences(db));
   app.use("/api", postStacks(db));
+||||||| merged common ancestors
+=======
+  app.use("/api", register(db));
+>>>>>>> safety/sept-29
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
