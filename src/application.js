@@ -25,6 +25,7 @@ const login = require('./routes/login-logout');
 const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
+const register = require('./routes/register');
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -62,6 +63,7 @@ module.exports = function application(
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
+  app.use("/api", register(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([

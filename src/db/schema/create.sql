@@ -22,6 +22,8 @@ DROP TABLE IF EXISTS stack_preferences
 CASCADE;
 DROP TABLE IF EXISTS posts_stacks
 CASCADE;
+DROP TABLE IF EXISTS avatars
+CASCADE;
 
 
 
@@ -175,4 +177,14 @@ CREATE TABLE posts_stacks
   id SERIAL PRIMARY KEY NOT NULL,
   stack_preference_id INTEGER REFERENCES stack_preferences(id) ON DELETE CASCADE,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
+);
+
+
+-- ************************************************************
+-- avatars table
+-- ************************************************************
+CREATE TABLE avatars
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  url VARCHAR(255) NOT NULL
 );
