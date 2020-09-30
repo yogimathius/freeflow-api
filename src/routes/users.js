@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/users", (req, res) => {
     db.query(
       `
-      SELECT users.id, avatar, location, is_mentor, is_student, users.username, SUM(mentors.mentor_rating) as mentorRating, SUM(students.student_rating) as studentrating 
+      SELECT users.id, avatar, location, is_mentor, is_student, users.username, SUM(mentors.mentor_rating) as mentorRating, SUM(students.student_rating) as studentrating, users.active
       FROM users 
       LEFT JOIN tutor_experiences as mentors ON users.id = mentors.mentor_id 
       LEFT JOIN tutor_experiences as students ON users.id = students.student_id 
