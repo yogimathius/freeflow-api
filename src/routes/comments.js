@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/comments", (req, res) => {
     db.query(
       `
-      SELECT post_id, commenter_id, text_body, users.username, avatar, users.active 
+      SELECT post_id, commenter_id, text_body, users.username, avatar, users.active , username
       FROM comments 
       JOIN users ON commenter_id = users.id
       JOIN user_profiles ON users.id = user_id

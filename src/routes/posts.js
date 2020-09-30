@@ -1,7 +1,5 @@
 const { text } = require("express");
-
 const router = require("express").Router();
-
 module.exports = (db) => {
   // router.get("/posts", (req, res) => {
   //   db.query(
@@ -17,11 +15,9 @@ module.exports = (db) => {
   //     res.json(data.rows);
   //   });
   // });
-
   router.get("/posts", (req, res) => {
     db.query(
       `
-
       SELECT posts.id as post_id, owner_id, text_body, time_posted, status_field, posts.active, avatar, username, users.active,name,stack_preferences.id as stack_id
       FROM posts
       JOIN user_profiles ON user_profiles.id = owner_id
@@ -34,7 +30,6 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
-
   router.get("/posts/:id", (req, res) => {
     const queryParams = [4];
     db.query(
@@ -51,7 +46,6 @@ module.exports = (db) => {
         console.log("user-profile api", err);
       });
   });
-
   router.post("/posts", (req, res) => {
     const {
       text_body,
@@ -59,7 +53,7 @@ module.exports = (db) => {
       is_mentor,
       is_student,
       active,
-    } = req.body.post;
+    } = req.body.newPost;
     const param = [
       4,
       text_body,
@@ -82,6 +76,5 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
-
   return router;
 };
