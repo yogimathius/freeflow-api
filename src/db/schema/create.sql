@@ -88,12 +88,12 @@ CREATE TABLE user_profiles
 (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  dob DATE NOT NULL,
-  location VARCHAR(255) NOT NULL,
-  is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
-  is_student BOOLEAN NOT NULL DEFAULT FALSE,
-  avatar VARCHAR(255) NOT NULL,
-  active BOOLEAN NOT NULL DEFAULT TRUE
+  dob DATE,
+  location VARCHAR(255),
+  is_mentor BOOLEAN DEFAULT FALSE,
+  is_student BOOLEAN DEFAULT FALSE,
+  avatar VARCHAR(255),
+  active BOOLEAN DEFAULT TRUE
 );
 -- ************************************************************
 -- tutor_experiences table
