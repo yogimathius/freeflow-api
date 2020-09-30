@@ -941,3 +941,409 @@ insert into posts_stacks
   (stack_preference_id, post_id)
 values
   (7, 5);
+
+
+
+-- ************************************************************
+-- avatars table
+-- ************************************************************
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/voluptatemnemolaborum.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/beataecorruptinesciunt.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/eumutinventore.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/estutimpedit.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/cumtemporeearum.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/eosutexercitationem.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/nihilrepellatnobis.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/atqueinventorealiquid.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/illoenimautem.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sapienteillumlaboriosam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/evenieteaeius.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/ducimusatut.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/utculpaab.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/atqueveronulla.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/consequunturaspernaturqui.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/saepevelitqui.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/commodidolorest.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/utlaborumsapiente.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/isteadillo.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/laudantiumofficiisaut.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/ullamquonostrum.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sitdoloresdolorem.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/accusamussuntmaxime.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quiperferendissit.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/delenitiperspiciatisaperiam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/suscipitcumvel.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quiafugitfuga.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/asperioresquiillum.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/eosquasut.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/etmolestiaesed.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/corporislaborummaxime.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/seddoloreset.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/autemsitdeserunt.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/veldoloresquae.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/facerenonveniam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/aliasveniamut.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/inventoreautemvitae.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sitevenietiusto.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/namfugiatlaudantium.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quiasperioresamet.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/temporibusdolora.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/magniremcumque.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/rationemolestiaenulla.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quibusdametquia.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quaeratprovidentvoluptatibus.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/veritatisplaceatnisi.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/eumcommodiut.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/accusantiumvoluptasid.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/estaspernaturquisquam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/corruptivoluptatemsed.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/utducimusmollitia.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/dignissimosaperiamneque.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/voluptatesitaquequasi.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/liberoexcepturiquaerat.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/velitaspernatursuscipit.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/distinctionesciuntsaepe.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quodvoluptasquas.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/voluptasdebitisin.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/etdelectusqui.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sequiipsumsit.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/doloremquenobisvoluptas.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/eiusdebitisest.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/doloreseumoccaecati.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/distinctionostrumnecessitatibus.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quodquisquamimpedit.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/ipsamsimiliqueomnis.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/repudiandaequasideserunt.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/necessitatibusautfuga.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sitminusest.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/consequatursuscipititaque.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/doloribusexqui.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/estdoloresexercitationem.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/dignissimosdebitisitaque.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/providentsitaliquam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/occaecatinesciuntquo.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/autdelenitimaxime.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sapienteevenietquos.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/ducimusutdeleniti.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/nonanimireprehenderit.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/sitexillo.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/itaquefugitveniam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/commodiquasidoloremque.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/doloresuntaccusamus.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quasirationenatus.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/excepturietunde.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/eosmaximevoluptatem.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/ullamaliasiure.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/cumautassumenda.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/illoofficiispossimus.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/utpariaturveritatis.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/quioccaecatiullam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/animiautvoluptates.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/nihiladvoluptas.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/temporaquicorrupti.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/estnumquameligendi.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/voluptatesquiquod.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/officiaperferendisprovident.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/dictaestquo.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/inconsequaturtotam.png?size=50x50&set=set1');
+insert into avatars
+  (url)
+values
+  ('https://robohash.org/autanimisit.png?size=50x50&set=set1');

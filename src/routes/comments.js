@@ -11,7 +11,7 @@ module.exports = (db) => {
       ORDER BY post_id;
       `
     ).then((data) => {
-      console.log("data in comments route: ", data.rows);
+      // console.log("data in comments route: ", data.rows);
       res.json(data.rows);
     });
   });

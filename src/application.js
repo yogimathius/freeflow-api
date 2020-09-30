@@ -18,20 +18,17 @@ const mentorPoints = require("./routes/mentor_points");
 const mentorStack = require("./routes/mentor_stack");
 const messages = require("./routes/messages");
 const posts = require("./routes/posts");
+const postsStacks = require('./routes/posts_stacks');
 const studentPoints = require("./routes/student_points");
 const studentStack = require("./routes/student_stack");
+const stackPreferences = require('./routes/stack_preferences');
 const index = require("./routes/index");
 const login = require("./routes/login-logout");
 const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
-const useComments = require("./routes/comments");
-// const getCommentsBySlug = require("./routes/comments/:slug");
-const createComment = require("./routes/comments");
-// const updateComment = require("./routes/comments/:id");
-// const deleteComment = require("./routes/comments/:id");
-const stackPreferences = require("./routes/stack_preferences");
-const postStacks = require("./routes/posts_stacks");
+const register = require('./routes/register');
+
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -50,7 +47,7 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => {} }
+  actions = { updateAppointment: () => { } }
 ) {
   app.use(cors());
   app.use(helmet());
@@ -62,6 +59,7 @@ module.exports = function application(
   app.use("/api", mentorStack(db));
   app.use("/api", messages(db));
   app.use("/api", posts(db));
+  app.use('/api', postsStacks(db));
   app.use("/api", studentPoints(db));
   app.use("/api", studentStack(db));
   app.use("/api", stackPreferences(db));
@@ -70,12 +68,7 @@ module.exports = function application(
   app.use("/api", tutorExperiences(db));
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
-  // app.use("/api", getCommentsBySlug(db));
-  app.use("/api", createComment(db));
-  // app.use("/api", updateComment(db));
-  // app.use("/api", deleteComment(db));
-  app.use("/api", stackPreferences(db));
-  app.use("/api", postStacks(db));
+  app.use("/api", register(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
@@ -97,7 +90,7 @@ module.exports = function application(
       });
   }
 
-  app.close = function () {
+  app.close = function() {
     return db.end();
   };
 
