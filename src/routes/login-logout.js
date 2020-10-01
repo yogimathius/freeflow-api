@@ -8,9 +8,10 @@ module.exports = (db) => {
     const userID = Number(req.body.userID);
 
     db.query(`
-      SELECT *
+      SELECT users.id, username, avatar
       FROM users
-      WHERE id = $1;
+      JOIN user_profiles ON users.id = user_id
+      WHERE users.id = $1;
     `, [userID])
       .then(data => {
         res.json(data.rows);
