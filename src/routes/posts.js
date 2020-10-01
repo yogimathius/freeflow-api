@@ -1,7 +1,5 @@
 const { text } = require("express");
-
 const router = require("express").Router();
-
 module.exports = (db) => {
   // router.get("/posts", (req, res) => {
   //   db.query(
@@ -17,7 +15,6 @@ module.exports = (db) => {
   //     res.json(data.rows);
   //   });
   // });
-
   router.get("/posts", (req, res) => {
     db.query(
       `
@@ -33,7 +30,6 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
-
   router.get("/posts/:id", (req, res) => {
     const queryParams = [4];
     db.query(
@@ -50,7 +46,6 @@ module.exports = (db) => {
         console.log("user-profile api", err);
       });
   });
-
   router.post("/posts", (req, res) => {
     const {
       owner_id,
@@ -83,6 +78,5 @@ module.exports = (db) => {
       res.json(data.rows);
     });
   });
-
   return router;
 };

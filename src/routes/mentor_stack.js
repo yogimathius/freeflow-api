@@ -2,7 +2,9 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/mentor_stack", (req, res) => {
-    db.query(`SELECT * FROM mentor_stack;`).then((data) => {
+    db.query(
+      `SELECT user_id, name FROM mentor_stack GROUP BY mentor_stack.user_id, mentor_stack.name;`
+    ).then((data) => {
       res.json(data.rows);
     });
   });

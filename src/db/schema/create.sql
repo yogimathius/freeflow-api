@@ -22,15 +22,10 @@ DROP TABLE IF EXISTS stack_preferences
 CASCADE;
 DROP TABLE IF EXISTS posts_stacks
 CASCADE;
-
-
-
--- CREATE TABLE progress_bars
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   points BIGINT
--- );
-
+DROP TABLE IF EXISTS avatars
+CASCADE;
+DROP TABLE IF EXISTS random_usernames
+CASCADE;
 
 -- ************************************************************
 -- users table
@@ -43,8 +38,6 @@ CREATE TABLE users
   password VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- messages table
 -- ************************************************************
@@ -57,8 +50,6 @@ CREATE TABLE messages
   time_sent TIMESTAMP NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- posts table
 -- ************************************************************
@@ -73,24 +64,18 @@ CREATE TABLE posts
   status_field VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- likes table
 -- ************************************************************
-
 CREATE TABLE likes
 (
   id SERIAL PRIMARY KEY NOT NULL,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
   liker_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
-
-
 -- ************************************************************
 -- comments table
 -- ************************************************************
-
 CREATE TABLE comments
 (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -98,8 +83,6 @@ CREATE TABLE comments
   commenter_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   text_body TEXT NOT NULL
 );
-
-
 -- ************************************************************
 -- user_profiles table
 -- ************************************************************
@@ -107,15 +90,13 @@ CREATE TABLE user_profiles
 (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  dob DATE NOT NULL,
-  location VARCHAR(255) NOT NULL,
-  is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
-  is_student BOOLEAN NOT NULL DEFAULT FALSE,
-  avatar VARCHAR(255) NOT NULL,
-  active BOOLEAN NOT NULL DEFAULT TRUE
+  dob DATE,
+  location VARCHAR(255),
+  is_mentor BOOLEAN DEFAULT FALSE,
+  is_student BOOLEAN DEFAULT FALSE,
+  avatar VARCHAR(255),
+  active BOOLEAN DEFAULT TRUE
 );
-
-
 -- ************************************************************
 -- tutor_experiences table
 -- ************************************************************
@@ -134,8 +115,6 @@ CREATE TABLE tutor_experiences
   date_accepted DATE,
   date_completed DATE
 );
-
-
 -- ************************************************************
 -- mentor_stack table
 -- ************************************************************
@@ -145,7 +124,6 @@ CREATE TABLE mentor_stack
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL
 );
-
 -- ************************************************************
 -- student_stack table
 -- ************************************************************
@@ -156,7 +134,6 @@ CREATE TABLE student_stack
   name VARCHAR(255) NOT NULL
 );
 
-
 -- ************************************************************
 -- stack_preferences table
 -- ************************************************************
@@ -166,7 +143,6 @@ CREATE TABLE stack_preferences
   name VARCHAR(255) NOT NULL
 );
 
-
 -- ************************************************************
 -- stack_preferences table
 -- ************************************************************
@@ -175,4 +151,24 @@ CREATE TABLE posts_stacks
   id SERIAL PRIMARY KEY NOT NULL,
   stack_preference_id INTEGER REFERENCES stack_preferences(id) ON DELETE CASCADE,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
+);
+
+
+-- ************************************************************
+-- avatars table
+-- ************************************************************
+CREATE TABLE avatars
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  url VARCHAR(255) NOT NULL
+);
+
+
+-- ************************************************************
+-- random_usernames table
+-- ************************************************************
+CREATE TABLE random_usernames
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
 );
