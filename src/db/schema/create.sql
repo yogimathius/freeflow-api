@@ -111,9 +111,9 @@ CREATE TABLE tutor_experiences
   mentor_comments TEXT DEFAULT NULL,
   student_comments TEXT DEFAULT NULL,
   status VARCHAR(255) NOT NULL,
-  date_initiated DATE,
-  date_accepted DATE,
-  date_completed DATE
+  date_initiated TIMESTAMP,
+  date_accepted TIMESTAMP,
+  date_completed TIMESTAMP
 );
 -- ************************************************************
 -- mentor_stack table

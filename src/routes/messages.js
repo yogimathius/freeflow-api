@@ -43,6 +43,7 @@ module.exports = db => {
     // const senderID = 2;
 
     const dateNow = new Date().toISOString();
+    console.log(dateNow);
 
     db.query(`
       INSERT INTO messages
