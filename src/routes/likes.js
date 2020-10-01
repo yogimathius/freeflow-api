@@ -12,7 +12,7 @@ module.exports = (db) => {
   router.post("/likes", (req, res) => {
     const { post_id, liker_id } = req.body.params;
     const param = [post_id, liker_id];
-    console.log("params: ", param);
+    console.log("params in like post: ", param);
     db.query(
       `
       INSERT INTO likes (post_id, liker_id)
