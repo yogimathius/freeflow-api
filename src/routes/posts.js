@@ -53,14 +53,15 @@ module.exports = (db) => {
 
   router.post("/posts", (req, res) => {
     const {
+      owner_id,
       text_body,
       time_posted,
       is_mentor,
       is_student,
       active,
-    } = req.body.post;
+    } = req.body.newPost;
     const param = [
-      4,
+      owner_id,
       text_body,
       time_posted,
       is_mentor,
@@ -78,6 +79,7 @@ module.exports = (db) => {
     RETURNING *;`,
       param
     ).then((data) => {
+      console.log(data.rows);
       res.json(data.rows);
     });
   });

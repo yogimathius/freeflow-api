@@ -13,6 +13,18 @@ module.exports = (db) => {
     });
   });
 
+  router.put("/user-edit", (req, res) => {
+    db.query(
+      `
+      SELECT users.id,avatar,location, is_mentor, is_student, users.username
+      FROM user_profiles
+      JOIN users on  user_profiles.user_id = users.id;
+    `
+    ).then((data) => {
+      res.json(data.rows);
+    });
+  });
+
   router.get("/user_profiles/mentor_points/:id", (req, res) => {
     // ********
     // const userId = req.body.userId;
