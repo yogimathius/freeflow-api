@@ -25,34 +25,34 @@ module.exports = (db) => {
   // });
 
   router.post("/comments", (req, res) => {
-    const { name, slug, text } = req.body;
-    const parentCommentId = parseInt(req.body.parentCommentId);
+    const { post_id, commenter_id, text_body } = req.body;
+    const param = [post_id, commenter_id, text_body];
     db.query(
-      "INSERT INTO comments (name, slug, text, parent_comment_id) VALUES ($1, $2, $3, $4)",
-      [name, slug, text, parentCommentId]
+      "INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3)",
+      [param]
     ).then((data) => {
       res.json(data.rows);
     });
   });
 
-  router.put("/comments/:id", (req, res) => {
-    const { name, slug, text } = req.body;
-    const id = parseInt(req.params.id);
-    const parentCommentId = parseInt(req.body.parentCommentId);
-    db.query(
-      "UPDATE comments SET name = $1, slug = $2, text = $3, parent_comment_id = $4 WHERE id = $5",
-      [name, slug, text, parentCommentId, id],
-      (error) => {
-        if (error) {
-          throw error;
-        }
-        res.status(200).json({
-          status: "success",
-          message: `Comment modified with ID: ${id}`,
-        });
-      }
-    );
-  });
+  // router.put("/comments/:id", (req, res) => {
+  //   const { name, text } = req.body;
+  //   const id = parseInt(req.params.id);
+  //   const parentCommentId = parseInt(req.body.parentCommentId);
+  //   db.query(
+  //     "UPDATE comments SET name = $1 = $2, text = $3, parent_comment_id = $4 WHERE id = $5",
+  //     [name, text, parentCommentId, id],
+  //     (error) => {
+  //       if (error) {
+  //         throw error;
+  //       }
+  //       res.status(200).json({
+  //         status: "success",
+  //         message: `Comment modified with ID: ${id}`,
+  //       });
+  //     }
+  //   );
+  // });
 
   router.delete("/comments/:id", (req, res) => {
     const id = parseInt(req.params.id);
