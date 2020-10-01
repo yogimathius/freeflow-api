@@ -24,6 +24,8 @@ DROP TABLE IF EXISTS posts_stacks
 CASCADE;
 DROP TABLE IF EXISTS avatars
 CASCADE;
+DROP TABLE IF EXISTS random_usernames
+CASCADE;
 
 -- ************************************************************
 -- users table
@@ -159,4 +161,14 @@ CREATE TABLE avatars
 (
   id SERIAL PRIMARY KEY NOT NULL,
   url VARCHAR(255) NOT NULL
+);
+
+
+-- ************************************************************
+-- random_usernames table
+-- ************************************************************
+CREATE TABLE random_usernames
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
 );
