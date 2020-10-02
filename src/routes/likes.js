@@ -31,5 +31,31 @@ module.exports = (db) => {
       });
   });
 
+  router.delete("/likes", (req, res) => {
+    const query = JSON.parse(req.query.removeLike);
+    // console.log("req.body", req.body);
+
+    const { post_id, liker_id } = query;
+    const params = [post_id, liker_id];
+    console.log("params in like post: ", params);
+
+    db.query(
+      `
+      DELETE FROM likes 
+      WHERE post_id = $1
+      AND liker_id = $2;
+      `,
+      params
+    )
+      .then((data) => {
+        console.log("data rows in like post: ", data);
+        res.json(data.rows); // jeremy sez: why return the whole array?
+      })
+      .catch((err) => {
+        console.log("bad juju on likes DB", err);
+        res.status(500).send("bad juju on likes DB");
+      });
+  });
+
   return router;
 };
