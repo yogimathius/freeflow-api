@@ -24,6 +24,8 @@ DROP TABLE IF EXISTS posts_stacks
 CASCADE;
 DROP TABLE IF EXISTS avatars
 CASCADE;
+DROP TABLE IF EXISTS random_usernames
+CASCADE;
 
 -- ************************************************************
 -- users table
@@ -44,6 +46,7 @@ CREATE TABLE messages
   id SERIAL PRIMARY KEY NOT NULL,
   sender_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   receiver_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  receiver_read BOOLEAN NOT NULL DEFAULT FALSE,
   text_body TEXT NOT NULL,
   time_sent TIMESTAMP NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
@@ -88,12 +91,12 @@ CREATE TABLE user_profiles
 (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  dob DATE NOT NULL,
-  location VARCHAR(255) NOT NULL,
-  is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
-  is_student BOOLEAN NOT NULL DEFAULT FALSE,
-  avatar VARCHAR(255) NOT NULL,
-  active BOOLEAN NOT NULL DEFAULT TRUE
+  dob DATE,
+  location VARCHAR(255),
+  is_mentor BOOLEAN DEFAULT FALSE,
+  is_student BOOLEAN DEFAULT FALSE,
+  avatar VARCHAR(255),
+  active BOOLEAN DEFAULT TRUE
 );
 -- ************************************************************
 -- tutor_experiences table
@@ -109,9 +112,9 @@ CREATE TABLE tutor_experiences
   mentor_comments TEXT DEFAULT NULL,
   student_comments TEXT DEFAULT NULL,
   status VARCHAR(255) NOT NULL,
-  date_initiated DATE,
-  date_accepted DATE,
-  date_completed DATE
+  date_initiated TIMESTAMP,
+  date_accepted TIMESTAMP,
+  date_completed TIMESTAMP
 );
 -- ************************************************************
 -- mentor_stack table
@@ -159,4 +162,14 @@ CREATE TABLE avatars
 (
   id SERIAL PRIMARY KEY NOT NULL,
   url VARCHAR(255) NOT NULL
+);
+
+
+-- ************************************************************
+-- random_usernames table
+-- ************************************************************
+CREATE TABLE random_usernames
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
 );
