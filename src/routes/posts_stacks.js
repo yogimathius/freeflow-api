@@ -13,7 +13,7 @@ module.exports = (db) => {
   });
 
   router.post("/posts_stacks", (req, res) => {
-    const { post_id, stack_id } = req.body.newStack;
+    const { post_id, stack_id } = req.body;
     const params = [post_id, stack_id];
     db.query(
       `

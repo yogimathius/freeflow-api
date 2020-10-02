@@ -74,9 +74,13 @@ module.exports = (db) => {
     RETURNING *;`,
       param
     ).then((data) => {
-      console.log(data.rows);
-      res.json(data.rows);
+      //console.log(data.rows);
+      res.json(data.rows[0]);
     });
+    // .catch((err) => {
+    //   console.log("what the heck", err);
+    //   res.status(500).send("bad juju on the DB I guess");
+    // });
   });
   return router;
 };
