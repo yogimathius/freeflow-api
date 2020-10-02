@@ -203,11 +203,7 @@ values
 insert into posts
   (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (5, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we don'
-t need a
-backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious
-use a
-kpop logo that's not a kpop logo!.', '2020-08-29T04:45:11Z', true, false, 'active', true);
+  (5, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!.', '2020-08-29T04:45:11Z', true, false, 'active', true);
 insert into posts
   (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
