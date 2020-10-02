@@ -2,17 +2,17 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/likes", (req, res) => {
-    db.query(
-      `SELECT post_id, SUM(liker_id) as sum from likes GROUP BY post_id;`
-    ).then((data) => {
+    db.query(`SELECT post_id, liker_id from likes;`).then((data) => {
       res.json(data.rows);
     });
   });
 
   router.post("/likes", (req, res) => {
-    const { post_id, liker_id } = req.body.params;
+    console.log("req.body", req.body);
+    const { post_id, liker_id } = req.body.newLike;
     const param = [post_id, liker_id];
     console.log("params in like post: ", param);
+
     db.query(
       `
       INSERT INTO likes (post_id, liker_id)
@@ -20,9 +20,15 @@ module.exports = (db) => {
       RETURNING *;
       `,
       param
-    ).then((data) => {
-      res.json(data.rows);
-    });
+    )
+      .then((data) => {
+        console.log("data rows in like post: ", data.rows);
+        res.json(data.rows); // jeremy sez: why return the whole array?
+      })
+      .catch((err) => {
+        console.log("bad juju on likes DB", err);
+        res.status(500).send("bad juju on likes DB");
+      });
   });
 
   return router;

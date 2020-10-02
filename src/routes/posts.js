@@ -24,7 +24,7 @@ module.exports = (db) => {
       JOIN users on users.id = owner_id
       JOIN  posts_stacks on posts_stacks.post_id=posts.id JOIN stack_preferences on stack_preferences.id = posts_stacks.stack_preference_id
       GROUP BY owner_id, posts.id, user_profiles.id, users.id,name,stack_preferences.id
-      ORDER BY time_posted;
+      ORDER BY time_posted DESC;
       `
     ).then((data) => {
       res.json(data.rows);

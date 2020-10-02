@@ -8,7 +8,7 @@ module.exports = (db) => {
       FROM comments 
       JOIN users ON commenter_id = users.id
       JOIN user_profiles ON users.id = user_id
-      ORDER BY post_id;
+      ORDER BY post_id DESC;
       `
     ).then((data) => {
       // console.log("data in comments route: ", data.rows);
@@ -25,11 +25,13 @@ module.exports = (db) => {
   // });
 
   router.post("/comments", (req, res) => {
-    const { post_id, commenter_id, text_body } = req.body;
+    console.log("req.body.newComment: ", req.body.newComment);
+    const { post_id, commenter_id, text_body } = req.body.newComment;
     const param = [post_id, commenter_id, text_body];
     db.query(
-      "INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3)",
-      [param]
+      `INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3)
+      RETURNING *`,
+      [post_id, commenter_id, text_body]
     ).then((data) => {
       res.json(data.rows);
     });

@@ -20,6 +20,7 @@ module.exports = (db) => {
 
     // hard coded for now...
     const userId = 4;
+    // const userId = req.params;    // wuldn't this b beter?
 
     db.query(
       `
