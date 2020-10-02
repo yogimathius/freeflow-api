@@ -90,6 +90,7 @@ module.exports = (db) => {
     const { mentorID, studentID, creatorID } = req.body;
     const dateNow = new Date().toISOString();
     const status = 'pending';
+    console.log(dateNow);
 
     db.query(`
       INSERT INTO tutor_experiences

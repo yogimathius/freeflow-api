@@ -46,6 +46,7 @@ CREATE TABLE messages
   id SERIAL PRIMARY KEY NOT NULL,
   sender_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   receiver_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  receiver_read BOOLEAN NOT NULL DEFAULT FALSE,
   text_body TEXT NOT NULL,
   time_sent TIMESTAMP NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
@@ -111,9 +112,9 @@ CREATE TABLE tutor_experiences
   mentor_comments TEXT DEFAULT NULL,
   student_comments TEXT DEFAULT NULL,
   status VARCHAR(255) NOT NULL,
-  date_initiated DATE,
-  date_accepted DATE,
-  date_completed DATE
+  date_initiated TIMESTAMP,
+  date_accepted TIMESTAMP,
+  date_completed TIMESTAMP
 );
 -- ************************************************************
 -- mentor_stack table

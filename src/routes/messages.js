@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
 module.exports = db => {
-  // router.get('/messages', (req, res) => {
-  //   db.query(`SELECT * FROM messages;`)
-  //     .then((data) => {
-  //       res.json(data.rows)
-  //     });
-  // });
+  router.get('/messages', (req, res) => {
+    db.query(`SELECT * FROM messages;`)
+      .then((data) => {
+        res.json(data.rows)
+      });
+  });
 
   router.post('/messages/', (req, res) => {
 
@@ -22,7 +22,7 @@ module.exports = db => {
         u1.username AS sender,
         u2.id AS receiverID,
         u2.username AS receiver,
-        text_body, time_sent, messages.active
+        text_body, time_sent, messages.active, messages.receiver_read
       FROM messages
         JOIN users u1 ON u1.id = sender_id
         JOIN users u2 ON u2.id = receiver_id
@@ -43,6 +43,7 @@ module.exports = db => {
     // const senderID = 2;
 
     const dateNow = new Date().toISOString();
+    console.log(dateNow);
 
     db.query(`
       INSERT INTO messages
@@ -55,6 +56,42 @@ module.exports = db => {
         res.json({ data: data.rows });
       });
 
+
+  })
+
+  router.put('/messages/read', (req, res) => {
+
+    const { currentUserID, otherUserID } = req.body;
+
+    console.log(currentUserID);
+    console.log(otherUserID);
+
+    db.query(`
+      UPDATE messages
+      SET receiver_read = true
+      WHERE receiver_id = $1 AND sender_id = $2
+      RETURNING *;
+    `, [currentUserID, otherUserID])
+      .then(data => {
+        res.json(data.rows);
+      });
+
+  })
+
+  router.post('/messages/unread_count', (req, res) => {
+
+    const { userID } = req.body;
+
+    console.log('userID oh yeah', userID)
+
+    db.query(`
+      SELECT COUNT(*)
+      FROM messages
+      WHERE receiver_id = $1 AND receiver_read = false;
+    `, [userID])
+      .then(data => {
+        res.json(data.rows);
+      })
 
   })
 
