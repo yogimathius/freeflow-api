@@ -144,11 +144,27 @@ module.exports = (db) => {
     db.query(`
       SELECT COUNT(*)
       FROM tutor_experiences
-      WHERE (student_id = $1 OR mentor_id = $1) AND creator_id <> $1 AND status = 'pending';
+      WHERE (student_id = $1 OR mentor_id = $1) AND creator_id <> $1 AND status = 'pending' AND receiver_seen = false;
     `, [userID])
       .then(data => {
         res.json(data.rows);
       })
+  })
+
+  router.put('/tutor_experiences/see_all', (req, res) => {
+
+    const { userID } = req.body;
+
+    db.query(`
+      UPDATE tutor_experiences
+      SET receiver_seen = true
+      WHERE (student_id = $1 OR mentor_id = $1) AND creator_id <> $1 AND status = 'pending'
+      RETURNING *;
+    `, [Number(userID)])
+      .then(data => {
+        res.json(data.rows);
+      })
+
   })
 
 
