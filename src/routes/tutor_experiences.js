@@ -137,6 +137,20 @@ module.exports = (db) => {
     }
   })
 
+  router.post('/tutor_experiences/unseen_count', (req, res) => {
+
+    const { userID } = req.body;
+
+    db.query(`
+      SELECT COUNT(*)
+      FROM tutor_experiences
+      WHERE (student_id = $1 OR mentor_id = $1) AND creator_id <> $1 AND status = 'pending';
+    `, [userID])
+      .then(data => {
+        res.json(data.rows);
+      })
+  })
+
 
   return router;
 };
