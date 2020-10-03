@@ -5354,3 +5354,55 @@ insert into random_usernames
   (name)
 values
   ('cdungaterr');
+
+
+
+-- ************************************************************
+-- coding_challenges table
+-- ************************************************************
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('String Reversal', 'Write a function that will take a string as an input and return the string reversed.', 'Easy');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Duplicate Count', 'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.', 'Medium');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Number Parity Index', 'Write a function that will return the index of the number in an array that is different in party (even/odd) from all the rest. There will always be only one that is different from the rest.', 'Medium');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Word Scramble', 'Complete the function that returns true if a portion of the first arguement (string1) characters can be rearranged to match the second arguement (string2), other return false.', 'Hard');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Valid Parentheses', 'Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it is invalid.', 'Hard');
+
+
+
+-- ************************************************************
+-- user_challenges table
+-- ************************************************************
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (2, 1, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (2, 3, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (2, 4, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (4, 1, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (4, 2, true);
