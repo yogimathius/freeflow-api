@@ -114,7 +114,8 @@ CREATE TABLE tutor_experiences
   status VARCHAR(255) NOT NULL,
   date_initiated TIMESTAMP,
   date_accepted TIMESTAMP,
-  date_completed TIMESTAMP
+  date_completed TIMESTAMP,
+  receiver_seen BOOLEAN NOT NULL DEFAULT FALSE
 );
 -- ************************************************************
 -- mentor_stack table
