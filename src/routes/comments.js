@@ -8,64 +8,87 @@ module.exports = (db) => {
       FROM comments 
       JOIN users ON commenter_id = users.id
       JOIN user_profiles ON users.id = user_id
-      ORDER BY post_id DESC;
+      ORDER BY post_id;
       `
-    ).then((data) => {
-      // console.log("data in comments route: ", data.rows);
-      res.json(data.rows);
-    });
+    )
+      .then((data) => {
+        res.json(data.rows);
+      })
+      .catch((err) => {
+        console.log("bad juju on comments DB", err);
+        res.status(500).send("bad juju on comments DB");
+      });
   });
-  // router.get("/comments/:slug", (req, res) => {
-  //   const slug = request.params.slug;
-  //   db.query("SELECT * FROM comments WHERE slug = $1 ORDER BY date DESC", [
-  //     slug,
-  //   ]).then((data) => {
-  //     res.json(data.rows);
-  //   });
-  // });
 
   router.post("/comments", (req, res) => {
     console.log("req.body.newComment: ", req.body.newComment);
     const { post_id, commenter_id, text_body } = req.body.newComment;
+    console.log(post_id, commenter_id, text_body);
     const param = [post_id, commenter_id, text_body];
     db.query(
       `INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3)
       RETURNING *`,
       [post_id, commenter_id, text_body]
-    ).then((data) => {
-      res.json(data.rows);
-    });
+    )
+      .then((data) => {
+        res.json(data.rows);
+      })
+      .catch((err) => {
+        console.log("bad juju on comments DB", err);
+        res.status(500).send("bad juju on comments DB");
+      });
   });
 
-  // router.put("/comments/:id", (req, res) => {
-  //   const { name, text } = req.body;
-  //   const id = parseInt(req.params.id);
-  //   const parentCommentId = parseInt(req.body.parentCommentId);
-  //   db.query(
-  //     "UPDATE comments SET name = $1 = $2, text = $3, parent_comment_id = $4 WHERE id = $5",
-  //     [name, text, parentCommentId, id],
-  //     (error) => {
-  //       if (error) {
-  //         throw error;
-  //       }
-  //       res.status(200).json({
-  //         status: "success",
-  //         message: `Comment modified with ID: ${id}`,
-  //       });
-  //     }
-  //   );
-  // });
-
-  router.delete("/comments/:id", (req, res) => {
-    const id = parseInt(req.params.id);
-    db.query("DELETE FROM comments WHERE id = $1", [id], (error) => {
-      if (error) {
-        throw error;
+  router.put("/comments/", (req, res) => {
+    console.log("req.body.updatedComment: ", req.body.updatedComment);
+    const { post_id, commenter_id, text_body } = req.body.updatedComment;
+    console.log(post_id, commenter_id, text_body);
+    const params = [post_id, commenter_id, text_body];
+    db.query(
+      "UPDATE comments SET text_body = $3 WHERE post_id = $1 AND commenter_id = $2",
+      [params],
+      (error) => {
+        if (error) {
+          throw error;
+        }
+        res
+          .status(200)
+          .json({
+            status: "success",
+            message: `Comment modified with ID: ${id}`,
+          })
+          .catch((err) => {
+            console.log("bad juju on comments DB", err);
+            res.status(500).send("bad juju on comments DB");
+          });
       }
-      res
-        .status(200)
-        .json({ status: "success", message: `Comment deleted with ID: ${id}` });
-    });
+    );
+  });
+
+  router.delete("/comments", (req, res) => {
+    const query = JSON.parse(req.query.removeComment);
+    // console.log("req.body", req.body);
+
+    const { post_id, commenter_id } = query;
+    const params = [post_id, commenter_id];
+    console.log("params in comment post: ", params);
+
+    db.query(
+      `
+      DELETE FROM comments 
+      WHERE post_id = $1
+      AND commenter_id = $2;
+      `,
+      params
+    )
+      .then((data) => {
+        console.log("data rows in comment post: ", data);
+        res.json(data.rows); // jeremy sez: why return the whole array?
+      })
+      .catch((err) => {
+        console.log("bad juju on comments DB", err);
+        res.status(500).send("bad juju on comments DB");
+      });
   });
   return router;
 };
