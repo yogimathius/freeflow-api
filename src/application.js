@@ -28,6 +28,7 @@ const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
 const register = require('./routes/register');
+const userChallenges = require('./routes/user_challenges');
 
 
 function read(file) {
@@ -69,6 +70,7 @@ module.exports = function application(
   app.use("/api", userProfiles(db));
   app.use("/api", users(db));
   app.use("/api", register(db));
+  app.use("/api", userChallenges(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
