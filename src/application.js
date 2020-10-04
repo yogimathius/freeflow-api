@@ -18,18 +18,17 @@ const mentorPoints = require("./routes/mentor_points");
 const mentorStack = require("./routes/mentor_stack");
 const messages = require("./routes/messages");
 const posts = require("./routes/posts");
-const postsStacks = require('./routes/posts_stacks');
+const postsStacks = require("./routes/posts_stacks");
 const studentPoints = require("./routes/student_points");
 const studentStack = require("./routes/student_stack");
-const stackPreferences = require('./routes/stack_preferences');
+const stackPreferences = require("./routes/stack_preferences");
 const index = require("./routes/index");
 const login = require("./routes/login-logout");
 const tutorExperiences = require("./routes/tutor_experiences");
 const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
-const register = require('./routes/register');
-const userChallenges = require('./routes/user_challenges');
-
+const register = require("./routes/register");
+const userChallenges = require("./routes/user_challenges");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -48,19 +47,19 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => { } }
+  actions = { updateComments: () => {} }
 ) {
   app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
 
-  app.use("/api", comments(db));
+  app.use("/api", comments(db, actions.updateComments));
   app.use("/api", likes(db));
   app.use("/api", mentorPoints(db));
   app.use("/api", mentorStack(db));
   app.use("/api", messages(db));
   app.use("/api", posts(db));
-  app.use('/api', postsStacks(db));
+  app.use("/api", postsStacks(db));
   app.use("/api", studentPoints(db));
   app.use("/api", studentStack(db));
   app.use("/api", stackPreferences(db));
@@ -92,7 +91,7 @@ module.exports = function application(
       });
   }
 
-  app.close = function() {
+  app.close = function () {
     return db.end();
   };
 

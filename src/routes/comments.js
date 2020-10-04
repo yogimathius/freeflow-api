@@ -1,10 +1,10 @@
 const router = require("express").Router();
 
-module.exports = (db) => {
+module.exports = (db, updateComments) => {
   router.get("/comments", (req, res) => {
     db.query(
       `
-      SELECT post_id, commenter_id, text_body, users.username, avatar, users.active , username
+      SELECT comments.id, post_id, commenter_id, text_body, users.username, avatar, users.active , username
       FROM comments 
       JOIN users ON commenter_id = users.id
       JOIN user_profiles ON users.id = user_id
@@ -31,7 +31,11 @@ module.exports = (db) => {
       [post_id, commenter_id, text_body]
     )
       .then((data) => {
-        res.json(data.rows);
+        console.log("data in route: ", data);
+        setTimeout(() => {
+          res.status(204).json({});
+          updateComments(Number(post_id), Number(commenter_id), text_body);
+        }, 1000);
       })
       .catch((err) => {
         console.log("bad juju on comments DB", err);
@@ -69,15 +73,14 @@ module.exports = (db) => {
     const query = JSON.parse(req.query.removeComment);
     // console.log("req.body", req.body);
 
-    const { post_id, commenter_id } = query;
-    const params = [post_id, commenter_id];
+    const { post_id, commenter_id, id } = query;
+    const params = [post_id, commenter_id, id];
     console.log("params in comment post: ", params);
 
     db.query(
       `
       DELETE FROM comments 
-      WHERE post_id = $1
-      AND commenter_id = $2;
+      WHERE comments.id = $1;
       `,
       params
     )

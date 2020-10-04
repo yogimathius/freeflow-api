@@ -1,6 +1,6 @@
 const PORT = process.env.PORT || 8001;
 const ENV = require("./environment");
-const app = require("./application")(ENV, { updateAppointment });
+const app = require("./application")(ENV, { updateComments });
 const server = require("http").Server(app);
 
 const WebSocket = require("ws");
@@ -16,14 +16,17 @@ wss.on("connection", (socket) => {
   };
 });
 
-function updateAppointment(id, interview) {
+function updateComments(id, interview) {
   wss.clients.forEach(function eachClient(client) {
     if (client.readyState === WebSocket.OPEN) {
       client.send(
         JSON.stringify({
-          type: "SET_POINTS",
-          id,
-          interview,
+          type: "ADD_COMMENT",
+          post_id,
+          commenter_id,
+          text_body,
+          avatar,
+          username,
         })
       );
     }
