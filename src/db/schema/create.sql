@@ -30,6 +30,8 @@ DROP TABLE IF EXISTS coding_challenges
 CASCADE;
 DROP TABLE IF EXISTS user_challenges
 CASCADE;
+DROP TABLE IF EXISTS coding_tests
+CASCADE;
 
 -- ************************************************************
 -- users table
@@ -200,4 +202,17 @@ CREATE TABLE user_challenges
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
   completed BOOLEAN NOT NULL DEFAULT FALSE
+);
+
+
+-- ************************************************************
+-- coding_tests table
+-- ************************************************************
+CREATE TABLE coding_tests
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
+  description TEXT NOT NULL,
+  input VARCHAR(255),
+  output VARCHAR(255)
 );
