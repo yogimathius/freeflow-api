@@ -5354,3 +5354,120 @@ insert into random_usernames
   (name)
 values
   ('cdungaterr');
+
+
+
+-- ************************************************************
+-- coding_challenges table
+-- ************************************************************
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('String Reversal', 'Write a function that will take a string as an input and return the string reversed.', 'Easy');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Duplicate Count', 'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.', 'Medium');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Number Parity Index', 'Write a function that will return the index of the number in an array that is different in party (even/odd) from all the rest. There will always be only one that is different from the rest.', 'Medium');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Word Scramble', 'Complete the function that returns true if a portion of the first arguement (string1) characters can be rearranged to match the second arguement (string2), other return false.', 'Hard');
+INSERT INTO coding_challenges
+  (title, description, difficulty)
+VALUES
+  ('Valid Parentheses', 'Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it is invalid.', 'Hard');
+
+
+
+-- ************************************************************
+-- user_challenges table
+-- ************************************************************
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (2, 1, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (2, 3, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (2, 4, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (4, 1, true);
+INSERT INTO user_challenges
+  (user_id, coding_challenge_id, completed)
+VALUES
+  (4, 2, true);
+
+
+-- ************************************************************
+-- coding_tests table
+-- ************************************************************
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (1, 'Should return an empty string when given and empty string', '', '');
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (1, 'Should return the same string if given a string of length 1', 's', 's');
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (1, 'Should return the string reversed if given string of length > 1', 'reverse', 'esrever');
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (2, 'Should return zero when given and empty string', '', 0);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (2, 'Should return zero when no duplicates are given', 'abcde', 0);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (2, 'Should return the count of the duplicates when duplicates are given', 'abbcdde', 2);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (3, 'Should return -1 if array is empty', '[]', -1);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (3, 'Should return 0 if array only contains one number', '[1]', 0);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (3, 'Should return index of parity number if array contains at least three numbers', '[1,3,5,6,9]', 3);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (4, 'Should return true if either string is empty', '', true);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (4, 'Should return false if substring is larger than string in length', '', false);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (4, 'Should return true if substring is part of superstring', '', true);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (5, 'Should return true if empty string is given', '', true);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (5, 'Should return false if string is not valid parentheses', '(())))', false);
+INSERT INTO coding_tests
+  (coding_challenge_id, description, input, output)
+VALUES
+  (5, 'Should return true if string is valid parentheses', '(())', true);
