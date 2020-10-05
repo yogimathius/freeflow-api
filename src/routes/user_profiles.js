@@ -13,13 +13,18 @@ module.exports = (db) => {
     });
   });
 
-  router.put("/user-edit", (req, res) => {
+  router.put("/user_profiles/edit", (req, res) => {
+    console.log("from update users", req.body);
+    const { id, location, avatar } = req.body;
+    const params = [id, location, avatar];
     db.query(
       `
-      SELECT users.id,avatar,location, is_mentor, is_student, users.username
-      FROM user_profiles
-      JOIN users on  user_profiles.user_id = users.id;
-    `
+      update user_profiles
+      set location = $2,
+       avatar = $3
+      where user_id = $1;
+    `,
+      params
     ).then((data) => {
       res.json(data.rows);
     });
