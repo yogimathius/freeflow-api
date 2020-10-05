@@ -17,8 +17,25 @@ module.exports = (db) => {
     });
   });
 
+  // router.get("/posts/:id", (req, res) => {
+  //   const queryParams = [4];
+  //   db.query(
+  //     `
+  //   SELECT active, is_mentor,is_student,owner_id,text_body,time_posted
+  //   FROM posts
+  //   WHERE owner_id = $1;`,
+  //     queryParams
+  //   )
+  //     .then((data) => {
+  //       res.json(data.rows);
+  //     })
+  //     .catch((err) => {
+  //       console.log("user-profile api", err);
+  //     });
+  // });
   router.post("/posts", (req, res) => {
     const {
+      owner_id,
       text_body,
       time_posted,
       is_mentor,
@@ -26,7 +43,7 @@ module.exports = (db) => {
       active,
     } = req.body.newPost;
     const param = [
-      4,
+      owner_id,
       text_body,
       time_posted,
       is_mentor,
@@ -44,7 +61,44 @@ module.exports = (db) => {
     RETURNING *;`,
       param
     ).then((data) => {
-      res.json(data.rows);
+      //console.log(data.rows);
+      res.json(data.rows[0]);
+    });
+    // .catch((err) => {
+    //   console.log("what the heck", err);
+    //   res.status(500).send("bad juju on the DB I guess");
+    // });
+  });
+
+  router.put("/posts", (req, res) => {
+    console.log("editing post", req.body);
+    const { text_body, post_id } = req.body;
+    const params = [text_body, post_id];
+    db.query(
+      `
+      UPDATE posts
+      SET text_body = $1
+      WHERE id=$2
+      RETURNING *;
+      `,
+      params
+    ).then((data) => {
+      res.json(data.rows[0]);
+    });
+  });
+
+  router.delete("/posts", (req, res) => {
+    console.log(req.query);
+    const { post_id } = req.query;
+
+    db.query(
+      `
+      DELETE FROM posts
+      WHERE id = $1
+      `,
+      [post_id]
+    ).then((data) => {
+      res.json(data.rows[0]);
     });
   });
   return router;

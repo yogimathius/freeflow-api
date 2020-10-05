@@ -17,5 +17,20 @@ module.exports = (db) => {
     });
   });
 
+  router.put("/users/edit", (req, res) => {
+    console.log("from update users", req.body);
+    const { id, username } = req.body;
+    const params = [id, username];
+    db.query(
+      `
+      update users
+     set username = $2
+     where id = $1;
+    `,
+      params
+    ).then((data) => {
+      res.json(data.rows);
+    });
+  });
   return router;
 };

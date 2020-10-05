@@ -21,5 +21,14 @@ module.exports = (db) => {
       })
   })
 
+  router.get('/challenges/tests', (req, res) => {
+    db.query(`
+      SELECT * FROM coding_tests;
+    `)
+      .then(data => {
+        res.json(data.rows);
+      })
+  })
+
   return router;
 };
