@@ -9,43 +9,43 @@
 insert into users
   (username, email, password, active)
 values
-  ('mathluvr', 'pblann0@pagesperso-orange.fr', '5QPpOBVh', true);
+  ('mathluvr', 'pblann0@pagesperso-orange.fr', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('dbaggiani1', 'mneeves1@theglobeandmail.com', 'K7WlLE2', true);
+  ('dbaggiani1', 'mneeves1@theglobeandmail.com', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('lwillmore2', 'dcurado2@chron.com', 'NBXjHS', true);
+  ('lwillmore2', 'dcurado2@chron.com', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('dchansonnau3', 'ahemphall3@dedecms.com', 'hqA6kAcnaYkx', true);
+  ('dchansonnau3', 'ahemphall3@dedecms.com', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('mulrik4', 'kcogin4@accuweather.com', '0QAb28CcRP', true);
+  ('mulrik4', 'kcogin4@accuweather.com', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('lkennerknecht5', 'stomlins5@boston.com', '1bD4Apez', true);
+  ('lkennerknecht5', 'stomlins5@boston.com', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('nkollaschek6', 'jstarte6@themeforest.net', 'lMbI2ey8JDg', true);
+  ('nkollaschek6', 'jstarte6@themeforest.net', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('edodsworth7', 'ddobble7@google.co.uk', 'jwCpqCpf4C', true);
+  ('edodsworth7', 'ddobble7@google.co.uk', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('eforcade8', 'ejimeno8@geocities.com', '9FUdAi', true);
+  ('eforcade8', 'ejimeno8@geocities.com', '123', true);
 insert into users
   (username, email, password, active)
 values
-  ('dkleiser9', 'pkilborn9@skype.com', 'tlCWwQL', true);
+  ('dkleiser9', 'pkilborn9@skype.com', '123', true);
 
 
 
