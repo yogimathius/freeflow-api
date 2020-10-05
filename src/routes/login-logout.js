@@ -22,5 +22,27 @@ module.exports = (db) => {
 
   });
 
+  router.post('/login-real', (req, res) => {
+
+    console.log(req.body);
+
+    const username = req.body.username;
+    const password = req.body.password;
+
+    db.query(`
+      SELECT users.id, username, avatar
+      FROM users
+      JOIN user_profiles ON users.id = user_id
+      WHERE username = $1 AND password = $2;
+    `, [username, password])
+      .then(data => {
+        res.json(data.rows);
+      })
+      .catch(err => {
+        res.json(err);
+      })
+
+  });
+
   return router;
 }
