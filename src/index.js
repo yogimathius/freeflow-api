@@ -1,6 +1,6 @@
 const PORT = process.env.PORT || 8001;
 const ENV = require("./environment");
-const app = require("./application")(ENV, { updateComments });
+const app = require("./application")(ENV, { updateComments, deleteComments });
 const server = require("http").Server(app);
 
 const WebSocket = require("ws");
@@ -16,7 +16,13 @@ wss.on("connection", (socket) => {
   };
 });
 
-function updateComments(id, interview) {
+function updateComments(post_id, commenter_id, text_body) {
+  console.log(
+    "updateComments function index api: ",
+    post_id,
+    commenter_id,
+    text_body
+  );
   wss.clients.forEach(function eachClient(client) {
     if (client.readyState === WebSocket.OPEN) {
       client.send(
@@ -25,8 +31,20 @@ function updateComments(id, interview) {
           post_id,
           commenter_id,
           text_body,
-          avatar,
-          username,
+        })
+      );
+    }
+  });
+}
+
+function deleteComments(post_id, commenter_id) {
+  wss.clients.forEach(function eachClient(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(
+        JSON.stringify({
+          type: "REMOVE_COMMENT",
+          post_id,
+          commenter_id,
         })
       );
     }

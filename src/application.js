@@ -47,13 +47,13 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateComments: () => {} }
+  actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
   app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
 
-  app.use("/api", comments(db, actions.updateComments));
+  app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
   app.use("/api", likes(db));
   app.use("/api", mentorPoints(db));
   app.use("/api", mentorStack(db));

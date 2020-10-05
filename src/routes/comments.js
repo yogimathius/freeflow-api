@@ -21,7 +21,6 @@ module.exports = (db, updateComments) => {
   });
 
   router.post("/comments", (req, res) => {
-    console.log("req.body.newComment: ", req.body.newComment);
     const { post_id, commenter_id, text_body } = req.body.newComment;
     console.log(post_id, commenter_id, text_body);
     const param = [post_id, commenter_id, text_body];
@@ -31,9 +30,9 @@ module.exports = (db, updateComments) => {
       [post_id, commenter_id, text_body]
     )
       .then((data) => {
-        console.log("data in route: ", data);
+        console.log("data in route: ", data.rows[0]);
+        res.json(data.rows);
         setTimeout(() => {
-          res.status(204).json({});
           updateComments(Number(post_id), Number(commenter_id), text_body);
         }, 1000);
       })
@@ -74,13 +73,13 @@ module.exports = (db, updateComments) => {
     // console.log("req.body", req.body);
 
     const { post_id, commenter_id, id } = query;
-    const params = [post_id, commenter_id, id];
+    const params = [post_id, commenter_id];
     console.log("params in comment post: ", params);
 
     db.query(
       `
       DELETE FROM comments 
-      WHERE comments.id = $1;
+      WHERE post_id = $1 AND commenter_id = $2;
       `,
       params
     )
