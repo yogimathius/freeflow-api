@@ -3,8 +3,8 @@ const path = require("path");
 
 const express = require("express");
 const bodyparser = require("body-parser");
-// const helmet = require("helmet");
-// const cors = require("cors");
+const helmet = require("helmet");
+const cors = require("cors");
 
 const app = express();
 const cookieParser = require("cookie-parser");
@@ -50,8 +50,8 @@ module.exports = function application(
   ENV,
   actions = { updateAppointment: () => { } }
 ) {
-  // app.use(cors());
-  // app.use(helmet());
+  app.use(cors());
+  app.use(helmet());
   app.use(bodyparser.json());
 
   app.use("/api", comments(db));
