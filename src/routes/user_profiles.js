@@ -13,6 +13,23 @@ module.exports = (db) => {
     });
   });
 
+  router.put("/user_profiles/edit", (req, res) => {
+    console.log("from update users", req.body);
+    const { id, location, avatar } = req.body;
+    const params = [id, location, avatar];
+    db.query(
+      `
+      update user_profiles
+      set location = $2,
+       avatar = $3
+      where user_id = $1;
+    `,
+      params
+    ).then((data) => {
+      res.json(data.rows);
+    });
+  });
+
   router.get("/user_profiles/mentor_points/:id", (req, res) => {
     // ********
     // const userId = req.body.userId;

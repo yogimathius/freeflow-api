@@ -182,6 +182,32 @@ CREATE TABLE random_usernames
 );
 
 
+-- CREATE FUNCTION update_users
+-- (_username users.username%TYPE,
+-- _location user_profiles.location%TYPE,
+-- _avatar user_profiles.avatar%TYPE,
+-- _id user_profiles.user_id%TYPE)
+
+-- returns void 
+-- $$
+-- BEGIN
+--   /* add two update queries inside this function */
+--   /* 1 Updating  table standards*/
+--   update users
+--   set users.username = '_username'
+--   where id = '_id';
+
+--   update user_profiles
+--   set user_profilles.location = '_location',
+--   set user_profiles
+--   .avatar = '_avatar'
+--   where user_id = _id;
+
+-- END
+-- $$
+--   LANGUAGE 'plpgsql' VOLATILE SECURITY DEFINER; 
+
+
 -- ************************************************************
 -- coding_challenges table
 -- ************************************************************

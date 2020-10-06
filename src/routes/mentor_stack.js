@@ -9,6 +9,38 @@ module.exports = (db) => {
     });
   });
 
+  router.post("/mentor_stack", (req, res) => {
+    // console.log("WHAT");
+    const { user_id, name } = req.body;
+    const params = [user_id, name];
+    db.query(
+      `insert into mentor_stack
+      (user_id, name)
+    values
+      ($1,$2);`,
+      params
+    ).then((data) => {
+      res.json(data.rows[0]);
+    });
+  });
+
+  router.delete("/mentor_stack", (req, res) => {
+    const { user_id, name } = req.query;
+
+    const params = [user_id, name];
+
+    db.query(
+      `
+      DELETE FROM mentor_stack
+      WHERE user_id = $1
+      AND name = $2;
+      `,
+      params
+    ).then((data) => {
+      res.json(data.rows[0]);
+    });
+  });
+
   router.get("/mentor_stack/:id", (req, res) => {
     // const queryString = ;
     const queryParams = [4];
