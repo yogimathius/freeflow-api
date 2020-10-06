@@ -343,11 +343,11 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (5, 10, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis.', '2020-08-16T14:41:52Z', false, false);
+  (5, 10, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis.', '2020-08-16T14:41:52Z', false, true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (10, 1, 'Window of opportunity get six alpha pups in here for a focus group, or can we jump on a zoom.', '2019-10-11T02:12:21Z', false, true);
+  (10, 1, 'Window of opportunity get six alpha pups in here for a focus group, or can we jump on a zoom.', '2019-10-11T02:12:21Z', false, false);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -415,7 +415,7 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (5, 1, 'Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2020-07-05T23:54:33Z', false, false);
+  (5, 1, 'Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2020-07-05T23:54:33Z', false, true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
