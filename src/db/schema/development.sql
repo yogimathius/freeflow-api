@@ -716,55 +716,31 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 4, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
+  (8, 1, 1, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 4, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
+  (8, 1, 8, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 4, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
+  (1, 8, 1, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 2, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
+  (1, 8, 8, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 2, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
+  (8, 4, 4, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (2, 8, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 1, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 3, 8, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (9, 7, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (10, 6, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+  (2, 1, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
@@ -772,23 +748,47 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (1, 6, 1, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (9, 5, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (8, 7, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 5, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (1, 3, 3, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (9, 8, 3, 8, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (1, 7, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (10, 6, 4, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (10, 8, 10, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (1, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (8, 5, 8, 8, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (1, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 
 -- ************************************************************
 -- mentor_stack table
@@ -5638,23 +5638,23 @@ VALUES
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (2, 1, true);
+  (8, 1, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (2, 3, true);
+  (8, 3, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (2, 4, true);
+  (8, 4, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (4, 1, true);
+  (1, 1, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (4, 2, true);
+  (1, 2, true);
 
 
 -- ************************************************************
