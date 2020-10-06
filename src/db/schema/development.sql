@@ -440,10 +440,6 @@ insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
   (1, 10, 'Out of scope eat our own dog food. That jerk from finance really threw me under the bus root-and-branch review pass the mayo, appeal to the client.', '2020-07-15T18:17:54Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 3, 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.', '2020-05-27T09:40:48Z', true, false);
 
 
 
