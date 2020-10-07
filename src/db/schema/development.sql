@@ -37,7 +37,7 @@ values
 insert into users
   (username, email, password, active)
 values
-  ('edodsworth7', 'ddobble7@google.co.uk', '123', true);
+  ('coder4lyfe', 'ddobble7@google.co.uk', '123', true);
 insert into users
   (username, email, password, active)
 values
@@ -243,19 +243,11 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (1, 8, 'Where do we stand on the latest client ask locked and loaded those options are already baked in with this model.', '2020-09-13T13:56:34Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
   (8, 10, 'New economy sorry i was triple muted 4-blocker or c-suite. Draw a line in the sand roll back strategy so rock Star/Ninja please advise soonest so your work on this project has been really impactful..', '2019-12-09T01:29:17Z', false, false);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
   (9, 4, 'Duis mattis egestas metus.', '2019-11-02T19:49:39Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 1, 'Win-win-win fire up your browser.', '2020-04-28T03:33:29Z', true, true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -352,10 +344,6 @@ insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
   (6, 8, 'In this space we want to see more charts value-added, or strategic staircase, yet i dont care if you got some copy, why you dont use officeipsumcom or something like that.', '2020-9-12T14:45:30Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (1, 8, 'Where do we stand on the latest client ask message the initiative old boys club cross sabers', '2020-07-04T15:19:54Z', true, true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
