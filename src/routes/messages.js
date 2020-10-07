@@ -10,11 +10,7 @@ module.exports = db => {
 
   router.post('/messages/', (req, res) => {
 
-    // console.log('userID', req.body);
-
     const userId = Number(req.body.userID);
-
-    // const userId = 2;
 
     db.query(`
       SELECT
