@@ -207,7 +207,7 @@ values
 insert into posts
   (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
-  (6, 'ugh for can you lower the price for the website? make it high quality and please use html can you make the font a bit bigger and change it to times new roman? jazz it up a little bit make the picture of the cupcake look delicious make the purple more well', '2020-09-19T08:03:13Z', false, true, 'active', true);
+  (6, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!', '2020-09-19T08:03:13Z', false, true, 'active', true);
 insert into posts
   (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
