@@ -52,6 +52,7 @@ values
 -- ************************************************************
 -- messages table
 -- ************************************************************
+
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active)
 values
@@ -304,6 +305,7 @@ insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
   (1, 10, 'Out of scope eat our own dog food. That jerk from finance really threw me under the bus root-and-branch review pass the mayo, appeal to the client.', '2020-07-15T18:17:54Z', true, false);
+
 
 
 
