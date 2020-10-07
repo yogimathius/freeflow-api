@@ -53,394 +53,145 @@ values
 -- messages table
 -- ************************************************************
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (6, 7, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', '2020-06-06T08:57:40Z', false, false);
+  (1, 2, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', '2020-08-23T00:05:39Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 5, 'Aliquam erat volutpat. In congue.', '2019-12-07T22:49:38Z', true, true);
+  (2, 1, 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.', '2020-08-26T08:44:41Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (10, 8, 'Offline this discussion value-added blue money we want to empower the team with the right tools and guidance to uplevel our craft and build better can I just chime in on that one quick-win.', '2020-09-30T23:50:47Z', true, true);
+  (1, 2, 'Maecenas rhoncus aliquam lacus.', '2020-08-25T11:21:04Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (6, 7, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.', '2020-07-21T10:03:24Z', true, false);
+  (2, 1, 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.', '2020-08-23T22:22:35Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 7, 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.', '2020-08-02T16:19:56Z', true, true);
+  (2, 1, 'Aenean lectus. Pellentesque eget nunc.', '2020-09-20T15:35:16Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 2, 'In hac habitasse platea dictumst.', '2020-08-31T20:08:12Z', true, true);
+  (2, 1, 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '2020-08-18T20:48:38Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (7, 10, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', '2020-03-13T00:16:58Z', true, true);
+  (1, 2, 'Vestibulum ac est lacinia nisi venenatis tristique.', '2020-08-20T14:48:17Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (6, 3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.', '2020-06-30T15:39:34Z', false, true);
+  (2, 1, 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', '2020-08-23T05:38:53Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (4, 3, 'Vivamus in felis eu sapien cursus vestibulum.', '2020-05-21T07:30:35Z', true, false);
+  (2, 1, 'Integer ac neque.', '2020-08-12T10:38:14Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (5, 7, 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.', '2019-10-10T20:02:49Z', false, false);
+  (2, 1, 'Aliquam erat volutpat.', '2020-08-04T09:55:22Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 8, 'Win-win-win.', '2020-09-19T01:49:26Z', false, false);
+  (1, 2, 'Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', '2020-08-23T21:45:12Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (2, 2, 'Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.', '2020-01-29T18:21:28Z', true, false);
+  (2, 1, 'Vestibulum ac est lacinia nisi venenatis tristique.', '2020-08-27T05:25:25Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (10, 3, 'Vestibulum rutrum rutrum neque.', '2020-02-11T21:21:07Z', true, false);
+  (1, 2, 'Nunc rhoncus dui vel sem. Sed sagittis.', '2020-08-31T00:07:31Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (5, 9, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '2019-12-06T06:56:55Z', false, false);
+  (2, 1, 'Curabitur in libero ut massa volutpat convallis.', '2020-08-08T05:22:31Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (1, 4, 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.', '2020-07-11T20:54:46Z', true, false);
+  (2, 1, 'Nullam varius.', '2020-08-20T21:46:04Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (7, 4, 'Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', '2020-03-17T12:49:54Z', true, false);
+  (1, 2, 'Suspendisse ornare consequat lectus.', '2020-08-09T08:13:06Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (10, 4, 'Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.', '2020-06-26T12:22:22Z', true, false);
+  (2, 1, 'In quis justo.', '2020-08-08T09:13:37Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (3, 5, 'Nunc rhoncus dui vel sem.', '2020-07-21T20:02:20Z', true, true);
+  (1, 2, 'Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.', '2020-09-03T22:18:33Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (3, 8, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', '2020-02-03T10:02:00Z', true, true);
+  (1, 2, 'Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', '2020-09-21T01:57:51Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (3, 6, 'Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.', '2020-05-28T13:41:49Z', false, false);
+  (1, 2, 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', '2020-09-17T20:10:58Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (1, 3, 'Mauris lacinia sapien quis libero.', '2020-05-30T08:14:00Z', true, true);
+  (2, 3, 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.', '2020-05-03T10:11:07Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (4, 9, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', '2020-05-16T18:33:10Z', false, true);
+  (3, 2, 'Quisque porta volutpat erat.', '2020-06-17T01:51:18Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (5, 9, 'Nam tristique tortor eu pede.', '2020-08-12T10:16:00Z', true, false);
+  (3, 2, 'Proin eu mi. Nulla ac enim.', '2020-02-23T12:25:18Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (10, 9, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl.', '2019-10-12T15:41:56Z', false, true);
+  (2, 3, 'Sed ante.', '2020-09-16T01:15:54Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (7, 9, 'Suspendisse potenti.', '2019-11-17T03:14:05Z', false, true);
+  (2, 3, 'Curabitur in libero ut massa volutpat convallis.', '2020-06-03T11:43:50Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (2, 8, 'Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', '2019-11-20T00:18:06Z', true, true);
+  (3, 2, 'Vestibulum sed magna at nunc commodo placerat. Praesent blandit.', '2020-07-04T14:22:43Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (7, 6, 'Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum.', '2020-02-02T09:22:20Z', false, true);
+  (3, 2, 'Quisque porta volutpat erat.', '2019-11-04T16:04:22Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (3, 3, 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem.', '2020-05-04T07:54:10Z', false, false);
+  (2, 3, 'Phasellus id sapien in sapien iaculis congue.', '2020-09-09T01:03:02Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 10, 'Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.', '2020-06-10T15:57:17Z', false, false);
+  (2, 3, 'Donec dapibus. Duis at velit eu est congue elementum.', '2020-02-11T06:34:20Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 8, 'Put your feelers out a better understanding of usage can aid in prioritizing future efforts.', '2020-09-21T02:55:45Z', true, false);
+  (3, 2, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', '2020-03-09T16:47:09Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (3, 7, 'Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', '2020-04-18T00:19:59Z', false, false);
+  (2, 3, 'Nullam molestie nibh in lectus. Pellentesque at nulla.', '2020-08-23T04:03:10Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (9, 3, 'Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', '2020-02-27T08:14:06Z', true, false);
+  (3, 2, 'Duis mattis egestas metus. Aenean fermentum.', '2020-01-16T01:55:35Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (8, 9, 'You gotta smoke test your hypothesis.', '2020-01-07T01:10:08Z', false, false);
+  (3, 2, 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.', '2020-04-10T04:27:26Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (10, 8, 'ne-sheet driving the initiative forward but mobile.', '2020-08-21T11:51:54Z', false, false);
+  (2, 3, 'Morbi ut odio.', '2020-07-04T15:34:01Z', true);
 insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
+  (sender_id, receiver_id, text_body, time_sent, active)
 values
-  (7, 1, 'Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor.', '2020-07-18T00:33:21Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (9, 1, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.', '2020-04-21T23:49:28Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 10, 'T-shaped individual we are running out of runway but rehydrate the team for whats our go to market strategy.', '2020-06-26T07:01:59Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (7, 4, 'Nulla tellus. In sagittis dui vel nisl.', '2019-12-06T21:29:28Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 6, 'Nunc purus.', '2020-01-25T20:43:56Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 6, 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', '2020-05-12T09:41:34Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 9, 'Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', '2019-12-26T23:53:52Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (2, 5, 'Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.', '2019-12-30T05:04:56Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 3, 'Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2020-09-10T22:34:52Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 7, 'Morbi porttitor lorem id ligula.', '2019-11-22T10:18:35Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 7, 'Suspendisse potenti. Nullam porttitor lacus at turpis.', '2020-07-03T00:54:00Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 6, 'Aenean sit amet justo.', '2019-10-22T03:55:52Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 5, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', '2020-01-06T12:46:44Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (1, 8, 'Where do we stand on the latest client ask locked and loaded those options are already baked in with this model.', '2020-09-13T13:56:34Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 10, 'New economy sorry i was triple muted 4-blocker or c-suite. Draw a line in the sand roll back strategy so rock Star/Ninja please advise soonest so your work on this project has been really impactful..', '2019-12-09T01:29:17Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (9, 4, 'Duis mattis egestas metus.', '2019-11-02T19:49:39Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 1, 'Win-win-win fire up your browser.', '2020-04-28T03:33:29Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.', '2020-03-19T21:51:40Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (2, 1, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', '2020-01-06T19:20:56Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (7, 9, 'Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.', '2020-01-08T21:30:08Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (6, 5, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2020-08-12T01:34:38Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (2, 9, 'Quisque id justo sit amet sapien dignissim vestibulum.', '2020-09-10T10:16:56Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (2, 9, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', '2020-09-15T01:27:22Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 9, 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum.', '2020-01-01T18:20:49Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 2, 'Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum.', '2020-03-04T11:02:02Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (9, 6, 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', '2020-05-12T01:45:15Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 3, 'Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', '2020-01-15T01:35:32Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (7, 3, 'Etiam faucibus cursus urna. Ut tellus.', '2020-08-09T02:18:47Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 4, 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla.', '2019-11-22T03:05:58Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 10, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '2020-02-02T05:38:38Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 8, 'In eleifend quam a odio. In hac habitasse platea dictumst.', '2020-04-30T16:33:21Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (4, 7, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2019-11-17T06:15:13Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (4, 9, 'Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.', '2020-09-03T19:20:29Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (1, 4, 'Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2020-09-28T14:50:49Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (9, 7, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.', '2020-01-11T00:35:26Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 3, 'Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.', '2020-09-24T00:46:18Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (2, 6, 'Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.', '2019-11-05T01:02:02Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (6, 5, 'Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.', '2020-08-25T06:24:50Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 10, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis.', '2020-08-16T14:41:52Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 1, 'Window of opportunity get six alpha pups in here for a focus group, or can we jump on a zoom.', '2019-10-11T02:12:21Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (6, 8, 'In this space we want to see more charts value-added, or strategic staircase, yet i dont care if you got some copy, why you dont use officeipsumcom or something like that.', '2020-9-12T14:45:30Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (1, 8, 'Where do we stand on the latest client ask message the initiative old boys club cross sabers', '2020-07-04T15:19:54Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (9, 4, 'In hac habitasse platea dictumst.', '2020-05-23T09:11:08Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 3, 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '2020-07-29T19:57:17Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 10, 'I also believe it is important for every member to be involved and invested in our company.', '2020-07-25T23:35:39Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (2, 1, 'Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', '2020-04-06T17:30:44Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (4, 1, 'Nam nulla.', '2020-06-22T09:41:56Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 1, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl.', '2020-05-05T17:17:55Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (10, 1, 'If you want to motivate these clowns, try less carrot and more stick paddle on both sides, or t-shaped individual, nor accountable talk race without a finish line sorry.', '2020-09-24T10:11:22Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (6, 3, 'Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.', '2019-11-07T09:04:59Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (4, 5, 'Sed ante. Vivamus tortor.', '2020-08-28T04:03:05Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (7, 3, 'Pellentesque at nulla.', '2020-04-04T19:33:10Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (4, 9, 'Nunc rhoncus dui vel sem. Sed sagittis.', '2020-09-17T16:33:51Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (6, 2, 'Duis bibendum.', '2019-12-27T14:27:46Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (9, 6, 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.', '2019-10-15T00:45:52Z', false, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 10, 'Deploy to production driving the initiative forward close the loop.', '2020-08-12T21:23:10Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 1, 'Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2020-07-05T23:54:33Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (8, 10, 'Deploy to production driving the initiative forward close the loop. Powerpoint Bunny high performance keywords, highlights . After I ran into Helen at a restaurant, I realized she was just office pretty. We need to harvest synergy effects.', '2020-09-29T19:31:20Z', true, false);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (3, 6, 'Vestibulum rutrum rutrum neque.', '2019-11-14T05:40:58Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (5, 3, 'Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', '2020-08-19T18:24:11Z', true, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (1, 7, 'Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', '2019-10-17T08:47:09Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (7, 9, 'Cras in purus eu magna vulputate luctus.', '2019-10-20T12:21:50Z', false, true);
-insert into messages
-  (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
-values
-  (1, 10, 'Out of scope eat our own dog food. That jerk from finance really threw me under the bus root-and-branch review pass the mayo, appeal to the client.', '2020-07-15T18:17:54Z', true, false);
-
+  (2, 3, 'Morbi porttitor lorem id ligula.', '2020-02-05T03:08:01Z', true);
 
 
 
@@ -498,6 +249,7 @@ insert into posts
   (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
 values
   (8, 'Hello, everyone! I''m just wondering if someone will be willing to help me out with a project? I have not dealt with Python before and would love some advice on it! Heard we have a great community here.', '2020-08-15T16:10:27Z', true, false, 'active', true);
+
 
 
 
@@ -648,10 +400,6 @@ insert into likes
   (post_id, liker_id)
 values
   (12, 5);
-insert into likes
-  (post_id, liker_id)
-values
-  (12, 8);
 
 
 
@@ -787,31 +535,55 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 1, 1, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
+  (2, 4, 4, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 1, 8, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
+  (2, 4, 4, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (1, 8, 1, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
+  (2, 4, 4, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (1, 8, 8, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 4, 4, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
+  (2, 4, 2, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 8, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (2, 1, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (2, 4, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (8, 1, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (8, 3, 8, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (9, 7, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+insert into tutor_experiences
+  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+values
+  (10, 6, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
@@ -819,47 +591,23 @@ values
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (1, 6, 1, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+  (2, 4, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 7, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (9, 5, 7, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (1, 3, 3, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
+  (2, 5, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (1, 7, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (9, 8, 3, 8, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 insert into tutor_experiences
   (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (10, 8, 10, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 5, 8, 8, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (10, 6, 4, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 
 -- ************************************************************
 -- mentor_stack table
@@ -5753,23 +5501,23 @@ VALUES
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (8, 1, true);
+  (2, 1, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (8, 3, true);
+  (2, 3, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (8, 4, true);
+  (2, 4, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (1, 1, true);
+  (4, 1, true);
 INSERT INTO user_challenges
   (user_id, coding_challenge_id, completed)
 VALUES
-  (1, 2, true);
+  (4, 2, true);
 
 
 -- ************************************************************
