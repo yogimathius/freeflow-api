@@ -1,16 +1,16 @@
 const router = require("express").Router();
 
 module.exports = (db) => {
-  router.get("/tutor_experiences", (req, res) => {
+  router.get("/experiences", (req, res) => {
     db.query(`
     SELECT *
-    FROM tutor_experiences;
+    FROM experiences;
     `).then((data) => {
       res.json(data.rows);
     });
   });
 
-  router.put('/tutor_experiences/accept', (req, res) => {
+  router.put('/experiences/accept', (req, res) => {
 
     const tutorExperienceID = req.body.tutorSessionID;
     const dateNow = new Date().toISOString();
@@ -19,7 +19,7 @@ module.exports = (db) => {
     // console.log(tutorExperienceID);
 
     db.query(`
-      UPDATE tutor_experiences
+      UPDATE experiences
       SET date_accepted = $2,
         status = 'in-progress'
       WHERE id = $1
@@ -30,13 +30,13 @@ module.exports = (db) => {
       })
   });
 
-  router.put('/tutor_experiences/delete', (req, res) => {
+  router.put('/experiences/delete', (req, res) => {
 
     const tutorExperienceID = req.body.tutorSessionID;
     // console.log(tutorExperienceID);
 
     db.query(`
-      DELETE FROM tutor_experiences
+      DELETE FROM experiences
       WHERE id = $1
       RETURNING *;
     `, [tutorExperienceID])
@@ -45,77 +45,77 @@ module.exports = (db) => {
       })
   });
 
-  router.put('/tutor_experiences/complete', (req, res) => {
+  router.put('/experiences/complete', (req, res) => {
 
-    const { tutorSessionID, isMentor, rating, comments } = req.body;
+    const { tutorSessionID, ishelper, rating, comments } = req.body;
     const dateNow = new Date().toISOString();
     console.log('datEnow', dateNow)
     console.log(tutorSessionID);
-    console.log(isMentor);
+    console.log(ishelper);
     console.log(rating);
     console.log(comments);
 
-    let mentorRating, mentorComments, studentRating, studentComments;
+    let helperRating, helperComments, helpedRating, helpedComments;
 
-    if (isMentor) {
-      mentorRating = rating;
-      mentorComments = comments;
-      studentRating = null;
-      studentComments = null;
+    if (ishelper) {
+      helperRating = rating;
+      helperComments = comments;
+      helpedRating = null;
+      helpedComments = null;
     } else {
-      mentorRating = null;
-      mentorComments = null;
-      studentRating = rating;
-      studentComments = comments;
+      helperRating = null;
+      helperComments = null;
+      helpedRating = rating;
+      helpedComments = comments;
     }
 
     db.query(`
-      UPDATE tutor_experiences
+      UPDATE experiences
       SET date_completed = $2,
-        mentor_rating = $3,
-        mentor_comments = $4,
-        student_rating = $5,
-        student_comments = $6,
+        helper_rating = $3,
+        helper_comments = $4,
+        helped_rating = $5,
+        helped_comments = $6,
         status = 'completed'
       WHERE id = $1
       RETURNING *;
-    `, [tutorSessionID, dateNow, mentorRating, mentorComments, studentRating, studentComments])
+    `, [tutorSessionID, dateNow, helperRating, helperComments, helpedRating, helpedComments])
       .then(data => {
         res.json(data);
       })
   });
 
-  router.post('/tutor_experiences/new', (req, res) => {
+  router.post('/experiences/new', (req, res) => {
 
-    const { mentorID, studentID, creatorID } = req.body;
+    const { helperID, helpedID, creatorID } = req.body;
     const dateNow = new Date().toISOString();
     const status = 'pending';
     console.log(dateNow);
 
     db.query(`
-      INSERT INTO tutor_experiences
-        (mentor_id, student_id, creator_id, date_initiated, status)
+      INSERT INTO experiences
+        (helper_id, helped_id, creator_id, date_initiated, status)
       VALUES
         ($1, $2, $3, $4, $5)
       RETURNING *;
-    `, [mentorID, studentID, creatorID, dateNow, status])
+    `, [helperID, helpedID, creatorID, dateNow, status])
       .then(data => {
         res.json(data);
       })
 
   })
 
-  router.put('/tutor_experiences/complete-other', (req, res) => {
+  router.put('/experiences/complete-other', (req, res) => {
 
-    const { isMentorRating, rating, comments, tutorSessionID } = req.body;
-    console.log(isMentorRating, rating, comments, tutorSessionID);
+    const { ishelperRating, rating, comments, tutorSessionID } = req.body;
+    console.log(ishelperRating, rating, comments, tutorSessionID);
 
-    if (isMentorRating) {
+    if (ishelperRating) {
 
       db.query(`
-        UPDATE tutor_experiences
-        SET mentor_rating = $2,
-          mentor_comments = $3
+        UPDATE experiences
+        SET helper_rating = $2,
+          helper_comments = $3
         WHERE id = $1
         RETURNING *;
       `, [tutorSessionID, rating, comments])
@@ -125,9 +125,9 @@ module.exports = (db) => {
 
     } else {
       db.query(`
-        UPDATE tutor_experiences
-        SET student_rating = $2,
-          student_comments = $3
+        UPDATE experiences
+        SET helped_rating = $2,
+          helped_comments = $3
         WHERE id = $1
         RETURNING *;
       `, [tutorSessionID, rating, comments])
@@ -137,28 +137,28 @@ module.exports = (db) => {
     }
   })
 
-  router.post('/tutor_experiences/unseen_count', (req, res) => {
+  router.post('/experiences/unseen_count', (req, res) => {
 
     const { userID } = req.body;
 
     db.query(`
       SELECT COUNT(*)
-      FROM tutor_experiences
-      WHERE (student_id = $1 OR mentor_id = $1) AND creator_id <> $1 AND status = 'pending' AND receiver_seen = false;
+      FROM experiences
+      WHERE (helped_id = $1 OR helper_id = $1) AND creator_id <> $1 AND status = 'pending' AND receiver_seen = false;
     `, [userID])
       .then(data => {
         res.json(data.rows);
       })
   })
 
-  router.put('/tutor_experiences/see_all', (req, res) => {
+  router.put('/experiences/see_all', (req, res) => {
 
     const { userID } = req.body;
 
     db.query(`
-      UPDATE tutor_experiences
+      UPDATE experiences
       SET receiver_seen = true
-      WHERE (student_id = $1 OR mentor_id = $1) AND creator_id <> $1 AND status = 'pending'
+      WHERE (helped_id = $1 OR helper_id = $1) AND creator_id <> $1 AND status = 'pending'
       RETURNING *;
     `, [Number(userID)])
       .then(data => {

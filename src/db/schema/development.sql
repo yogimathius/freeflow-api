@@ -383,52 +383,52 @@ values
 -- posts table
 -- ************************************************************
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (5, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!.', '2020-08-29T04:45:11Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (6, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!', '2020-09-19T08:03:13Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (1, 'I would love to help someone who would want to learn Javascript. I have a few years worth of experience as a developer and would love to have someone to mentor. ', '2020-08-22T23:46:08Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (1, 'Inredibly excited for the new PS4 release!!!! What do you guys think about that? ', '2020-06-16T23:46:08Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (1, 'Mentorship is the best way to reinforce knowledge. Is anyone looking for a mentor to help them setup Express backend? Would love to offer some help. ', '2020-06-16T23:46:08Z', true, false, 'active', true);
 
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (3, 'My grasp on reality right now is tenuous. We want to see more charts. Are we in agreeance. Performance review prairie dogging run it up the flagpole, ping the boss and circle back five-year strategic plan herding cats. Low hanging fruit circle back nor due diligence optics usabiltiy. Deploy to production. The last person we talked to said this would be ready we need to build it so that it scales, this is not the hill i want to die on clear blue water scope creep nor we want to see more charts.', '2020-08-30T07:53:19Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (7, 'Work. Strategic staircase we need distributors to evangelize the new line to local markets. Circle back around i also believe its important for every member to be involved and invested in our company and this is one way to do so yet reach out, and i am dead inside, or personal development note for the previous submit: the devil should be on the left shoulder. Game plan due diligence, for can you send me an invite?. You must be muted create spaces to explore what’s next put a record on and see who dances, so poop', '2020-08-09T21:06:59Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (2, 'Drop-dead date can you send me an invite? service as core &innovations as power makes our brand i don''t want to drain the whole swamp, i just want to shoot some alligators who''s the goto on this job with the way forward . Helicopter view land the plane but products need full resourcing and support from a cross-functional team in order to be built, maintained, and evolved but performance review zeitgeist keep it lean we need a paradigm shift.', '2020-08-06T16:29:48Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (1, 'I was wondering if my cat could be placed over the logo in the flyer. That will be a conversation piece can you make the logo bigger yes bigger bigger still the logo is too big can we barter services? yet labrador so we need to make the new version clean and sexy can you pimp this powerpoint, need more geometry patterns you might wanna give it another shot.', '2020-08-07T22:04:47Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (6, 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', '2020-08-28T22:55:33Z', true, false, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (2, 'Apple the target audience is makes and famles aged zero and up make it pop. Can you make it look more designed this red is too red. We have big contacts we will promote you can you make it more infographic-y nor this was not according to brief can you lower the price for the website? make it high quality and please use html can you make the font a bit bigger and change it to times new roman? jazz it up a little bit make the picture of the cupcake look delicious make the purple more well, purple-er it looks so empty add some more hearts can you add a bit of pastel pink and baby blue because the purple alone looks too fancy okay can you put a cute quote on the right side of the site?', '2020-08-21T09:36:33Z', false, true, 'active', true);
 insert into posts
-  (owner_id, text_body, time_posted, is_mentor, is_student, status_field, active)
+  (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
   (8, 'Hello, everyone! I''m just wondering if someone will be willing to help me out with a project? I have not dealt with Python before and would love some advice on it! Heard we have a great community here.', '2020-08-15T16:10:27Z', true, false, 'active', true);
 
@@ -664,43 +664,43 @@ values
 -- user_profiles table
 -- ************************************************************
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (1, '4/30/2000', 'Vancouver', false, true, 'https://robohash.org/voluptatemvoluptasaut.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (2, '1/17/1997', 'Calgary', true, true, 'https://robohash.org/eaexplicabodeserunt.jpg?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (3, '3/27/1997', 'Edmonton', false, true, 'https://robohash.org/eligendivoluptatesodit.jpg?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (4, '10/7/1981', 'Edmonton', false, true, 'https://robohash.org/sedeaquenulla.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (5, '12/3/1979', 'Vancouver', false, true, 'https://robohash.org/evenietvelitest.jpg?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (6, '3/23/1976', 'Calgary', false, true, 'https://robohash.org/possimusvoluptasomnis.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (7, '11/9/1996', 'Edmonton', false, true, 'https://robohash.org/voluptatemdoloremtotam.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (8, '4/18/1981', 'Calgary', true, true, 'https://robohash.org/iurerepellatnesciunt.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (9, '5/5/1982', 'Edmonton', true, false, 'https://robohash.org/nullaautemquis.bmp?size=50x50&set=set1', true);
 insert into user_profiles
-  (user_id, dob, location, is_mentor, is_student, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active)
 values
   (10, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true);
 
@@ -709,376 +709,376 @@ values
 
 -- ************************************************************
 -- ************************************************************
--- tutor_experiences table
+-- experiences table
 -- ************************************************************
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (8, 1, 1, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (8, 1, 8, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 8, 1, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 8, 8, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (8, 4, 4, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (2, 8, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (2, 1, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 6, 1, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (8, 7, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 3, 3, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 7, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (10, 8, 10, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (8, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into tutor_experiences
-  (mentor_id, student_id, creator_id, mentor_rating, student_rating, mentor_comments, student_comments, status, date_initiated, date_accepted, date_completed)
+insert into experiences
+  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
   (1, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 
 -- ************************************************************
--- mentor_stack table
+-- user_skills table
 -- ************************************************************
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (5, 'React');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'Python');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'Python');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'Node');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'Express');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (9, 'React');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (4, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (3, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (10, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (4, 'Rails');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (7, 'Ruby');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (5, 'Javascript');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (6, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (9, 'SQL');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (3, 'Rails');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (4, 'Ruby');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (2, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (8, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (10, 'Rails');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (9, 'Rails');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'Javascript');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (6, 'SQL');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (9, 'Node.js');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (10, 'React');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (10, 'Ruby');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (1, 'React');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (4, 'React');
-insert into mentor_stack
+insert into user_skills
   (user_id, name)
 values
   (2, 'Javascript');
 
 
 
--- ************************************************************
--- student_stack table
--- ************************************************************
-insert into student_stack
-  (user_id, name)
-values
-  (5, 'React');
-insert into student_stack
-  (user_id, name)
-values
-  (1, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (9, 'React');
-insert into student_stack
-  (user_id, name)
-values
-  (4, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (3, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (10, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (4, 'Rails');
-insert into student_stack
-  (user_id, name)
-values
-  (7, 'Ruby');
-insert into student_stack
-  (user_id, name)
-values
-  (5, 'Javascript');
-insert into student_stack
-  (user_id, name)
-values
-  (6, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (9, 'SQL');
-insert into student_stack
-  (user_id, name)
-values
-  (3, 'Rails');
-insert into student_stack
-  (user_id, name)
-values
-  (4, 'Ruby');
-insert into student_stack
-  (user_id, name)
-values
-  (2, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (8, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (10, 'Rails');
-insert into student_stack
-  (user_id, name)
-values
-  (9, 'Rails');
-insert into student_stack
-  (user_id, name)
-values
-  (1, 'Javascript');
-insert into student_stack
-  (user_id, name)
-values
-  (6, 'SQL');
-insert into student_stack
-  (user_id, name)
-values
-  (9, 'Node.js');
-insert into student_stack
-  (user_id, name)
-values
-  (10, 'React');
-insert into student_stack
-  (user_id, name)
-values
-  (10, 'Ruby');
-insert into student_stack
-  (user_id, name)
-values
-  (1, 'React');
-insert into student_stack
-  (user_id, name)
-values
-  (4, 'React');
-insert into student_stack
-  (user_id, name)
-values
-  (2, 'Javascript');
+-- -- ************************************************************
+-- -- student_stack table
+-- -- ************************************************************
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (5, 'React');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (1, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (9, 'React');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (4, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (3, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (10, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (4, 'Rails');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (7, 'Ruby');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (5, 'Javascript');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (6, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (9, 'SQL');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (3, 'Rails');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (4, 'Ruby');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (2, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (8, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (10, 'Rails');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (9, 'Rails');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (1, 'Javascript');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (6, 'SQL');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (9, 'Node.js');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (10, 'React');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (10, 'Ruby');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (1, 'React');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (4, 'React');
+-- insert into student_stack
+--   (user_id, name)
+-- values
+--   (2, 'Javascript');
 
 
 -- ************************************************************
--- stack_preferences table
+-- db_skills table
 -- ************************************************************
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('HTML');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('CSS');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Javascript');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('React.js');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Node.js');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('SQL');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('SASS');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Python');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Django');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Flask');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Ruby');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Ruby/Rails');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Java');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('C++');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('C');
-insert into stack_preferences
+insert into db_skills
   (name)
 values
   ('Express');
@@ -1086,150 +1086,150 @@ values
 
 
 -- ************************************************************
--- posts_stacks table
+-- posts_skills table
 -- ************************************************************
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (8, 9);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (3, 3);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (15, 4);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (11, 5);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (11, 9);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (8, 12);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (12, 8);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (14, 3);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (2, 3);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (12, 4);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (2, 7);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (10, 9);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (12, 10);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (6, 8);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (6, 1);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (6, 7);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (8, 7);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (4, 10);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (15, 3);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (2, 4);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (5, 5);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (2, 4);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (9, 3);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (3, 9);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (8, 2);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (3, 2);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (4, 7);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (7, 3);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (5, 5);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (10, 10);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (12, 1);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (10, 2);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (2, 6);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (15, 10);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (7, 5);
-insert into posts_stacks
-  (stack_preference_id, post_id)
+insert into posts_skills
+  (db_skills_id, post_id)
 values
   (3, 12);
 
@@ -5648,117 +5648,117 @@ values
 
 
 
--- ************************************************************
--- coding_challenges table
--- ************************************************************
-INSERT INTO coding_challenges
-  (title, description, difficulty)
-VALUES
-  ('String Reversal', 'Write a function that will take a string as an input and return the string reversed.', 'Easy');
-INSERT INTO coding_challenges
-  (title, description, difficulty)
-VALUES
-  ('Duplicate Count', 'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.', 'Medium');
-INSERT INTO coding_challenges
-  (title, description, difficulty)
-VALUES
-  ('Number Parity Index', 'Write a function that will return the index of the number in an array that is different in party (even/odd) from all the rest. There will always be only one that is different from the rest.', 'Medium');
-INSERT INTO coding_challenges
-  (title, description, difficulty)
-VALUES
-  ('Word Scramble', 'Complete the function that returns true if a portion of the first arguement (string1) characters can be rearranged to match the second arguement (string2), other return false.', 'Hard');
-INSERT INTO coding_challenges
-  (title, description, difficulty)
-VALUES
-  ('Valid Parentheses', 'Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it is invalid.', 'Hard');
+-- -- ************************************************************
+-- -- coding_challenges table
+-- -- ************************************************************
+-- INSERT INTO coding_challenges
+--   (title, description, difficulty)
+-- VALUES
+--   ('String Reversal', 'Write a function that will take a string as an input and return the string reversed.', 'Easy');
+-- INSERT INTO coding_challenges
+--   (title, description, difficulty)
+-- VALUES
+--   ('Duplicate Count', 'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.', 'Medium');
+-- INSERT INTO coding_challenges
+--   (title, description, difficulty)
+-- VALUES
+--   ('Number Parity Index', 'Write a function that will return the index of the number in an array that is different in party (even/odd) from all the rest. There will always be only one that is different from the rest.', 'Medium');
+-- INSERT INTO coding_challenges
+--   (title, description, difficulty)
+-- VALUES
+--   ('Word Scramble', 'Complete the function that returns true if a portion of the first arguement (string1) characters can be rearranged to match the second arguement (string2), other return false.', 'Hard');
+-- INSERT INTO coding_challenges
+--   (title, description, difficulty)
+-- VALUES
+--   ('Valid Parentheses', 'Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it is invalid.', 'Hard');
 
 
 
--- ************************************************************
--- user_challenges table
--- ************************************************************
-INSERT INTO user_challenges
-  (user_id, coding_challenge_id, completed)
-VALUES
-  (2, 1, true);
-INSERT INTO user_challenges
-  (user_id, coding_challenge_id, completed)
-VALUES
-  (2, 3, true);
-INSERT INTO user_challenges
-  (user_id, coding_challenge_id, completed)
-VALUES
-  (2, 4, true);
-INSERT INTO user_challenges
-  (user_id, coding_challenge_id, completed)
-VALUES
-  (4, 1, true);
-INSERT INTO user_challenges
-  (user_id, coding_challenge_id, completed)
-VALUES
-  (4, 2, true);
+-- -- ************************************************************
+-- -- user_challenges table
+-- -- ************************************************************
+-- INSERT INTO user_challenges
+--   (user_id, coding_challenge_id, completed)
+-- VALUES
+--   (2, 1, true);
+-- INSERT INTO user_challenges
+--   (user_id, coding_challenge_id, completed)
+-- VALUES
+--   (2, 3, true);
+-- INSERT INTO user_challenges
+--   (user_id, coding_challenge_id, completed)
+-- VALUES
+--   (2, 4, true);
+-- INSERT INTO user_challenges
+--   (user_id, coding_challenge_id, completed)
+-- VALUES
+--   (4, 1, true);
+-- INSERT INTO user_challenges
+--   (user_id, coding_challenge_id, completed)
+-- VALUES
+--   (4, 2, true);
 
 
--- ************************************************************
--- coding_tests table
--- ************************************************************
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (1, 'Should return an empty string when given and empty string', '', '');
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (1, 'Should return the same string if given a string of length 1', 's', 's');
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (1, 'Should return the string reversed if given string of length > 1', 'reverse', 'esrever');
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (2, 'Should return zero when given and empty string', '', 0);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (2, 'Should return zero when no duplicates are given', 'abcde', 0);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (2, 'Should return the count of the duplicates when duplicates are given', 'abbcdde', 2);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (3, 'Should return -1 if array is empty', '[]', -1);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (3, 'Should return 0 if array only contains one number', '[1]', 0);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (3, 'Should return index of parity number if array contains at least three numbers', '[1,3,5,6,9]', 3);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (4, 'Should return true if either string is empty', '', true);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (4, 'Should return false if substring is larger than string in length', '', false);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (4, 'Should return true if substring is part of superstring', '', true);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (5, 'Should return true if empty string is given', '', true);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (5, 'Should return false if string is not valid parentheses', '(())))', false);
-INSERT INTO coding_tests
-  (coding_challenge_id, description, input, output)
-VALUES
-  (5, 'Should return true if string is valid parentheses', '(())', true);
+-- -- ************************************************************
+-- -- coding_tests table
+-- -- ************************************************************
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (1, 'Should return an empty string when given and empty string', '', '');
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (1, 'Should return the same string if given a string of length 1', 's', 's');
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (1, 'Should return the string reversed if given string of length > 1', 'reverse', 'esrever');
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (2, 'Should return zero when given and empty string', '', 0);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (2, 'Should return zero when no duplicates are given', 'abcde', 0);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (2, 'Should return the count of the duplicates when duplicates are given', 'abbcdde', 2);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (3, 'Should return -1 if array is empty', '[]', -1);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (3, 'Should return 0 if array only contains one number', '[1]', 0);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (3, 'Should return index of parity number if array contains at least three numbers', '[1,3,5,6,9]', 3);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (4, 'Should return true if either string is empty', '', true);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (4, 'Should return false if substring is larger than string in length', '', false);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (4, 'Should return true if substring is part of superstring', '', true);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (5, 'Should return true if empty string is given', '', true);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (5, 'Should return false if string is not valid parentheses', '(())))', false);
+-- INSERT INTO coding_tests
+--   (coding_challenge_id, description, input, output)
+-- VALUES
+--   (5, 'Should return true if string is valid parentheses', '(())', true);

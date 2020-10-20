@@ -12,15 +12,13 @@ DROP TABLE IF EXISTS comments
 CASCADE;
 DROP TABLE IF EXISTS user_profiles
 CASCADE;
-DROP TABLE IF EXISTS tutor_experiences
+DROP TABLE IF EXISTS experiences
 CASCADE;
-DROP TABLE IF EXISTS mentor_stack
+DROP TABLE IF EXISTS user_skills
 CASCADE;
-DROP TABLE IF EXISTS student_stack
+DROP TABLE IF EXISTS db_skills
 CASCADE;
-DROP TABLE IF EXISTS stack_preferences
-CASCADE;
-DROP TABLE IF EXISTS posts_stacks
+DROP TABLE IF EXISTS posts_skills
 CASCADE;
 DROP TABLE IF EXISTS avatars
 CASCADE;
@@ -66,8 +64,8 @@ CREATE TABLE posts
   owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   text_body TEXT NOT NULL,
   time_posted TIMESTAMP NOT NULL,
-  is_mentor BOOLEAN NOT NULL DEFAULT FALSE,
-  is_student BOOLEAN NOT NULL DEFAULT FALSE,
+  is_helper BOOLEAN NOT NULL DEFAULT FALSE,
+  is_helped BOOLEAN NOT NULL DEFAULT FALSE,
   status_field VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
@@ -99,24 +97,24 @@ CREATE TABLE user_profiles
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   dob DATE,
   location VARCHAR(255),
-  is_mentor BOOLEAN DEFAULT FALSE,
-  is_student BOOLEAN DEFAULT FALSE,
+  is_helper BOOLEAN DEFAULT FALSE,
+  is_helped BOOLEAN DEFAULT FALSE,
   avatar VARCHAR(255),
   active BOOLEAN DEFAULT TRUE
 );
 -- ************************************************************
--- tutor_experiences table
+-- experiences table
 -- ************************************************************
-CREATE TABLE tutor_experiences
+CREATE TABLE experiences
 (
   id SERIAL PRIMARY KEY NOT NULL,
-  mentor_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  student_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  helper_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  helped_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   creator_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  mentor_rating INTEGER DEFAULT NULL,
-  student_rating INTEGER DEFAULT NULL,
-  mentor_comments TEXT DEFAULT NULL,
-  student_comments TEXT DEFAULT NULL,
+  helper_rating INTEGER DEFAULT NULL,
+  helped_rating INTEGER DEFAULT NULL,
+  helper_comments TEXT DEFAULT NULL,
+  helped_comments TEXT DEFAULT NULL,
   status VARCHAR(255) NOT NULL,
   date_initiated TIMESTAMP,
   date_accepted TIMESTAMP,
@@ -124,18 +122,9 @@ CREATE TABLE tutor_experiences
   receiver_seen BOOLEAN NOT NULL DEFAULT FALSE
 );
 -- ************************************************************
--- mentor_stack table
+-- user_skills table
 -- ************************************************************
-CREATE TABLE mentor_stack
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  name VARCHAR(255) NOT NULL
-);
--- ************************************************************
--- student_stack table
--- ************************************************************
-CREATE TABLE student_stack
+CREATE TABLE user_skills
 (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
@@ -143,21 +132,21 @@ CREATE TABLE student_stack
 );
 
 -- ************************************************************
--- stack_preferences table
+-- db_skills table
 -- ************************************************************
-CREATE TABLE stack_preferences
+CREATE TABLE db_skills
 (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL
 );
 
 -- ************************************************************
--- stack_preferences table
+-- db_skills table
 -- ************************************************************
-CREATE TABLE posts_stacks
+CREATE TABLE posts_skills
 (
   id SERIAL PRIMARY KEY NOT NULL,
-  stack_preference_id INTEGER REFERENCES stack_preferences(id) ON DELETE CASCADE,
+  db_skills_id INTEGER REFERENCES db_skills(id) ON DELETE CASCADE,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
 );
 
@@ -181,64 +170,37 @@ CREATE TABLE random_usernames
   name VARCHAR(255) NOT NULL
 );
 
-
--- CREATE FUNCTION update_users
--- (_username users.username%TYPE,
--- _location user_profiles.location%TYPE,
--- _avatar user_profiles.avatar%TYPE,
--- _id user_profiles.user_id%TYPE)
-
--- returns void 
--- $$
--- BEGIN
---   /* add two update queries inside this function */
---   /* 1 Updating  table standards*/
---   update users
---   set users.username = '_username'
---   where id = '_id';
-
---   update user_profiles
---   set user_profilles.location = '_location',
---   set user_profiles
---   .avatar = '_avatar'
---   where user_id = _id;
-
--- END
--- $$
---   LANGUAGE 'plpgsql' VOLATILE SECURITY DEFINER; 
-
-
 -- ************************************************************
 -- coding_challenges table
 -- ************************************************************
-CREATE TABLE coding_challenges
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  description TEXT NOT NULL,
-  difficulty VARCHAR(255) NOT NULL
-);
+-- CREATE TABLE coding_challenges
+-- (
+--   id SERIAL PRIMARY KEY NOT NULL,
+--   title VARCHAR(255) NOT NULL,
+--   description TEXT NOT NULL,
+--   difficulty VARCHAR(255) NOT NULL
+-- );
 
 -- ************************************************************
 -- user_challenges table
 -- ************************************************************
-CREATE TABLE user_challenges
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
-  completed BOOLEAN NOT NULL DEFAULT FALSE
-);
+-- CREATE TABLE user_challenges
+-- (
+--   id SERIAL PRIMARY KEY NOT NULL,
+--   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+--   coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
+--   completed BOOLEAN NOT NULL DEFAULT FALSE
+-- );
 
 
 -- ************************************************************
 -- coding_tests table
 -- ************************************************************
-CREATE TABLE coding_tests
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
-  description TEXT NOT NULL,
-  input VARCHAR(255),
-  output VARCHAR(255)
-);
+-- CREATE TABLE coding_tests
+-- (
+--   id SERIAL PRIMARY KEY NOT NULL,
+--   coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
+--   description TEXT NOT NULL,
+--   input VARCHAR(255),
+--   output VARCHAR(255)
+-- );

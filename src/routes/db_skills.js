@@ -1,10 +1,10 @@
 const router = require("express").Router();
 
 module.exports = (db) => {
-  router.get("/stack_preferences", (req, res) => {
+  router.get("/db_skills", (req, res) => {
     db.query(
       `
-      SELECT * FROM stack_preferences;
+      SELECT * FROM db_skills;
     `
     ).then((data) => {
       res.json(data.rows);

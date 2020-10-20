@@ -1,20 +1,20 @@
 const router = require("express").Router();
 
 module.exports = (db) => {
-  router.get("/mentor_stack", (req, res) => {
+  router.get("/user_skills", (req, res) => {
     db.query(
-      `SELECT user_id, name FROM mentor_stack GROUP BY mentor_stack.user_id, mentor_stack.name;`
+      `SELECT user_id, name FROM user_skills GROUP BY user_skills.user_id, user_skills.name;`
     ).then((data) => {
       res.json(data.rows);
     });
   });
 
-  router.post("/mentor_stack", (req, res) => {
+  router.post("/user_skills", (req, res) => {
     // console.log("WHAT");
     const { user_id, name } = req.body;
     const params = [user_id, name];
     db.query(
-      `insert into mentor_stack
+      `insert into user_skills
       (user_id, name)
     values
       ($1,$2);`,
@@ -24,14 +24,14 @@ module.exports = (db) => {
     });
   });
 
-  router.delete("/mentor_stack", (req, res) => {
+  router.delete("/user_skills", (req, res) => {
     const { user_id, name } = req.query;
 
     const params = [user_id, name];
 
     db.query(
       `
-      DELETE FROM mentor_stack
+      DELETE FROM user_skills
       WHERE user_id = $1
       AND name = $2;
       `,
@@ -41,12 +41,12 @@ module.exports = (db) => {
     });
   });
 
-  router.get("/mentor_stack/:id", (req, res) => {
+  router.get("/user_skills/:id", (req, res) => {
     // const queryString = ;
     const queryParams = [4];
     db.query(
       `SELECT *
-    FROM mentor_stack 
+    FROM user_skills 
     where user_id = $1`,
       queryParams
     ).then((data) => {

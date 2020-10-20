@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/user_profiles", (req, res) => {
     db.query(
       `
-      SELECT users.id,avatar,location, is_mentor, is_student, users.username
+      SELECT users.id,avatar,location, is_helper, is_helped, users.username
       FROM user_profiles
       JOIN users on  user_profiles.user_id = users.id;
     `
@@ -30,7 +30,7 @@ module.exports = (db) => {
     });
   });
 
-  router.get("/user_profiles/mentor_points/:id", (req, res) => {
+  router.get("/user_profiles/helper_points/:id", (req, res) => {
     // ********
     // const userId = req.body.userId;
     // ********
@@ -41,20 +41,20 @@ module.exports = (db) => {
 
     db.query(
       `
-      SELECT SUM(mentor_rating) as mentorRating
-      FROM tutor_experiences
-      JOIN users ON mentor_id = users.id
+      SELECT SUM(helper_rating) as helperRating
+      FROM experiences
+      JOIN users ON helper_id = users.id
       WHERE users.id = $1;
     `,
       [userId]
     ).then((data) => {
-      // console.log('mentorPoints', data.rows)
+      // console.log('helperPoints', data.rows)
       // console.log(userId);
       res.json(data.rows);
     });
   });
 
-  router.get("/user_profiles/student_points/:id", (req, res) => {
+  router.get("/user_profiles/helped_points/:id", (req, res) => {
     // ********
     // const userId = req.body.userId;
     // ********
@@ -65,8 +65,8 @@ module.exports = (db) => {
     db.query(
       `
       SELECT SUM(student_rating) as studentRating
-      FROM tutor_experiences
-      JOIN users ON student_id = users.id
+      FROM experiences
+      JOIN users ON helped_id = users.id
       WHERE users.id = $1;
     `,
       [userId]
