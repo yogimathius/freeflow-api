@@ -53,6 +53,9 @@ module.exports = function application(
   app.use(helmet());
   app.use(bodyparser.json());
 
+  // parse requests of content-type - application/x-www-form-urlencoded
+  app.use(bodyparser.urlencoded({ extended: true }));
+
   app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
   app.use("/api", likes(db));
   app.use("/api", helperPoints(db));
@@ -70,6 +73,10 @@ module.exports = function application(
   app.use("/api", users(db));
   app.use("/api", register(db));
   app.use("/api", userChallenges(db));
+
+  app.get("/", (req, res) => {
+    res.json({ message: "Welcome to freeflow application." });
+  });
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
