@@ -61,7 +61,7 @@ module.exports = (db) => {
     RETURNING *;`,
       param
     ).then((data) => {
-      //console.log(data.rows);
+      console.log(data.rows[0]);
       res.json(data.rows[0]);
     });
     // .catch((err) => {
