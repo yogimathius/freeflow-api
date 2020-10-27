@@ -7,45 +7,34 @@
 -- users table
 -- ************************************************************
 insert into users
-  (username, email, password, active)
+  (username, first_name, last_name, email, password, active)
 values
-  ('mathluvr', 'pblann0@pagesperso-orange.fr', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('dbaggiani1', 'mneeves1@theglobeandmail.com', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('lwillmore2', 'dcurado2@chron.com', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('dchansonnau3', 'ahemphall3@dedecms.com', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('mulrik4', 'kcogin4@accuweather.com', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('lkennerknecht5', 'stomlins5@boston.com', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('nkollaschek6', 'jstarte6@themeforest.net', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('coder4lyfe', 'ddobble7@google.co.uk', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('eforcade8', 'ejimeno8@geocities.com', '123', true);
-insert into users
-  (username, email, password, active)
-values
-  ('dkleiser9', 'pkilborn9@skype.com', '123', true);
+('mjachievem', 'mathiusjohnsondeveloper@gmail.com', '123', false),
+('cgiovannoni0', 'cgiovannoni0@wikimedia.org', 'y6ypa9Lqo4K', false),
+('mastling1', 'mastling1@boston.com', 'pGfzMZFLKA', false),
+('jpyford2', 'jpyford2@cnn.com', 'AMiHNyGBrcg', false),
+('sdiprose3', 'sdiprose3@google.cn', 'fqSVKYfZM', true),
+('ibaudy4', 'ibaudy4@sciencedirect.com', 'aaD9aKRzAdB', false),
+('fpetrillo5', 'fpetrillo5@elpais.com', '2lNcjArfK2', false),
+('dmouat6', 'dmouat6@cdbaby.com', 'jnLj4Gg00', true),
+('pdambrogi7', 'pdambrogi7@boston.com', 'hxXEWA8', false),
+('sstuckow8', 'sstuckow8@harvard.edu', 'OKsyDxFeOu', false),
+('mwaplington9', 'mwaplington9@msu.edu', 'k8oN0P9GJQ', true),
+('jcrichmera', 'jcrichmera@pbs.org', 'fA7AlQAR', false),
+('nboffinb', 'nboffinb@etsy.com', 'hY4SpIy', true),
+('jarendsc', 'jarendsc@vimeo.com', 'aQXxs4iIp', false),
+('bfearensided', 'bfearensided@bravesites.com', 'yx0Dhj9r', false),
+('khuckelle', 'khuckelle@chron.com', 'WbCoycZcFL', true),
+('sregglerf', 'sregglerf@cornell.edu', 'LeqpxW1', false),
+('aofficerg', 'aofficerg@dedecms.com', 'Unx8NcV', false),
+('cjecksh', 'cjecksh@tiny.cc', 'QnXj0h5NeUt', false),
+('ostamperi', 'ostamperi@parallels.com', 'aSEeCnKmVio', false),
+('ntirkinj', 'ntirkinj@telegraph.co.uk', 'tAAM3vE', false),
+('mhalewoodk', 'mhalewoodk@shinystat.com', 'bH4sJL2', false),
+('ntriplowl', 'ntriplowl@cnbc.com', 'QWPHoRKYsMSP', false),
+('binkinm', 'binkinm@comcast.net', 'Wba6eYhZnm7', true),
+('amichelmoren', 'amichelmoren@google.ru', 'WTyygwCxnp', false),
+('swhitterso', 'swhitterso@live.com', 'yBAIR5lrdk1', false);
 
 
 
@@ -393,7 +382,7 @@ values
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
-  (1, 'I would love to help someone who would want to learn Javascript. I have a few years worth of experience as a developer and would love to have someone to mentor. ', '2020-08-22T23:46:08Z', true, false, 'active', true);
+  (1, 'I would love to help someone who would want to learn Yoga. I have a few years worth of experience as a developer and would love to have someone to mentor. ', '2020-08-22T23:46:08Z', true, false, 'active', true);
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
@@ -401,7 +390,7 @@ values
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
-  (1, 'Mentorship is the best way to reinforce knowledge. Is anyone looking for a mentor to help them setup Express backend? Would love to offer some help. ', '2020-06-16T23:46:08Z', true, false, 'active', true);
+  (1, 'Mentorship is the best way to reinforce knowledge. Is anyone looking for a mentor to help them setup Writing backend? Would love to offer some help. ', '2020-06-16T23:46:08Z', true, false, 'active', true);
 
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
@@ -426,11 +415,11 @@ values
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
-  (2, 'Apple the target audience is makes and famles aged zero and up make it pop. Can you make it look more designed this red is too red. We have big contacts we will promote you can you make it more infographic-y nor this was not according to brief can you lower the price for the website? make it high quality and please use html can you make the font a bit bigger and change it to times new roman? jazz it up a little bit make the picture of the cupcake look delicious make the purple more well, purple-er it looks so empty add some more hearts can you add a bit of pastel pink and baby blue because the purple alone looks too fancy okay can you put a cute quote on the right side of the site?', '2020-08-21T09:36:33Z', false, true, 'active', true);
+  (2, 'Apple the target audience is makes and famles aged zero and up make it pop. Can you make it look more designed this red is too red. We have big contacts we will promote you can you make it more infographic-y nor this was not according to brief can you lower the price for the website? make it high quality and please use Research can you make the font a bit bigger and change it to times new roman? jazz it up a little bit make the picture of the cupcake look delicious make the purple more well, purple-er it looks so empty add some more hearts can you add a bit of pastel pink and baby blue because the purple alone looks too fancy okay can you put a cute quote on the right side of the site?', '2020-08-21T09:36:33Z', false, true, 'active', true);
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
-  (8, 'Hello, everyone! I''m just wondering if someone will be willing to help me out with a project? I have not dealt with Python before and would love some advice on it! Heard we have a great community here.', '2020-08-15T16:10:27Z', true, false, 'active', true);
+  (8, 'Hello, everyone! I''m just wondering if someone will be willing to help me out with a project? I have not dealt with Carpentry before and would love some advice on it! Heard we have a great community here.', '2020-08-15T16:10:27Z', true, false, 'active', true);
 
 
 
@@ -656,7 +645,7 @@ values
 insert into comments
   (post_id, commenter_id, text_body)
 values
-  (12, 7, 'Not the best person do help out with Python but cool man.');
+  (12, 7, 'Not the best person do help out with Carpentry but cool man.');
 
 
 
@@ -664,47 +653,34 @@ values
 -- user_profiles table
 -- ************************************************************
 insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
+  (user_id, dob, location, is_helper, is_helped, avatar, active,   first_name,
+  last_name)
 values
-  (1, '4/30/2000', 'Vancouver', false, true, 'https://robohash.org/voluptatemvoluptasaut.bmp?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (2, '1/17/1997', 'Calgary', true, true, 'https://robohash.org/eaexplicabodeserunt.jpg?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (3, '3/27/1997', 'Edmonton', false, true, 'https://robohash.org/eligendivoluptatesodit.jpg?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (4, '10/7/1981', 'Edmonton', false, true, 'https://robohash.org/sedeaquenulla.bmp?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (5, '12/3/1979', 'Vancouver', false, true, 'https://robohash.org/evenietvelitest.jpg?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (6, '3/23/1976', 'Calgary', false, true, 'https://robohash.org/possimusvoluptasomnis.bmp?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (7, '11/9/1996', 'Edmonton', false, true, 'https://robohash.org/voluptatemdoloremtotam.bmp?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (8, '4/18/1981', 'Calgary', true, true, 'https://robohash.org/iurerepellatnesciunt.bmp?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (9, '5/5/1982', 'Edmonton', true, false, 'https://robohash.org/nullaautemquis.bmp?size=50x50&set=set1', true);
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active)
-values
-  (10, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true);
-
-
+  (1, '5/1/1986', 'Squamish', true, true, 'https://robohash.org/voluptatemvoluptasaut.bmp?size=50x50&set=set1', true, 'Mathius', 'Johnson'),
+  (2, '5/1/1986', 'Squamish', true, true, 'https://robohash.org/eaexplicabodeserunt.jpg?size=50x50&set=set1', true, 'Meghan', 'Astling'),
+  (3, '3/27/1997', 'Edmonton', false, true, 'https://robohash.org/eligendivoluptatesodit.jpg?size=50x50&set=set1', true, 'Jareb', 'Pyford'),
+  (4, '10/7/1981', 'Edmonton', false, true, 'https://robohash.org/sedeaquenulla.bmp?size=50x50&set=set1', true, 'Scarface', 'Diprose'),
+  (5, '12/3/1979', 'Vancouver', false, true, 'https://robohash.org/evenietvelitest.jpg?size=50x50&set=set1', true, 'Irene', 'Baudy'),
+  (6, '3/23/1976', 'Calgary', false, true, 'https://robohash.org/possimusvoluptasomnis.bmp?size=50x50&set=set1', true, 'Forbes', 'Petrillo'),
+  (7, '11/9/1996', 'Edmonton', false, true, 'https://robohash.org/voluptatemdoloremtotam.bmp?size=50x50&set=set1', true, 'Dominique', 'Mouat'),
+  (8, '4/18/1981', 'Calgary', true, true, 'https://robohash.org/iurerepellatnesciunt.bmp?size=50x50&set=set1', true, 'Pall', 'D''Ambrogi'),
+  (9, '5/5/1982', 'Edmonton', true, false, 'https://robohash.org/nullaautemquis.bmp?size=50x50&set=set1', true, 'Shamus', 'Stuckow'),
+  (10, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Melisent', 'Waplington'),
+  (11, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Jacques', 'Crichmer'),
+  (12, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Nicolai', 'Boffin'),
+  (13, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Jehanna', 'Arends'),
+  (14, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Melisent', 'Waplington'),
+  (15, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Kenon', 'Huckell'),
+  (16, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Stanley', 'Reggler'),
+  (17, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Abby', 'Officer'),
+  (18, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Cristina', 'Jecks'),
+  (19, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Cristina', 'Jecks'),
+  (20, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Octavia', 'Stamper'),
+  (21, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Natal', 'Tirkin'),
+  (22, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Marcello', 'Halewood'),
+  (23, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Nap', 'Triplow'),
+  (24, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Bryce', 'Inkin'),
+  (25, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Shani', 'Whitters'),
 
 
 -- ************************************************************
@@ -793,120 +769,46 @@ values
 -- ************************************************************
 insert into user_skills
   (user_id, name)
-values
-  (5, 'React');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'Python');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'Python');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'Node');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'Express');
-insert into user_skills
-  (user_id, name)
-values
-  (9, 'React');
-insert into user_skills
-  (user_id, name)
-values
-  (4, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (3, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (10, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (4, 'Rails');
-insert into user_skills
-  (user_id, name)
-values
-  (7, 'Ruby');
-insert into user_skills
-  (user_id, name)
-values
-  (5, 'Javascript');
-insert into user_skills
-  (user_id, name)
-values
-  (6, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (9, 'SQL');
-insert into user_skills
-  (user_id, name)
-values
-  (3, 'Rails');
-insert into user_skills
-  (user_id, name)
-values
-  (4, 'Ruby');
-insert into user_skills
-  (user_id, name)
-values
-  (2, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (8, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (10, 'Rails');
-insert into user_skills
-  (user_id, name)
-values
-  (9, 'Rails');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'Javascript');
-insert into user_skills
-  (user_id, name)
-values
-  (6, 'SQL');
-insert into user_skills
-  (user_id, name)
-values
-  (9, 'Node.js');
-insert into user_skills
-  (user_id, name)
-values
-  (10, 'React');
-insert into user_skills
-  (user_id, name)
-values
-  (10, 'Ruby');
-insert into user_skills
-  (user_id, name)
-values
-  (1, 'React');
-insert into user_skills
-  (user_id, name)
-values
-  (4, 'React');
-insert into user_skills
-  (user_id, name)
-values
-  (2, 'Javascript');
+  values
+  (5, 'Programming'),
+  (1, 'Carpentry'),
+  (1, 'Landscaping'),
+  (1, 'Carpentry'),
+  (1, 'Math'),
+  (1, 'Writing'),
+  (9, 'Programming'),
+  (4, 'Landscaping'),
+  (3, 'Landscaping'),
+  (10, 'Landscaping'),
+  (4, 'Writing'),
+  (7, 'Fitness'),
+  (5, 'Yoga'),
+  (6, 'Landscaping'),
+  (9, 'Engineering'),
+  (3, 'Writing'),
+  (4, 'Fitness'),
+  (2, 'Landscaping'),
+  (8, 'Landscaping'),
+  (10, 'Writing'),
+  (9, 'Writing'),
+  (1, 'Yoga'),
+  (6, 'Engineering'),
+  (9, 'Landscaping'),
+  (10, 'Programming'),
+  (10, 'Fitness'),
+  (1, 'Programming'),
+  (4, 'Programming'),
+  (2, 'Yoga'),
+  (10, 'Speaking'),
+  (9, 'Speaking'),
+  (1, 'Marketing'),
+  (6, 'Cooking'),
+  (9, 'Music'),
+  (10, 'Dancing'),
+  (10, 'Singing'),
+  (1, 'Dancing'),
+  (4, 'Dancing'),
+  (2, 'Singing');
 
 
 
@@ -916,103 +818,103 @@ values
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (5, 'React');
+--   (5, 'Programming');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (1, 'Node.js');
+--   (1, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (9, 'React');
+--   (9, 'Programming');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (4, 'Node.js');
+--   (4, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (3, 'Node.js');
+--   (3, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (10, 'Node.js');
+--   (10, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (4, 'Rails');
+--   (4, 'Writing');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (7, 'Ruby');
+--   (7, 'Fitness');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (5, 'Javascript');
+--   (5, 'Yoga');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (6, 'Node.js');
+--   (6, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (9, 'SQL');
+--   (9, 'Cooking');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (3, 'Rails');
+--   (3, 'Writing');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (4, 'Ruby');
+--   (4, 'Fitness');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (2, 'Node.js');
+--   (2, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (8, 'Node.js');
+--   (8, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (10, 'Rails');
+--   (10, 'Writing');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (9, 'Rails');
+--   (9, 'Writing');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (1, 'Javascript');
+--   (1, 'Yoga');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (6, 'SQL');
+--   (6, 'Engineering');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (9, 'Node.js');
+--   (9, 'Landscaping');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (10, 'React');
+--   (10, 'Programming');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (10, 'Ruby');
+--   (10, 'Fitness');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (1, 'React');
+--   (1, 'Programming');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (4, 'React');
+--   (4, 'Programming');
 -- insert into student_stack
 --   (user_id, name)
 -- values
---   (2, 'Javascript');
+--   (2, 'Yoga');
 
 
 -- ************************************************************
@@ -1021,67 +923,28 @@ values
 insert into db_skills
   (name)
 values
-  ('HTML');
-insert into db_skills
-  (name)
-values
-  ('CSS');
-insert into db_skills
-  (name)
-values
-  ('Javascript');
-insert into db_skills
-  (name)
-values
-  ('React.js');
-insert into db_skills
-  (name)
-values
-  ('Node.js');
-insert into db_skills
-  (name)
-values
-  ('SQL');
-insert into db_skills
-  (name)
-values
-  ('SASS');
-insert into db_skills
-  (name)
-values
-  ('Python');
-insert into db_skills
-  (name)
-values
-  ('Django');
-insert into db_skills
-  (name)
-values
-  ('Flask');
-insert into db_skills
-  (name)
-values
-  ('Ruby');
-insert into db_skills
-  (name)
-values
-  ('Ruby/Rails');
-insert into db_skills
-  (name)
-values
-  ('Java');
-insert into db_skills
-  (name)
-values
-  ('C++');
-insert into db_skills
-  (name)
-values
-  ('C');
-insert into db_skills
-  (name)
-values
-  ('Express');
+  ('Research'),
+  ('Creative'),
+  ('Yoga'),
+  ('Programming'),
+  ('Landscaping'),
+  ('Engineering'),
+  ('SASS'),
+  ('Carpentry'),
+  ('Sales'),
+  ('Networking'),
+  ('Fitness'),
+  ('Writing'),
+  ('Reading'),
+  ('Guitar'),
+  ('Meditation'),
+  ('Cooking'),
+  ('Dancing'),
+  ('Singing'),
+  ('Music'),
+  ('Marketing'),
+  ('Public Speaking'),
+  ('Writing');
 
 
 
