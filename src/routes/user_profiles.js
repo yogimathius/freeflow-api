@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/user_profiles", (req, res) => {
     db.query(
       `
-      SELECT users.id,avatar,location, first_name, last_name, is_helper, is_helped, users.username
+      SELECT users.id,avatar,location, user_profiles.first_name, user_profiles.last_name, is_helper, is_helped, users.username
       FROM user_profiles
       JOIN users on  user_profiles.user_id = users.id;
     `

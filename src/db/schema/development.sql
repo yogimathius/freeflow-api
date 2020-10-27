@@ -1,40 +1,23 @@
--- INSERT INTO progress_bars
---   (points)
--- VALUES
---   (0)
 
 -- ************************************************************
 -- users table
 -- ************************************************************
-insert into users
-  (username, first_name, last_name, email, password, active)
-values
-('mjachievem', 'mathiusjohnsondeveloper@gmail.com', '123', false),
-('cgiovannoni0', 'cgiovannoni0@wikimedia.org', 'y6ypa9Lqo4K', false),
-('mastling1', 'mastling1@boston.com', 'pGfzMZFLKA', false),
-('jpyford2', 'jpyford2@cnn.com', 'AMiHNyGBrcg', false),
-('sdiprose3', 'sdiprose3@google.cn', 'fqSVKYfZM', true),
-('ibaudy4', 'ibaudy4@sciencedirect.com', 'aaD9aKRzAdB', false),
-('fpetrillo5', 'fpetrillo5@elpais.com', '2lNcjArfK2', false),
-('dmouat6', 'dmouat6@cdbaby.com', 'jnLj4Gg00', true),
-('pdambrogi7', 'pdambrogi7@boston.com', 'hxXEWA8', false),
-('sstuckow8', 'sstuckow8@harvard.edu', 'OKsyDxFeOu', false),
-('mwaplington9', 'mwaplington9@msu.edu', 'k8oN0P9GJQ', true),
-('jcrichmera', 'jcrichmera@pbs.org', 'fA7AlQAR', false),
-('nboffinb', 'nboffinb@etsy.com', 'hY4SpIy', true),
-('jarendsc', 'jarendsc@vimeo.com', 'aQXxs4iIp', false),
-('bfearensided', 'bfearensided@bravesites.com', 'yx0Dhj9r', false),
-('khuckelle', 'khuckelle@chron.com', 'WbCoycZcFL', true),
-('sregglerf', 'sregglerf@cornell.edu', 'LeqpxW1', false),
-('aofficerg', 'aofficerg@dedecms.com', 'Unx8NcV', false),
-('cjecksh', 'cjecksh@tiny.cc', 'QnXj0h5NeUt', false),
-('ostamperi', 'ostamperi@parallels.com', 'aSEeCnKmVio', false),
-('ntirkinj', 'ntirkinj@telegraph.co.uk', 'tAAM3vE', false),
-('mhalewoodk', 'mhalewoodk@shinystat.com', 'bH4sJL2', false),
-('ntriplowl', 'ntriplowl@cnbc.com', 'QWPHoRKYsMSP', false),
-('binkinm', 'binkinm@comcast.net', 'Wba6eYhZnm7', true),
-('amichelmoren', 'amichelmoren@google.ru', 'WTyygwCxnp', false),
-('swhitterso', 'swhitterso@live.com', 'yBAIR5lrdk1', false);
+
+insert into users (username, first_name, last_name, email, password, active) values ('mjachievem', 'Mathius', 'Johnson', 'cstilldale0@blogger.com', '123', false);
+insert into users (username, first_name, last_name, email, password, active) values ('dsleaford1', 'Derril', 'Sleaford', 'dsleaford1@nyu.edu', '4lGhIyW', false);
+insert into users (username, first_name, last_name, email, password, active) values ('rfrisel2', 'Rollie', 'Frisel', 'rfrisel2@epa.gov', 'wyGUjG9', false);
+insert into users (username, first_name, last_name, email, password, active) values ('skidston3', 'Sara-ann', 'Kidston', 'skidston3@npr.org', 'wHAbRX', true);
+insert into users (username, first_name, last_name, email, password, active) values ('jzoppo4', 'Jennilee', 'Zoppo', 'jzoppo4@phpbb.com', 'HToZ8p', true);
+insert into users (username, first_name, last_name, email, password, active) values ('craubenheimer5', 'Casey', 'Raubenheimer', 'craubenheimer5@marriott.com', 'kqXoj7wzgd', false);
+insert into users (username, first_name, last_name, email, password, active) values ('krosenbush6', 'Katharyn', 'Rosenbush', 'krosenbush6@xrea.com', 'iFDsDpu', false);
+insert into users (username, first_name, last_name, email, password, active) values ('cjames7', 'Charleen', 'James', 'cjames7@miibeian.gov.cn', 'O0dgA3', false);
+insert into users (username, first_name, last_name, email, password, active) values ('rbaum8', 'Raimund', 'Baum', 'rbaum8@disqus.com', 'h5ZkJvfvVHoe', false);
+insert into users (username, first_name, last_name, email, password, active) values ('tsnarie9', 'Tremayne', 'Snarie', 'tsnarie9@wunderground.com', 'g42ajp2U', false);
+insert into users (username, first_name, last_name, email, password, active) values ('elefleminga', 'Emilio', 'Le Fleming', 'elefleminga@goo.gl', '0cdLfNgHnx9', false);
+insert into users (username, first_name, last_name, email, password, active) values ('llyfieldb', 'Lyman', 'Lyfield', 'llyfieldb@shop-pro.jp', 'HoDw6F5W1C5', false);
+insert into users (username, first_name, last_name, email, password, active) values ('ninworthc', 'Nelia', 'Inworth', 'ninworthc@fda.gov', 'St6WukH', true);
+insert into users (username, first_name, last_name, email, password, active) values ('csnufflebottomd', 'Cello', 'Snufflebottom', 'csnufflebottomd@bluehost.com', 'GANtItn', true);
+insert into users (username, first_name, last_name, email, password, active) values ('lmeasore', 'Lem', 'Measor', 'lmeasore@liveinternet.ru', 'QLz5fo', true);
 
 
 
@@ -46,7 +29,7 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (6, 7, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', '2020-06-06T08:57:40Z', false, false);
+  (1, 7, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', '2020-06-06T08:57:40Z', false, false);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -54,7 +37,7 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (10, 8, 'Offline this discussion value-added blue money we want to empower the team with the right tools and guidance to uplevel our craft and build better can I just chime in on that one quick-win.', '2020-09-30T23:50:47Z', true, true);
+  (10, 1, 'Offline this discussion value-added blue money we want to empower the team with the right tools and guidance to uplevel our craft and build better can I just chime in on that one quick-win.', '2020-09-30T23:50:47Z', true, true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -74,11 +57,11 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (6, 3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.', '2020-06-30T15:39:34Z', false, true);
+  (1, 3, 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.', '2020-06-30T15:39:34Z', false, true);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (4, 3, 'Vivamus in felis eu sapien cursus vestibulum.', '2020-05-21T07:30:35Z', true, false);
+  (4, 1, 'Vivamus in felis eu sapien cursus vestibulum.', '2020-05-21T07:30:35Z', true, false);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -98,7 +81,7 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (5, 9, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '2019-12-06T06:56:55Z', false, false);
+  (1, 9, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '2019-12-06T06:56:55Z', false, false);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -106,7 +89,7 @@ values
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
-  (7, 4, 'Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', '2020-03-17T12:49:54Z', true, false);
+  (7, 1, 'Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', '2020-03-17T12:49:54Z', true, false);
 insert into messages
   (sender_id, receiver_id, text_body, time_sent, active, receiver_read)
 values
@@ -652,35 +635,21 @@ values
 -- ************************************************************
 -- user_profiles table
 -- ************************************************************
-insert into user_profiles
-  (user_id, dob, location, is_helper, is_helped, avatar, active,   first_name,
-  last_name)
-values
-  (1, '5/1/1986', 'Squamish', true, true, 'https://robohash.org/voluptatemvoluptasaut.bmp?size=50x50&set=set1', true, 'Mathius', 'Johnson'),
-  (2, '5/1/1986', 'Squamish', true, true, 'https://robohash.org/eaexplicabodeserunt.jpg?size=50x50&set=set1', true, 'Meghan', 'Astling'),
-  (3, '3/27/1997', 'Edmonton', false, true, 'https://robohash.org/eligendivoluptatesodit.jpg?size=50x50&set=set1', true, 'Jareb', 'Pyford'),
-  (4, '10/7/1981', 'Edmonton', false, true, 'https://robohash.org/sedeaquenulla.bmp?size=50x50&set=set1', true, 'Scarface', 'Diprose'),
-  (5, '12/3/1979', 'Vancouver', false, true, 'https://robohash.org/evenietvelitest.jpg?size=50x50&set=set1', true, 'Irene', 'Baudy'),
-  (6, '3/23/1976', 'Calgary', false, true, 'https://robohash.org/possimusvoluptasomnis.bmp?size=50x50&set=set1', true, 'Forbes', 'Petrillo'),
-  (7, '11/9/1996', 'Edmonton', false, true, 'https://robohash.org/voluptatemdoloremtotam.bmp?size=50x50&set=set1', true, 'Dominique', 'Mouat'),
-  (8, '4/18/1981', 'Calgary', true, true, 'https://robohash.org/iurerepellatnesciunt.bmp?size=50x50&set=set1', true, 'Pall', 'D''Ambrogi'),
-  (9, '5/5/1982', 'Edmonton', true, false, 'https://robohash.org/nullaautemquis.bmp?size=50x50&set=set1', true, 'Shamus', 'Stuckow'),
-  (10, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Melisent', 'Waplington'),
-  (11, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Jacques', 'Crichmer'),
-  (12, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Nicolai', 'Boffin'),
-  (13, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Jehanna', 'Arends'),
-  (14, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Melisent', 'Waplington'),
-  (15, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Kenon', 'Huckell'),
-  (16, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Stanley', 'Reggler'),
-  (17, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Abby', 'Officer'),
-  (18, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Cristina', 'Jecks'),
-  (19, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Cristina', 'Jecks'),
-  (20, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Octavia', 'Stamper'),
-  (21, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Natal', 'Tirkin'),
-  (22, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Marcello', 'Halewood'),
-  (23, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Nap', 'Triplow'),
-  (24, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Bryce', 'Inkin'),
-  (25, '1/17/1993', 'Vancouver', true, false, 'https://robohash.org/saepeteneturfacere.bmp?size=50x50&set=set1', true, 'Shani', 'Whitters'),
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (1, '11/7/1999', 'Fajã de Cima', false, true, 'https://robohash.org/rerumipsafugiat.bmp?size=50x50&set=set1', true, 'Mathius', 'Johnson');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (2, '5/8/1998', 'Vukovar', true, true, 'https://robohash.org/nequenemonostrum.jpg?size=50x50&set=set1', false, 'Derril', 'Sleaford');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (3, '3/23/1962', 'Voyutychi', false, true, 'https://robohash.org/reprehenderitquiasimilique.jpg?size=50x50&set=set1', true, 'Rollie', 'Frisel');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (4, '2/25/1963', 'Dajin', false, true, 'https://robohash.org/eteiustenetur.png?size=50x50&set=set1', false, 'Sara-ann', 'Kidston');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (5, '7/16/1996', 'Putou', true, false, 'https://robohash.org/nobissaepecorrupti.bmp?size=50x50&set=set1', false, 'Jennilee', 'Zoppo');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (6, '11/15/1965', 'Khisarya', true, false, 'https://robohash.org/velitsedvoluptatem.bmp?size=50x50&set=set1', false, 'Casey', 'Raubenheimer');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (7, '1/8/1987', 'Iksan', true, false, 'https://robohash.org/voluptatemnostrumomnis.bmp?size=50x50&set=set1', false, 'Katharyn', 'Rosenbush');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (8, '1/3/1992', 'Kryevidh', true, true, 'https://robohash.org/doloremvoluptatemconsequatur.jpg?size=50x50&set=set1', false, 'Charleen', 'James');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (9, '4/5/1974', 'Gaoming', true, true, 'https://robohash.org/suscipitnisiet.jpg?size=50x50&set=set1', false, 'Raimund', 'Baum');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (10, '9/22/1994', 'Kruty', false, false, 'https://robohash.org/possimusillout.bmp?size=50x50&set=set1', true, 'Tremayne', 'Snarie');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (11, '3/14/1998', 'Maracás', false, true, 'https://robohash.org/aliquamcommodiquisquam.png?size=50x50&set=set1', false, 'Emilio', 'Le Fleming');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (12, '1/9/1983', 'Roshal’', false, false, 'https://robohash.org/autetatque.png?size=50x50&set=set1', false, 'Lyman', 'Lyfield');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (13, '4/27/1974', 'Xinchengpu', false, false, 'https://robohash.org/sedautfacilis.bmp?size=50x50&set=set1', false, 'Nelia', 'Inworth');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (14, '2/19/1972', 'La Sierpe', true, false, 'https://robohash.org/vitaeseddoloremque.png?size=50x50&set=set1', true, 'Cello', 'Snufflebottom');
+insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (15, '4/18/1998', 'Chocianów', false, true, 'https://robohash.org/dignissimossequimolestias.png?size=50x50&set=set1', true, 'Lem', 'Measor');
 
 
 -- ************************************************************
