@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
-      SELECT posts.id as post_id, owner_id, text_body, time_posted, status_field, posts.active, avatar, username, users.active,name,db_skills.id as stack_id
+      SELECT posts.id as post_id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, avatar, username, users.active, name, db_skills.id as skill_id
       FROM posts
       JOIN user_profiles ON user_profiles.id = owner_id
       JOIN users on users.id = owner_id
@@ -61,7 +61,7 @@ module.exports = (db) => {
     RETURNING *;`,
       param
     ).then((data) => {
-      //console.log(data.rows);
+      console.log(data.rows[0]);
       res.json(data.rows[0]);
     });
     // .catch((err) => {

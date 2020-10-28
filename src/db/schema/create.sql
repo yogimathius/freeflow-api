@@ -1,5 +1,3 @@
--- DROP TABLE IF EXISTS progress_bars
--- CASCADE;
 DROP TABLE IF EXISTS users
 CASCADE;
 DROP TABLE IF EXISTS messages
@@ -24,12 +22,12 @@ DROP TABLE IF EXISTS avatars
 CASCADE;
 DROP TABLE IF EXISTS random_usernames
 CASCADE;
-DROP TABLE IF EXISTS coding_challenges
-CASCADE;
-DROP TABLE IF EXISTS user_challenges
-CASCADE;
-DROP TABLE IF EXISTS coding_tests
-CASCADE;
+-- DROP TABLE IF EXISTS coding_challenges
+-- CASCADE;
+-- DROP TABLE IF EXISTS user_challenges
+-- CASCADE;
+-- DROP TABLE IF EXISTS coding_tests
+-- CASCADE;
 
 -- ************************************************************
 -- users table
@@ -38,6 +36,8 @@ CREATE TABLE users
 (
   id SERIAL PRIMARY KEY NOT NULL,
   username VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
@@ -100,7 +100,9 @@ CREATE TABLE user_profiles
   is_helper BOOLEAN DEFAULT FALSE,
   is_helped BOOLEAN DEFAULT FALSE,
   avatar VARCHAR(255),
-  active BOOLEAN DEFAULT TRUE
+  active BOOLEAN DEFAULT TRUE,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL
 );
 -- ************************************************************
 -- experiences table

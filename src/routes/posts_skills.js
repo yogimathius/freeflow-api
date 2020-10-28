@@ -13,8 +13,8 @@ module.exports = (db) => {
   });
 
   router.post("/posts_skills", (req, res) => {
-    const { post_id, stack_id } = req.body;
-    const params = [post_id, stack_id];
+    const { post_id, skill_id } = req.body;
+    const params = [post_id, skill_id];
     db.query(
       `
       insert into posts_skills
