@@ -3,7 +3,7 @@
 -- users table
 -- ************************************************************
 
-insert into users (username, first_name, last_name, email, password, active) values ('mjachievem', 'Mathius', 'Johnson', 'cstilldale0@blogger.com', '123', false);
+insert into users (username, first_name, last_name, email, password, active) values ('mjachievem', 'Mathius', 'Johnson', 'cstilldale0@blogger.com', '123', true);
 insert into users (username, first_name, last_name, email, password, active) values ('dsleaford1', 'Derril', 'Sleaford', 'dsleaford1@nyu.edu', '4lGhIyW', false);
 insert into users (username, first_name, last_name, email, password, active) values ('rfrisel2', 'Rollie', 'Frisel', 'rfrisel2@epa.gov', 'wyGUjG9', false);
 insert into users (username, first_name, last_name, email, password, active) values ('skidston3', 'Sara-ann', 'Kidston', 'skidston3@npr.org', 'wHAbRX', true);
