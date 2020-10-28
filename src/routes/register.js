@@ -41,19 +41,22 @@ module.exports = db => {
     `,
 			[usernameInput, firstnameInput, lastnameInput, emailInput, passwordInput]
 		).then(data => {
+			console.log(data.rows[0]);
 			const user_id = data.rows[0].id;
 			res.json({ user_id });
+			console.log('attempting to create user profile with user id', user_id);
+
 			db.query(
 				`
           INSERT INTO user_profiles
-            (user_id, avatar, active)
+            (user_id, first_name, last_name, avatar, active)
           VALUES
-            ($1, $2, true)
+            ($1, $2, $3, $4, true)
           RETURNING *;
         `,
-				[user_id, avatarSrc]
+				[user_id, firstnameInput, lastnameInput, avatarSrc]
 			).then(data => {
-				console.log(data.rows);
+				console.log('set up user profile', data.rows);
 			});
 		});
 	});
