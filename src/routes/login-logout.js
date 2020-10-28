@@ -1,48 +1,50 @@
 const router = require('express').Router();
 
-module.exports = (db) => {
-  router.post('/login', (req, res) => {
+module.exports = db => {
+	router.post('/login', (req, res) => {
+		console.log('this is request body', req.body);
 
-    console.log(req.body);
+		const userID = Number(req.body.userID);
 
-    const userID = Number(req.body.userID);
-
-    db.query(`
+		db.query(
+			`
       SELECT users.id, username, avatar
       FROM users
       JOIN user_profiles ON users.id = user_id
       WHERE users.id = $1;
-    `, [userID])
-      .then(data => {
-        res.json(data.rows);
-      })
-      .catch(err => {
-        console.log(err);
-      })
+    `,
+			[userID]
+		)
+			.then(data => {
+				res.json(data.rows);
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	});
 
-  });
+	router.post('/login-real', (req, res) => {
+		console.log('fron login page', req.body);
 
-  router.post('/login-real', (req, res) => {
+		const username = req.body.username;
+		const password = req.body.password;
 
-    console.log(req.body);
-
-    const username = req.body.username;
-    const password = req.body.password;
-
-    db.query(`
+		db.query(
+			`
       SELECT users.id, username, avatar, password
       FROM users
       JOIN user_profiles ON users.id = user_id
       WHERE username = $1 AND password = $2;
-    `, [username, password])
-      .then(data => {
-        res.json(data.rows);
-      })
-      .catch(err => {
-        res.json(err);
-      })
+    `,
+			[username, password]
+		)
+			.then(data => {
+				res.json(data.rows);
+			})
+			.catch(err => {
+				res.json(err);
+			});
+	});
 
-  });
-
-  return router;
-}
+	return router;
+};
