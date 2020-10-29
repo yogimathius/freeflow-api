@@ -46,11 +46,11 @@ values
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
-  (5, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!.', '2020-08-29T04:45:11Z', true, false, 'active', true);
+  (1, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!.', '2020-08-29T04:45:11Z', true, false, 'active', true);
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
-  (6, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!', '2020-09-19T08:03:13Z', false, true, 'active', true);
+  (2, 'I need a website. How much will it cost can you turn it around in photoshop so we can see more of the front, and we dont need a backup, it never goes down! labrador make the font bigger. Can you rework to make the pizza look more delicious use a kpop logo thats not a kpop logo!', '2020-09-19T08:03:13Z', false, true, 'active', true);
 insert into posts
   (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
 values
@@ -60,23 +60,7 @@ values
 insert into likes
   (post_id, liker_id)
 values
-  (10, 3);
-insert into likes
-  (post_id, liker_id)
-values
-  (6, 1);
-insert into likes
-  (post_id, liker_id)
-values
-  (3, 2);
-insert into likes
-  (post_id, liker_id)
-values
-  (7, 3);
-insert into likes
-  (post_id, liker_id)
-values
-  (4, 2);
+  (1, 3);
 insert into likes
   (post_id, liker_id)
 values
@@ -84,11 +68,27 @@ values
 insert into likes
   (post_id, liker_id)
 values
-  (8, 1);
+  (3, 2);
 insert into likes
   (post_id, liker_id)
 values
-  (7, 2);
+  (1, 3);
+insert into likes
+  (post_id, liker_id)
+values
+  (2, 2);
+insert into likes
+  (post_id, liker_id)
+values
+  (2, 1);
+insert into likes
+  (post_id, liker_id)
+values
+  (3, 1);
+insert into likes
+  (post_id, liker_id)
+values
+  (3, 2);
 
 -- COMMENTS
 insert into comments
