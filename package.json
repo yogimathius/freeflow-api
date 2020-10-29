@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "reset": "psql -U sprinter -d sprint < ./src/db/schema/create.sql && psql -U sprinter -d sprint < ./src/db/schema/development.sql"
+    "test:server": "NODE_ENV=test npm start",
+    "reset": "psql -U sprinter -d sprint < ./src/db/schema/create.sql && psql -U sprinter -d sprint < ./src/db/schema/development.sql",
   },
   "keywords": [],
   "author": "",
