@@ -887,34 +887,46 @@ insert into user_skills
 
 
 -- ************************************************************
+-- skill_categories table
+-- ************************************************************
+insert into -- skill_categories table
+  (name)
+values
+  ('Analytical'),
+  ('Business'),
+  ('Creative'),
+  ('Communication'),
+  ('Phisical'),
+  ('Management'),
+  ('Technical');
+
+-- ************************************************************
 -- db_skills table
 -- ************************************************************
 insert into db_skills
-  (name)
+  (skill_category_id, name)
 values
-  ('Research'),
-  ('Creative'),
-  ('Yoga'),
-  ('Programming'),
-  ('Landscaping'),
-  ('Engineering'),
-  ('SASS'),
-  ('Carpentry'),
-  ('Sales'),
-  ('Networking'),
-  ('Fitness'),
-  ('Writing'),
-  ('Reading'),
-  ('Guitar'),
-  ('Meditation'),
-  ('Cooking'),
-  ('Dancing'),
-  ('Singing'),
-  ('Music'),
-  ('Marketing'),
-  ('Public Speaking'),
-  ('Writing');
-
+  (1, 'Research'),
+  (2, 'Creative'),
+  (5, 'Yoga'),
+  (1, 'Programming'),
+  (7, 'Landscaping'),
+  (1, 'Engineering'),
+  (1, 'SASS'),
+  (7, 'Carpentry'),
+  (2, 'Sales'),
+  (4, 'Networking'),
+  (5, 'Fitness'),
+  (3, 'Writing'),
+  (1, 'Reading'),
+  (3, 'Guitar'),
+  (5, 'Meditation'),
+  (3, 'Cooking'),
+  (3, 'Dancing'),
+  (3, 'Singing'),
+  (3, 'Music'),
+  (2, 'Marketing'),
+  (4, 'Public Speaking');
 
 
 -- ************************************************************
@@ -1065,7 +1077,40 @@ insert into posts_skills
 values
   (3, 12);
 
+-- ************************************************************
+-- types table
+-- ************************************************************
+insert into types
+  (name)
+values
+  ('Skills'),
+  ('Assets'),
+  ('Wants'),
+  ('Needs');
 
+-- ************************************************************
+-- topics table
+-- ************************************************************
+insert into topics (user_id, type_id, skill_category_id) values (7, 3, 4);
+insert into topics (user_id, type_id, skill_category_id) values (13, 2, 7);
+insert into topics (user_id, type_id, skill_category_id) values (1, 4, 7);
+insert into topics (user_id, type_id, skill_category_id) values (14, 3, 4);
+insert into topics (user_id, type_id, skill_category_id) values (9, 4, 5);
+insert into topics (user_id, type_id, skill_category_id) values (11, 4, 7);
+insert into topics (user_id, type_id, skill_category_id) values (9, 2, 5);
+insert into topics (user_id, type_id, skill_category_id) values (4, 1, 5);
+insert into topics (user_id, type_id, skill_category_id) values (7, 3, 1);
+insert into topics (user_id, type_id, skill_category_id) values (2, 4, 1);
+insert into topics (user_id, type_id, skill_category_id) values (7, 4, 6);
+insert into topics (user_id, type_id, skill_category_id) values (1, 2, 7);
+insert into topics (user_id, type_id, skill_category_id) values (9, 3, 2);
+insert into topics (user_id, type_id, skill_category_id) values (7, 3, 6);
+insert into topics (user_id, type_id, skill_category_id) values (10, 2, 3);
+insert into topics (user_id, type_id, skill_category_id) values (11, 2, 7);
+insert into topics (user_id, type_id, skill_category_id) values (11, 4, 3);
+insert into topics (user_id, type_id, skill_category_id) values (2, 1, 6);
+insert into topics (user_id, type_id, skill_category_id) values (8, 4, 4);
+insert into topics (user_id, type_id, skill_category_id) values (12, 1, 6);
 
 -- ************************************************************
 -- avatars table
@@ -5477,6 +5522,10 @@ insert into random_usernames
   (name)
 values
   ('cdungaterr');
+
+
+
+
 
 
 
