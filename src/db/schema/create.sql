@@ -12,6 +12,12 @@ DROP TABLE IF EXISTS user_profiles
 CASCADE;
 DROP TABLE IF EXISTS experiences
 CASCADE;
+DROP TABLE IF EXISTS types
+CASCADE;
+DROP TABLE IF EXISTS topics
+CASCADE;
+DROP TABLE IF EXISTS skill_categories
+CASCADE;
 DROP TABLE IF EXISTS user_skills
 CASCADE;
 DROP TABLE IF EXISTS db_skills
@@ -123,6 +129,7 @@ CREATE TABLE experiences
   date_completed TIMESTAMP,
   receiver_seen BOOLEAN NOT NULL DEFAULT FALSE
 );
+
 -- ************************************************************
 -- user_skills table
 -- ************************************************************
@@ -134,13 +141,24 @@ CREATE TABLE user_skills
 );
 
 -- ************************************************************
+-- skill_categories table
+-- ************************************************************
+CREATE TABLE skill_categories
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+
+-- ************************************************************
 -- db_skills table
 -- ************************************************************
 CREATE TABLE db_skills
 (
   id SERIAL PRIMARY KEY NOT NULL,
+  skill_category_id INTEGER REFERENCES skill_categories(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL
 );
+
 
 -- ************************************************************
 -- db_skills table
@@ -171,6 +189,7 @@ CREATE TABLE random_usernames
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL
 );
+
 
 -- ************************************************************
 -- coding_challenges table
@@ -206,3 +225,24 @@ CREATE TABLE random_usernames
 --   input VARCHAR(255),
 --   output VARCHAR(255)
 -- );
+
+
+-- ************************************************************
+-- types table
+-- ************************************************************
+CREATE TABLE types
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+
+-- ************************************************************
+-- topics table
+-- ************************************************************
+CREATE TABLE topics
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  users_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  types_id INTEGER REFERENCES types(id) ON DELETE CASCADE,
+  skill_category_id INTEGER REFERENCES skill_categories(id) ON DELETE CASCADE
+);
