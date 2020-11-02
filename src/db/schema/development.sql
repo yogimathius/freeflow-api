@@ -889,7 +889,7 @@ insert into user_skills
 -- ************************************************************
 -- skill_categories table
 -- ************************************************************
-insert into -- skill_categories table
+insert into skill_categories
   (name)
 values
   ('Analytical'),
