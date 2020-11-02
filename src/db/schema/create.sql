@@ -99,10 +99,10 @@ CREATE TABLE avatars
 CREATE TABLE topics
 (
   id SERIAL PRIMARY KEY NOT NULL,
-  users_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  types_id INTEGER REFERENCES types(id) ON DELETE CASCADE,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  type_id INTEGER REFERENCES types(id) ON DELETE CASCADE,
   skill_category_id INTEGER REFERENCES skill_categories(id) ON DELETE CASCADE,
-  description TEXT                   --FIXME: I assume this describes about the type in detail and current situatuion
+  description TEXT                   --FIXME: Add description content to seeds
 );
 
 -- ************************************************************

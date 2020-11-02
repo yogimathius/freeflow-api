@@ -31,6 +31,7 @@ const register = require("./routes/register");
 const userChallenges = require("./routes/user_challenges");
 const types = require("./routes/types");
 const skillCategories = require("./routes/skill_categories");
+const topics = require("./routes/topics");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -77,6 +78,7 @@ module.exports = function application(
   app.use("/api", userChallenges(db));
   app.use("/api", types(db));
   app.use("/api", skillCategories(db));
+  app.use("/api", topics(db));
 
   app.get("/", (req, res) => {
     res.json({ message: "Welcome to freeflow application." });
