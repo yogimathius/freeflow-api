@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-  "scripts": {
-    "start": "nodemon ./src/index.js",
-    "test:server": "NODE_ENV=test npm start",
-    "reset": "psql -U sprinter -d sprint < ./src/db/schema/create.sql && psql -U sprinter -d sprint < ./src/db/schema/development.sql",
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test:server": "NODE_ENV=test npm start",
+    "reset": "psql -U sprinter -d sprint < ./src/db/schema/create.sql && psql -U sprinter -d sprint < ./src/db/schema/development.sql"
+  },
   "dependencies": {
     "cookie": "^0.4.1",
     "cookie-parser": "^1.4.5",
@@ -43,5 +43,5 @@
     "typescript": "^4.0.3",
     "ws": "^7.3.1"
   },
-  "proxy": "http://localhost:8001"
+  "proxy": "http://localhost:8080"
 }

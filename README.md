@@ -27,10 +27,10 @@
 	Run NPM start
 
 ## TESTING
-    
+    For Cypress End to End Testing:
+
     Run npm run test:server to run the test server
-    Reset the database with npm run reset or http://localhost:8001/api/debug/reset
-    npm run cypress 
+    Reset the database with npm run reset or http://localhost:8080/api/debug/reset
 
 ### DEPENDENCIES
 
