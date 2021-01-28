@@ -41,7 +41,8 @@ module.exports = (db) => {
       is_helper,
       is_helped,
       active,
-    } = req.body.newPost;
+    } = req.body;
+
     const param = [
       owner_id,
       text_body,
@@ -51,7 +52,6 @@ module.exports = (db) => {
       "active",
       active,
     ];
-    // const queryString =;
     console.log(param);
     db.query(
       `INSERT INTO posts

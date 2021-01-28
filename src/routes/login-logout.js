@@ -30,7 +30,7 @@ module.exports = (db) => {
     const password = req.body.password;
 
     db.query(`
-      SELECT users.id, username, avatar, password
+      SELECT users.id, username, avatar
       FROM users
       JOIN user_profiles ON users.id = user_id
       WHERE username = $1 AND password = $2;
