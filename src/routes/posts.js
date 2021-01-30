@@ -52,6 +52,7 @@ module.exports = (db) => {
       "active",
       active,
     ];
+
     console.log(param);
     db.query(
       `INSERT INTO posts

@@ -9,7 +9,7 @@ module.exports = (db) => {
 
   router.post("/likes", (req, res) => {
     console.log("req.body", req.body);
-    const { post_id, liker_id } = req.body.newLike;
+    const { post_id, liker_id } = req.body;
     const param = [post_id, liker_id];
     console.log("params in like post: ", param);
 
