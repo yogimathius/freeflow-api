@@ -32,9 +32,10 @@ module.exports = (db) => {
   });
 
   router.delete("/likes", (req, res) => {
-    const { post_id, liker_id } = req.body;
+    const query = JSON.parse(req.query.removeLike);
     console.log("req.body remove like", req.body);
 
+    const { post_id, liker_id } = query;
     const params = [post_id, liker_id];
     console.log("params in remove like post: ", params);
 
@@ -47,7 +48,7 @@ module.exports = (db) => {
       params
     )
       .then((data) => {
-        console.log("data rows in remove like post: ", data.rows[0]);
+        console.log("data rows in remove like post: ", data);
         res.json(data.rows[0]); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
