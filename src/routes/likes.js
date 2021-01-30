@@ -23,7 +23,7 @@ module.exports = (db) => {
     )
       .then((data) => {
         console.log("data rows in like post: ", data.rows);
-        res.json(data.rows); // jeremy sez: why return the whole array?
+        res.json(data.rows[0]); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
         console.log("bad juju on likes DB", err);
