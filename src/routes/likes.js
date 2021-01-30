@@ -32,6 +32,7 @@ module.exports = (db) => {
   });
 
   router.delete("/likes", (req, res) => {
+    console.log(req);
     const query = JSON.parse(req.query.removeLike);
     console.log("req.body remove like", req.body);
 
