@@ -74,13 +74,13 @@ module.exports = (db, updateComments) => {
     const query = JSON.parse(req.query.removeComment);
 
     const { post_id, commenter_id, id } = query;
-    const params = [post_id, commenter_id];
+    const params = [post_id, commenter_id, id];
     console.log("params in comment post: ", params);
 
     db.query(
       `
       DELETE FROM comments 
-      WHERE post_id = $1 AND commenter_id = $2;
+      WHERE post_id = $1 AND commenter_id = $2 AND id = $3;
       `,
       params
     )
