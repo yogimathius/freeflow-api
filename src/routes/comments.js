@@ -21,8 +21,9 @@ module.exports = (db, updateComments) => {
   });
 
   router.post("/comments", (req, res) => {
-    const { post_id, commenter_id, text_body } = req.body.newComment;
-    // console.log(post_id, commenter_id, text_body);
+    console.log(req.body);
+    const { post_id, commenter_id, text_body } = req.body;
+    console.log(post_id, commenter_id, text_body);
     const param = [post_id, commenter_id, text_body];
     db.query(
       `INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3)
@@ -30,8 +31,8 @@ module.exports = (db, updateComments) => {
       [post_id, commenter_id, text_body]
     )
       .then((data) => {
-        // console.log("data in route: ", data.rows[0]);
-        res.json(data.rows);
+        console.log("data in route: ", data.rows[0]);
+        res.json(data.rows[0]);
         setTimeout(() => {
           updateComments(Number(post_id), Number(commenter_id), text_body);
         }, 1000);
