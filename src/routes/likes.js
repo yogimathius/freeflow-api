@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/likes", (req, res) => {
-    db.query(`SELECT post_id, liker_id from likes;`).then((data) => {
+    db.query(`SELECT * from likes;`).then((data) => {
       res.json(data.rows);
     });
   });
