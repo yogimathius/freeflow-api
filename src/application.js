@@ -14,21 +14,16 @@ const db = require("./db");
 
 const comments = require("./routes/comments");
 const likes = require("./routes/likes");
-const helperPoints = require("./routes/helper_points");
 const userSkills = require("./routes/user_skills");
 const messages = require("./routes/messages");
 const posts = require("./routes/posts");
 const postsSkills = require("./routes/posts_skills");
-const studentPoints = require("./routes/helped_points");
-// const studentStack = require("./routes/student_stack");
 const dbSkills = require("./routes/db_skills");
 const index = require("./routes/index");
 const login = require("./routes/login-logout");
 const experiences = require("./routes/experiences");
-const userProfiles = require("./routes/user_profiles");
 const users = require("./routes/users");
 const register = require("./routes/register");
-const userChallenges = require("./routes/user_challenges");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -58,21 +53,16 @@ module.exports = function application(
 
   app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
   app.use("/api", likes(db));
-  app.use("/api", helperPoints(db));
   app.use("/api", userSkills(db));
   app.use("/api", messages(db));
   app.use("/api", posts(db));
   app.use("/api", postsSkills(db));
-  app.use("/api", studentPoints(db));
-  // app.use("/api", studentStack(db));
   app.use("/api", dbSkills(db));
   app.use("/api", index());
   app.use("/api", login(db));
   app.use("/api", experiences(db));
-  app.use("/api", userProfiles(db));
   app.use("/api", users(db));
   app.use("/api", register(db));
-  app.use("/api", userChallenges(db));
 
   app.get("/", (req, res) => {
     res.json({ message: "Welcome to freeflow application." });
