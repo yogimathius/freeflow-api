@@ -89,7 +89,7 @@ module.exports = (db) => {
   });
 
   router.delete("/posts", (req, res) => {
-    console.log("hello", req.query);
+    console.log("query in delete", req.query);
     const { post_id } = req.query;
 
     db.query(
