@@ -71,7 +71,7 @@ module.exports = (db, updateComments) => {
 
   router.delete("/comments", (req, res) => {
     console.log("req.body", req.body, req.query);
-    const query = JSON.parse(req.query);
+    const query = JSON.parse(req.query.removeComment);
 
     const { post_id, commenter_id, id } = query;
     const params = [post_id, commenter_id, id];
