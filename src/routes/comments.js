@@ -70,8 +70,8 @@ module.exports = (db, updateComments) => {
   });
 
   router.delete("/comments", (req, res) => {
+    console.log("req.body", req.body);
     const query = JSON.parse(req.query.removeComment);
-    // console.log("req.body", req.body);
 
     const { post_id, commenter_id, id } = query;
     const params = [post_id, commenter_id];
