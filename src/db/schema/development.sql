@@ -636,20 +636,20 @@ values
 -- user_profiles table
 -- ************************************************************
 insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (1, '11/7/1999', 'Fajã de Cima', false, true, 'https://robohash.org/rerumipsafugiat.bmp?size=50x50&set=set1', true, 'Mathius', 'Johnson');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (2, '5/8/1998', 'Vukovar', true, true, 'https://robohash.org/nequenemonostrum.jpg?size=50x50&set=set1', false, 'Derril', 'Sleaford');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (2, '5/8/1998', 'Vukovar', true, true, 'https://robohash.org/nequenemonostrum.jpg?size=50x50&set=set1', true, 'Derril', 'Sleaford');
 insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (3, '3/23/1962', 'Voyutychi', false, true, 'https://robohash.org/reprehenderitquiasimilique.jpg?size=50x50&set=set1', true, 'Rollie', 'Frisel');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (4, '2/25/1963', 'Dajin', false, true, 'https://robohash.org/eteiustenetur.png?size=50x50&set=set1', false, 'Sara-ann', 'Kidston');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (5, '7/16/1996', 'Putou', true, false, 'https://robohash.org/nobissaepecorrupti.bmp?size=50x50&set=set1', false, 'Jennilee', 'Zoppo');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (6, '11/15/1965', 'Khisarya', true, false, 'https://robohash.org/velitsedvoluptatem.bmp?size=50x50&set=set1', false, 'Casey', 'Raubenheimer');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (7, '1/8/1987', 'Iksan', true, false, 'https://robohash.org/voluptatemnostrumomnis.bmp?size=50x50&set=set1', false, 'Katharyn', 'Rosenbush');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (8, '1/3/1992', 'Kryevidh', true, true, 'https://robohash.org/doloremvoluptatemconsequatur.jpg?size=50x50&set=set1', false, 'Charleen', 'James');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (9, '4/5/1974', 'Gaoming', true, true, 'https://robohash.org/suscipitnisiet.jpg?size=50x50&set=set1', false, 'Raimund', 'Baum');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (10, '9/22/1994', 'Kruty', false, false, 'https://robohash.org/possimusillout.bmp?size=50x50&set=set1', true, 'Tremayne', 'Snarie');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (11, '3/14/1998', 'Maracás', false, true, 'https://robohash.org/aliquamcommodiquisquam.png?size=50x50&set=set1', false, 'Emilio', 'Le Fleming');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (12, '1/9/1983', 'Roshal’', false, false, 'https://robohash.org/autetatque.png?size=50x50&set=set1', false, 'Lyman', 'Lyfield');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (13, '4/27/1974', 'Xinchengpu', false, false, 'https://robohash.org/sedautfacilis.bmp?size=50x50&set=set1', false, 'Nelia', 'Inworth');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (14, '2/19/1972', 'La Sierpe', true, false, 'https://robohash.org/vitaeseddoloremque.png?size=50x50&set=set1', true, 'Cello', 'Snufflebottom');
-insert into user_profiles (id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (15, '4/18/1998', 'Chocianów', false, true, 'https://robohash.org/dignissimossequimolestias.png?size=50x50&set=set1', true, 'Lem', 'Measor');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (4, '2/25/1963', 'Dajin', false, true, 'https://robohash.org/eteiustenetur.png?size=50x50&set=set1', true, 'Sara-ann', 'Kidston');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (5, '7/16/1996', 'Putou', true, false, 'https://robohash.org/nobissaepecorrupti.bmp?size=50x50&set=set1', true, 'Jennilee', 'Zoppo');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (6, '11/15/1965', 'Khisarya', true, false, 'https://robohash.org/velitsedvoluptatem.bmp?size=50x50&set=set1', true, 'Casey', 'Raubenheimer');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (7, '1/8/1987', 'Iksan', true, false, 'https://robohash.org/voluptatemnostrumomnis.bmp?size=50x50&set=set1', true, 'Katharyn', 'Rosenbush');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (8, '1/3/1992', 'Kryevidh', true, true, 'https://robohash.org/doloremvoluptatemconsequatur.jpg?size=50x50&set=set1', true, 'Charleen', 'James');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (9, '4/5/1974', 'Gaoming', true, true, 'https://robohash.org/suscipitnisiet.jpg?size=50x50&set=set1', true, 'Raimund', 'Baum');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (10, '9/22/1994', 'Kruty', false, false, 'https://robohash.org/possimusillout.bmp?size=50x50&set=set1', true, 'Tremayne', 'Snarie');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (11, '3/14/1998', 'Maracás', false, true, 'https://robohash.org/aliquamcommodiquisquam.png?size=50x50&set=set1', true, 'Emilio', 'Le Fleming');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (12, '1/9/1983', 'Roshal’', false, false, 'https://robohash.org/autetatque.png?size=50x50&set=set1', true, 'Lyman', 'Lyfield');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (13, '4/27/1974', 'Xinchengpu', false, false, 'https://robohash.org/sedautfacilis.bmp?size=50x50&set=set1', true, 'Nelia', 'Inworth');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (14, '2/19/1972', 'La Sierpe', true, false, 'https://robohash.org/vitaeseddoloremque.png?size=50x50&set=set1', true, 'Cello', 'Snufflebottom');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (15, '4/18/1998', 'Chocianów', false, true, 'https://robohash.org/dignissimossequimolestias.png?size=50x50&set=set1', true, 'Lem', 'Measor');
 
 
 -- ************************************************************
@@ -887,34 +887,46 @@ insert into user_skills
 
 
 -- ************************************************************
+-- skill_categories table
+-- ************************************************************
+insert into -- skill_categories table
+  (name)
+values
+  ('Analytical'),
+  ('Business'),
+  ('Creative'),
+  ('Communication'),
+  ('Phisical'),
+  ('Management'),
+  ('Technical');
+
+-- ************************************************************
 -- db_skills table
 -- ************************************************************
 insert into db_skills
-  (name)
+  (skill_category_id, name)
 values
-  ('Research'),
-  ('Creative'),
-  ('Yoga'),
-  ('Programming'),
-  ('Landscaping'),
-  ('Engineering'),
-  ('SASS'),
-  ('Carpentry'),
-  ('Sales'),
-  ('Networking'),
-  ('Fitness'),
-  ('Writing'),
-  ('Reading'),
-  ('Guitar'),
-  ('Meditation'),
-  ('Cooking'),
-  ('Dancing'),
-  ('Singing'),
-  ('Music'),
-  ('Marketing'),
-  ('Public Speaking'),
-  ('Writing');
-
+  (1, 'Research'),
+  (2, 'Creative'),
+  (5, 'Yoga'),
+  (1, 'Programming'),
+  (7, 'Landscaping'),
+  (1, 'Engineering'),
+  (1, 'SASS'),
+  (7, 'Carpentry'),
+  (2, 'Sales'),
+  (4, 'Networking'),
+  (5, 'Fitness'),
+  (3, 'Writing'),
+  (1, 'Reading'),
+  (3, 'Guitar'),
+  (5, 'Meditation'),
+  (3, 'Cooking'),
+  (3, 'Dancing'),
+  (3, 'Singing'),
+  (3, 'Music'),
+  (2, 'Marketing'),
+  (4, 'Public Speaking');
 
 
 -- ************************************************************
@@ -1065,7 +1077,40 @@ insert into posts_skills
 values
   (3, 12);
 
+-- ************************************************************
+-- types table
+-- ************************************************************
+insert into types
+  (name)
+values
+  ('Skills'),
+  ('Assets'),
+  ('Wants'),
+  ('Needs');
 
+-- ************************************************************
+-- topics table
+-- ************************************************************
+insert into topics (user_id, type_id, skill_category_id) values (7, 3, 4);
+insert into topics (user_id, type_id, skill_category_id) values (13, 2, 7);
+insert into topics (user_id, type_id, skill_category_id) values (1, 4, 7);
+insert into topics (user_id, type_id, skill_category_id) values (14, 3, 4);
+insert into topics (user_id, type_id, skill_category_id) values (9, 4, 5);
+insert into topics (user_id, type_id, skill_category_id) values (11, 4, 7);
+insert into topics (user_id, type_id, skill_category_id) values (9, 2, 5);
+insert into topics (user_id, type_id, skill_category_id) values (4, 1, 5);
+insert into topics (user_id, type_id, skill_category_id) values (7, 3, 1);
+insert into topics (user_id, type_id, skill_category_id) values (2, 4, 1);
+insert into topics (user_id, type_id, skill_category_id) values (7, 4, 6);
+insert into topics (user_id, type_id, skill_category_id) values (1, 2, 7);
+insert into topics (user_id, type_id, skill_category_id) values (9, 3, 2);
+insert into topics (user_id, type_id, skill_category_id) values (7, 3, 6);
+insert into topics (user_id, type_id, skill_category_id) values (10, 2, 3);
+insert into topics (user_id, type_id, skill_category_id) values (11, 2, 7);
+insert into topics (user_id, type_id, skill_category_id) values (11, 4, 3);
+insert into topics (user_id, type_id, skill_category_id) values (2, 1, 6);
+insert into topics (user_id, type_id, skill_category_id) values (8, 4, 4);
+insert into topics (user_id, type_id, skill_category_id) values (12, 1, 6);
 
 -- ************************************************************
 -- avatars table
@@ -5477,6 +5522,10 @@ insert into random_usernames
   (name)
 values
   ('cdungaterr');
+
+
+
+
 
 
 

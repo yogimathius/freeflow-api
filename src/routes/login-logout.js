@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
-module.exports = (db) => {
-  router.post('/login', (req, res) => {
+module.exports = db => {
+	router.post('/login', (req, res) => {
+		console.log('this is request body', req.body);
 
-    console.log(req.body);
+		const userID = Number(req.body.userID);
 
-    const userID = Number(req.body.userID);
-
-    db.query(`
+		db.query(
+			`
       SELECT users.id, username, avatar
       FROM users
       JOIN user_profiles ON users.id = user_id
@@ -34,15 +34,16 @@ module.exports = (db) => {
       FROM users
       JOIN user_profiles ON users.id = user_id
       WHERE username = $1 AND password = $2;
-    `, [username, password])
-      .then(data => {
-        res.json(data.rows);
-      })
-      .catch(err => {
-        res.json(err);
-      })
+    `,
+			[username, password]
+		)
+			.then(data => {
+				res.json(data.rows);
+			})
+			.catch(err => {
+				res.json(err);
+			});
+	});
 
-  });
-
-  return router;
-}
+	return router;
+};
