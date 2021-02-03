@@ -5,7 +5,7 @@ module.exports = (db) => {
     //I need the params here
     db.query(
       `
-      Select posts_skills.id AS id
+      Select posts_skills.id AS id,
       name, db_skills_id, post_id from db_skills JOIN posts_skills on db_skills.id=posts_skills.db_skills_id;
       `
     ).then((data) => {
