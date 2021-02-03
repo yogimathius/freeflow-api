@@ -39,7 +39,7 @@ module.exports = (db) => {
       `INSERT INTO posts
     (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active, id)
     VALUES
-    ($1,$2,$3,$4,$5,$6,$7)
+    ($1,$2,$3,$4,$5,$6,$7,$8)
     RETURNING *;`,
       param
     ).then((data) => {
