@@ -44,12 +44,16 @@ module.exports = function application(
   ENV,
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
-  app.use(cors());
+  const corsUrl ='https://freeflow-network.netlify.app'
+  app.use(cors({
+    origin: corsUrl
+  }));
   app.use(helmet());
   app.use(bodyparser.json());
 
   // parse requests of content-type - application/x-www-form-urlencoded
   app.use(bodyparser.urlencoded({ extended: true }));
+
   app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
   app.use("/api", likes(db));
   app.use("/api", userSkills(db));
