@@ -44,7 +44,10 @@ module.exports = function application(
   ENV,
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
-  app.use(cors());
+  const corsUrl ='https://freeflow-two-point-o.herokuapp.com/api'
+  app.use(cors({
+    origin: corsUrl
+  }));
   app.use(helmet());
   app.use(bodyparser.json());
 
