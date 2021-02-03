@@ -17,22 +17,6 @@ module.exports = (db) => {
     });
   });
 
-  // router.get("/posts/:id", (req, res) => {
-  //   const queryParams = [4];
-  //   db.query(
-  //     `
-  //   SELECT active, is_helper,is_helped,owner_id,text_body,time_posted
-  //   FROM posts
-  //   WHERE owner_id = $1;`,
-  //     queryParams
-  //   )
-  //     .then((data) => {
-  //       res.json(data.rows);
-  //     })
-  //     .catch((err) => {
-  //       console.log("user-profile api", err);
-  //     });
-  // });
   router.post("/posts", (req, res) => {
     const {
       owner_id,

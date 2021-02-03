@@ -5,7 +5,8 @@ module.exports = (db) => {
     //I need the params here
     db.query(
       `
-      Select name, db_skills_id, post_id from db_skills JOIN posts_skills on db_skills.id=posts_skills.db_skills_id;
+      Select ROW_NUMBER() OVER (ORDER BY 1) AS id
+      name, db_skills_id, post_id from db_skills JOIN posts_skills on db_skills.id=posts_skills.db_skills_id;
       `
     ).then((data) => {
       res.json(data.rows);

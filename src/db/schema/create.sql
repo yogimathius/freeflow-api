@@ -171,38 +171,3 @@ CREATE TABLE random_usernames
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL
 );
-
--- ************************************************************
--- coding_challenges table
--- ************************************************************
--- CREATE TABLE coding_challenges
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   title VARCHAR(255) NOT NULL,
---   description TEXT NOT NULL,
---   difficulty VARCHAR(255) NOT NULL
--- );
-
--- ************************************************************
--- user_challenges table
--- ************************************************************
--- CREATE TABLE user_challenges
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
---   coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
---   completed BOOLEAN NOT NULL DEFAULT FALSE
--- );
-
-
--- ************************************************************
--- coding_tests table
--- ************************************************************
--- CREATE TABLE coding_tests
--- (
---   id SERIAL PRIMARY KEY NOT NULL,
---   coding_challenge_id INTEGER REFERENCES coding_challenges(id) ON DELETE CASCADE,
---   description TEXT NOT NULL,
---   input VARCHAR(255),
---   output VARCHAR(255)
--- );
