@@ -44,7 +44,7 @@ module.exports = function application(
   ENV,
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
-  const corsUrl ='https://freeflow-two-point-o.herokuapp.com/api'
+  const corsUrl ='https://freeflow-network.netlify.app'
   app.use(cors({
     origin: corsUrl
   }));
