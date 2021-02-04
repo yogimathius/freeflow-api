@@ -45,7 +45,7 @@ module.exports = function application(
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
   
-  var whitelist = ['https://freeflow-two-point-o.herokuapp.com/api/users', 'http://example2.com']
+  var whitelist = ['https://freeflow-two-point-o.herokuapp.com/api/', 'http://example2.com']
   var corsOptions = {
     origin: function (origin, callback) {
       if (whitelist.indexOf(origin) !== -1) {
