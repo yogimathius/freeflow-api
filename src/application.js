@@ -44,27 +44,13 @@ module.exports = function application(
   ENV,
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
-  var allowedOrigins = ['http://localhost:3002/', 'https://freeflow-network.netlify.app/']
-
-  app.use(cors({
-    origin: function(origin, callback){
-    // allow requests with no origin 
-      // (like mobile apps or curl requests)
-      if(!origin) return callback(null, true);
-        if(allowedOrigins.indexOf(origin) === -1){
-         var msg = 'The CORS policy for this site does not ' +
-        'allow access from the specified Origin.';
-        return callback(new Error(msg), false);
-        }
-      return callback(null, true);
-    }
-  }));
+  
+  app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
 
   // parse requests of content-type - application/x-www-form-urlencoded
   app.use(bodyparser.urlencoded({ extended: true }));
-
   app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
   app.use("/api", likes(db));
   app.use("/api", userSkills(db));
