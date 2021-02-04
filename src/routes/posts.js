@@ -4,11 +4,11 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
-      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active,
+      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active
       FROM posts
       JOIN user_profiles ON user_profiles.id = owner_id
       JOIN users on users.id = owner_id
-      GROUP BY user_profiles.id, users.id ORDER BY time_posted DESC;
+      GROUP BY posts.id, user_profiles.id, users.id ORDER BY time_posted DESC;
       `
     ).then((data) => {
       res.json(data.rows);
