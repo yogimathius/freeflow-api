@@ -24,10 +24,6 @@ DROP TABLE IF EXISTS db_skills
 CASCADE;
 DROP TABLE IF EXISTS posts_skills
 CASCADE;
-DROP TABLE IF EXISTS avatars
-CASCADE;
-DROP TABLE IF EXISTS random_usernames
-CASCADE;
 -- DROP TABLE IF EXISTS coding_challenges
 -- CASCADE;
 -- DROP TABLE IF EXISTS user_challenges
