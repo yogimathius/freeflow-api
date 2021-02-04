@@ -66,8 +66,8 @@ module.exports = function application(
   app.use("/api", userSkills(db));
   app.use("/api", messages(db));
   app.use("/api", posts(db));
-  app.use("/api", postsSkills(db));
-  app.use("/api", dbSkills(db));
+  app.use("/api", cors(corsOptions),postsSkills(db));
+  app.use("/api", cors(corsOptions),dbSkills(db));
   app.use("/api", index());
   app.use("/api", login(db));
   app.use("/api", experiences(db));
