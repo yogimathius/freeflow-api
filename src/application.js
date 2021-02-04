@@ -45,14 +45,17 @@ module.exports = function application(
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
   
-  app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-   res.setHeader('Access-Control-Expose-Headers','Content-Type,expire');
-  next();
-  });
-  
+  var whitelist = ['http://example1.com', 'http://example2.com']
+  var corsOptions = {
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true)
+      } else {
+        callback(new Error('Not allowed by CORS'))
+      }
+    }
+  }
+     
   app.use(helmet());
   app.use(bodyparser.json());
 
@@ -71,7 +74,7 @@ module.exports = function application(
   app.use("/api", users(db));
   app.use("/api", register(db));
 
-  app.get("/", (req, res) => {
+  app.get("/", cors(corsOptions), (req, res) => {
     res.json({ message: "Welcome to freeflow application." });
   });
 
