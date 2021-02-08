@@ -169,23 +169,3 @@ CREATE TABLE posts_skills
   db_skills_id INTEGER REFERENCES db_skills(id) ON DELETE CASCADE,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
 );
-
-
--- ************************************************************
--- avatars table
--- ************************************************************
-CREATE TABLE avatars
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  url VARCHAR(255) NOT NULL
-);
-
-
--- ************************************************************
--- random_usernames table
--- ************************************************************
-CREATE TABLE random_usernames
-(
-  id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL
-);
