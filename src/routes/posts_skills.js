@@ -14,9 +14,9 @@ module.exports = (db) => {
   });
 
   router.post("/posts_skills", (req, res) => {
-    const { post_id, skill_id } = req.body;
+    const { post_id, db_skills_id } = req.body;
     console.log(req.body);
-    const params = [post_id, skill_id];
+    const params = [post_id, db_skills_id];
     console.log("params in posts skills: ", params);
     db.query(
       `
