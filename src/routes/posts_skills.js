@@ -17,6 +17,7 @@ module.exports = (db) => {
     const { post_id, skill_id } = req.body;
     console.log(req.body);
     const params = [post_id, skill_id];
+    console.log("params in posts skills: ", params);
     db.query(
       `
       insert into posts_skills
@@ -26,6 +27,7 @@ module.exports = (db) => {
       `,
       params
     ).then((data) => {
+      console.log("success in post skills post request!!");
       res.json(data.rows);
     });
   });

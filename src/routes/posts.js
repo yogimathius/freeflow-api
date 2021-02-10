@@ -4,7 +4,11 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
-      SELECT * FROM posts;
+      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active
+      FROM posts
+      JOIN user_profiles ON user_profiles.id = owner_id
+      JOIN users on users.id = owner_id
+      GROUP BY posts.id, user_profiles.id, users.id ORDER BY time_posted DESC;
       `
     ).then((data) => {
       res.json(data.rows);
@@ -39,7 +43,7 @@ module.exports = (db) => {
       `INSERT INTO posts
     (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active, id)
     VALUES
-    ($1,$2,$3,$4,$5,$6,$7)
+    ($1,$2,$3,$4,$5,$6,$7, $8)
     RETURNING *;`,
       param
     ).then((data) => {
