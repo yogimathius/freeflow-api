@@ -23,7 +23,7 @@ module.exports = (db) => {
       insert into posts_skills
       (post_id,db_skills_id, id)
       values
-      ($1,$2.$3);
+      ($1,$2,$3);
       `,
       params
     ).then((data) => {
