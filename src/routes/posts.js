@@ -8,7 +8,7 @@ module.exports = (db) => {
       FROM posts
       JOIN users on users.id = owner_id
       JOIN posts_skills ON posts_skills.post_id = posts.id
-      GROUP BY posts.id, user_profiles.id, users.id ORDER BY time_posted DESC;
+      GROUP BY posts.id, users.id ORDER BY time_posted DESC;
       `
     ).then((data) => {
       res.json(data.rows);
