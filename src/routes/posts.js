@@ -22,8 +22,7 @@ module.exports = (db) => {
       time_posted,
       is_helper,
       is_helped,
-      active,
-      id
+      active
     } = req.body;
     console.log(owner_id);
 
@@ -34,16 +33,15 @@ module.exports = (db) => {
       is_helper,
       is_helped,
       "active",
-      active,
-      id
+      active
     ];
 
     console.log(param);
     db.query(
       `INSERT INTO posts
-    (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active, id)
+    (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active)
     VALUES
-    ($1,$2,$3,$4,$5,$6,$7, $8)
+    ($1,$2,$3,$4,$5,$6,$7)
     RETURNING *;`,
       param
     ).then((data) => {
