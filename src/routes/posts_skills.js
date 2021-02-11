@@ -21,7 +21,7 @@ module.exports = (db) => {
     db.query(
       `
       insert into posts_skills
-      (post_id,db_skills_id, id)
+      (post_id,db_skills_id)
       values
       ($1,$2);
       `,
