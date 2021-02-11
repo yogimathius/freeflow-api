@@ -1,0 +1,6 @@
+SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active, ARRAY_AGG(posts_skills.db_skills_id)
+FROM posts
+JOIN user_profiles ON user_profiles.id = owner_id
+JOIN users on users.id = owner_id
+JOIN posts_skills ON posts_skills.post_id = posts.id
+GROUP BY posts.id, user_profiles.id, users.id ORDER BY time_posted DESC;

@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
-      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active, ARRAY_AGG(posts_skills.db_skills_id)
+      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active, ARRAY_AGG(posts_skills.db_skills_id) as skills
       FROM posts
       JOIN user_profiles ON user_profiles.id = owner_id
       JOIN users on users.id = owner_id
