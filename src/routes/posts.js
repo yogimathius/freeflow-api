@@ -4,12 +4,11 @@ module.exports = (db) => {
   router.get("/posts", (req, res) => {
     db.query(
       `
-      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active, ARRAY_AGG(db_skills.name) as skills
+      SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active, ARRAY_AGG(posts_skills.db_skills_id) as skills
       FROM posts
       JOIN users on users.id = owner_id
       JOIN posts_skills ON posts_skills.post_id = posts.id
-      JOIN db_skills ON posts_skills.db_skills_id = db_skills.id
-      GROUP BY posts.id, users.id ORDER BY time_posted DESC;
+      GROUP BY posts.id, user_profiles.id, users.id ORDER BY time_posted DESC;
       `
     ).then((data) => {
       res.json(data.rows);
