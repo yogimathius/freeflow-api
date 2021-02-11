@@ -85,7 +85,8 @@ CREATE TABLE comments
   id SERIAL PRIMARY KEY NOT NULL,
   post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
   commenter_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  text_body TEXT NOT NULL
+  text_body TEXT NOT NULL,
+  time_posted TIMESTAMP NOT NULL
 );
 -- ************************************************************
 -- user_profiles table

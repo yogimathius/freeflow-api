@@ -22,13 +22,12 @@ module.exports = (db, updateComments) => {
 
   router.post("/comments", (req, res) => {
     console.log(req.body);
-    const { post_id, commenter_id, text_body } = req.body;
-    console.log(post_id, commenter_id, text_body);
-    const param = [post_id, commenter_id, text_body];
+    const { post_id, commenter_id, text_body, time_posted } = req.body;
+    const param = [post_id, commenter_id, text_body, time_posted];
     db.query(
-      `INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3)
+      `INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3. $4)
       RETURNING *`,
-      [post_id, commenter_id, text_body]
+      param
     )
       .then((data) => {
         console.log("data in route: ", data.rows[0]);

@@ -538,77 +538,43 @@ values
 -- comments table
 -- ************************************************************
 insert into comments
-  (post_id, commenter_id, text_body)
+  (post_id, commenter_id, text_body, time_posted)
 values
-  (1, 10, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (10, 5, 'Aenean sit amet justo.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (7, 8, 'In quis justo.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (2, 8, 'Nulla facilisi.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (2, 7, 'Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (5, 6, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (3, 1, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (5, 3, 'Vestibulum sed magna at nunc commodo placerat.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (3, 2, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (7, 4, 'Aliquam non mauris. Morbi non lectus.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (1, 4, 'Fusce consequat. Nulla nisl.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (7, 6, 'Fusce consequat.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (4, 2, 'In congue.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (5, 5, 'Sed vel enim sit amet nunc viverra dapibus.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (7, 1, 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (12, 1, 'I would like to help you out on this project. I will send you a message so we can start as tutor session');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (12, 3, 'It''s cool how you have a side project going on! It will really help you out in the long-term');
-insert into comments
-  (post_id, commenter_id, text_body)
-values
-  (12, 7, 'Not the best person do help out with Carpentry but cool man.');
+  (1, 10, 'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', 	'2021-02-10T19:27:55Z'),
+
+  (10, 5, 'Aenean sit amet justo.', '2021-02-05T14:14:06Z'),
+
+  (7, 8, 'In quis justo.', '2020-10-18T12:08:55Z'),
+
+  (2, 8, 'Nulla facilisi.', '2021-02-08T10:15:17Z'),
+
+  (2, 7, 'Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', '2021-02-10T10:57:23Z'),
+
+  (5, 6, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.', '2021-02-16T06:19:22Z'),
+
+  (3, 1, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '2021-02-8T03:59:09Z'),
+
+  (5, 3, 'Vestibulum sed magna at nunc commodo placerat.', '	2021-02-24T09:34:45Z'),
+
+  (3, 2, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.', '2021-01-28T06:24:07Z'),
+
+  (7, 4, 'Aliquam non mauris. Morbi non lectus.', '	2021-02-11T19:37:01Z'),
+
+  (1, 4, 'Fusce consequat. Nulla nisl.', '	2021-02-27T13:15:46Z'),
+
+  (7, 6, 'Fusce consequat.', '2021-02-21T11:57:48Z	'),
+
+  (4, 2, 'In congue.', '2021-02-07T01:09:31Z'),
+
+  (5, 5, 'Sed vel enim sit amet nunc viverra dapibus.', '2021-02-18T01:59:25Z'),
+
+  (7, 1, 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', '	2021-02-06T19:09:22Z'),
+
+  (12, 1, 'I would like to help you out on this project. I will send you a message so we can start as tutor session', '2021-02-14T00:16:18Z'),
+
+  (12, 3, 'It''s cool how you have a side project going on! It will really help you out in the long-term', '	2021-01-28T20:18:00Z'),
+
+  (12, 7, 'Not the best person do help out with Carpentry but cool man.', '	2021-02-02T20:18:00Z');
 
 
 
