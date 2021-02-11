@@ -2,7 +2,6 @@ const router = require("express").Router();
 
 module.exports = (db) => {
   router.get("/posts_skills", (req, res) => {
-    //I need the params here
     db.query(
       `
       Select posts_skills.id AS id,
