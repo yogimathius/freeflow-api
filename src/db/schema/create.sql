@@ -65,7 +65,8 @@ CREATE TABLE posts
   is_helper BOOLEAN NOT NULL DEFAULT FALSE,
   is_helped BOOLEAN NOT NULL DEFAULT FALSE,
   status_field VARCHAR(255) NOT NULL,
-  active BOOLEAN NOT NULL DEFAULT TRUE
+  active BOOLEAN NOT NULL DEFAULT TRUE,
+  skill_ids INTEGER[]
 );
 -- ************************************************************
 -- likes table
