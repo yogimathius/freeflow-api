@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/likes", (req, res) => {
     db.query(`
     SELECT posts.id, 
-    COUNT(likes.id), ArRAY_AGG(likes.liker_id) 
+    COUNT(likes.id), ARRAY_AGG(likes.liker_id) 
     FROM posts JOIN likes 
     ON posts.id = likes.post_id 
     GROUP BY posts.id;`).then((data) => {
