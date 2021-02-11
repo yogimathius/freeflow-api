@@ -48,11 +48,11 @@ module.exports = (db) => {
     ).then((data) => {
       console.log(data.rows[0]);
       res.json(data.rows[0]);
-    });
+    })
     // .catch((err) => {
     //   console.log("what the heck", err);
     //   res.status(500).send("bad juju on the DB I guess");
-    // });
+    // })
   });
 
   router.put("/posts", (req, res) => {
