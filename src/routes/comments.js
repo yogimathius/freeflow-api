@@ -49,7 +49,7 @@ module.exports = (db, updateComments) => {
     const params = [post_id, commenter_id, text_body];
     db.query(
       "UPDATE comments SET text_body = $3 WHERE post_id = $1 AND commenter_id = $2",
-      [params],
+      params,
       (error) => {
         if (error) {
           throw error;
