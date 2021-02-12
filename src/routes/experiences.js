@@ -15,6 +15,27 @@ module.exports = (db) => {
     });
   });
 
+  router.post('/experiences/new', (req, res) => {
+
+    const { helper_id, helped_id, creator_id } = req.body;
+    const dateNow = new Date().toISOString();
+    const status = 'pending';
+    console.log(dateNow);
+
+    db.query(`
+      INSERT INTO experiences
+        (helper_id, helped_id, creator_id, date_initiated, status)
+      VALUES
+        ($1, $2, $3, $4, $5)
+      RETURNING *;
+    `, [helper_id, helped_id, creator_id, dateNow, status])
+      .then(data => {
+        console.log("success in add new experience: ", data.rows);
+        res.json(data.rows[0]);
+      })
+
+  })
+
   router.put('/experiences/accept', (req, res) => {
 
     const tutorExperienceID = req.body.tutorSessionID;
@@ -90,25 +111,6 @@ module.exports = (db) => {
       })
   });
 
-  router.post('/experiences/new', (req, res) => {
-
-    const { helperID, helpedID, creatorID } = req.body;
-    const dateNow = new Date().toISOString();
-    const status = 'pending';
-    console.log(dateNow);
-
-    db.query(`
-      INSERT INTO experiences
-        (helper_id, helped_id, creator_id, date_initiated, status)
-      VALUES
-        ($1, $2, $3, $4, $5)
-      RETURNING *;
-    `, [helperID, helpedID, creatorID, dateNow, status])
-      .then(data => {
-        res.json(data.rows[0]);
-      })
-
-  })
 
   router.put('/experiences/complete-other', (req, res) => {
 
