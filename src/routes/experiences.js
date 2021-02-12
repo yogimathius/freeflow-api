@@ -35,7 +35,6 @@ module.exports = (db) => {
         data.rows[0].helped = helped;
         res.json(data.rows[0]);
       })
-
   })
 
   router.put('/experiences/accept', (req, res) => {
@@ -60,15 +59,16 @@ module.exports = (db) => {
 
   router.put('/experiences/delete', (req, res) => {
 
-    const tutorExperienceID = req.body.tutorSessionID;
+    const experienceId = req.body;
     // console.log(tutorExperienceID);
 
     db.query(`
       DELETE FROM experiences
       WHERE id = $1
       RETURNING *;
-    `, [tutorExperienceID])
+    `, [experienceId])
       .then(data => {
+        console.log("success in delete experience: ", data.rows[0]);
         res.json(data.rows[0]);
       })
   });
