@@ -25,7 +25,7 @@ module.exports = (db, updateComments) => {
     const { post_id, commenter_id, text_body, time_posted } = req.body;
     const param = [post_id, commenter_id, text_body, time_posted];
     db.query(
-      `INSERT INTO comments (post_id, commenter_id, text_body) VALUES ($1, $2, $3. $4)
+      `INSERT INTO comments (post_id, commenter_id, text_body, time_posted) VALUES ($1, $2, $3. $4)
       RETURNING *`,
       param
     )
