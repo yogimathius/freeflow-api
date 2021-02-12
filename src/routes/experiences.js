@@ -11,7 +11,7 @@ module.exports = (db) => {
     JOIN users u2 
       ON helped_id = u2.id;
     `).then((data) => {
-      res.json(data.rows);
+      res.json(data.rows[0]);
     });
   });
 
@@ -31,7 +31,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [tutorExperienceID, dateNow])
       .then(data => {
-        res.json(data);
+        res.json(data.rows[0]);
       })
   });
 
@@ -46,7 +46,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [tutorExperienceID])
       .then(data => {
-        res.json(data);
+        res.json(data.rows[0]);
       })
   });
 
@@ -86,7 +86,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [tutorSessionID, dateNow, helperRating, helperComments, helpedRating, helpedComments])
       .then(data => {
-        res.json(data);
+        res.json(data.rows[0]);
       })
   });
 
@@ -105,7 +105,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [helperID, helpedID, creatorID, dateNow, status])
       .then(data => {
-        res.json(data);
+        res.json(data.rows[0]);
       })
 
   })
@@ -125,7 +125,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [tutorSessionID, rating, comments])
         .then(data => {
-          res.json(data)
+          res.json(data.rows[0]);
         })
 
     } else {
@@ -137,7 +137,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [tutorSessionID, rating, comments])
         .then(data => {
-          res.json(data)
+          res.json(data.rows[0]);
         })
     }
   })
@@ -152,7 +152,7 @@ module.exports = (db) => {
       WHERE (helped_id = $1 OR helper_id = $1) AND creator_id <> $1 AND status = 'pending' AND receiver_seen = false;
     `, [userID])
       .then(data => {
-        res.json(data.rows);
+        res.json(data.rows[0]);
       })
   })
 
@@ -167,7 +167,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [Number(userID)])
       .then(data => {
-        res.json(data.rows);
+        res.json(data.rows[0]);
       })
 
   })
