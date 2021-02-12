@@ -49,23 +49,14 @@ module.exports = (db, updateComments) => {
     const params = [post_id, commenter_id, text_body];
     db.query(
       "UPDATE comments SET text_body = $3 WHERE post_id = $1 AND commenter_id = $2",
-      params,
-      (error) => {
-        if (error) {
-          throw error;
-        }
-        res
-          .status(200)
-          .json({
-            status: "success",
-            message: `Comment modified`,
-          })
-          .catch((err) => {
-            console.log("bad juju on comments DB", err);
-            res.status(500).send("bad juju on comments DB");
-          });
-      }
-    );
+      params)
+      .then((data) => {
+        res.json(data.rows[0])
+      })
+      .catch((err) => {
+        console.log("bad juju on update comments DB", err);
+        res.status(500).send("bad juju on update comments DB");
+      });
   });
 
   router.delete("/comments", (req, res) => {
