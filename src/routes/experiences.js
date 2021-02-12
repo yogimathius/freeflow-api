@@ -11,7 +11,7 @@ module.exports = (db) => {
     JOIN users u2 
       ON helped_id = u2.id;
     `).then((data) => {
-      res.json(data.rows[0]);
+      res.json(data.rows);
     });
   });
 
