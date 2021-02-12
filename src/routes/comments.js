@@ -65,7 +65,7 @@ module.exports = (db, updateComments) => {
 
     const { post_id, commenter_id, id } = query;
     const params = [post_id, commenter_id, id];
-    console.log("params in comment post: ", params);
+    console.log("params in delete comment post: ", params);
 
     db.query(
       `

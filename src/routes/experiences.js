@@ -3,8 +3,9 @@ const router = require("express").Router();
 module.exports = (db) => {
   router.get("/experiences", (req, res) => {
     db.query(`
-    SELECT *
-    FROM experiences;
+    SELECT experiences.*, CONCAT(users.first_name, " ", users.last_name) as helper
+    FROM experiences
+    JOIN users ON helper_id = users.id;
     `).then((data) => {
       res.json(data.rows);
     });
