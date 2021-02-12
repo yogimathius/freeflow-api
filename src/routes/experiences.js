@@ -17,7 +17,7 @@ module.exports = (db) => {
 
   router.post('/experiences/new', (req, res) => {
 
-    const { helper_id, helped_id, creator_id } = req.body;
+    const { helper_id, helped_id, creator_id, helper, helped } = req.body;
     const dateNow = new Date().toISOString();
     const status = 'pending';
     console.log(dateNow);
@@ -31,6 +31,8 @@ module.exports = (db) => {
     `, [helper_id, helped_id, creator_id, dateNow, status])
       .then(data => {
         console.log("success in add new experience: ", data.rows);
+        data.rows[0].helper = helper;
+        data.rows[0].helped = helped;
         res.json(data.rows[0]);
       })
 
