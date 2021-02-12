@@ -7,7 +7,6 @@ module.exports = (db) => {
       SELECT * FROM db_skills;
     `
     ).then((data) => {
-      console.log("data in db skills: ", data.rows);
       res.json(data.rows);
     });
   });

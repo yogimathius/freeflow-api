@@ -42,7 +42,7 @@ module.exports = (db, updateComments) => {
       });
   });
 
-  router.put("/comments/", (req, res) => {
+  router.put("/comments", (req, res) => {
     console.log("req.body.updatedComment: ", req.body);
     const { post_id, commenter_id, text_body } = req.body;
     console.log(post_id, commenter_id, text_body);
