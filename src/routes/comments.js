@@ -43,7 +43,7 @@ module.exports = (db, updateComments) => {
   });
 
   router.put("/comments", (req, res) => {
-    console.log("req.body.updatedComment: ", req.body);
+    console.log("req.body: ", req.body);
     const { post_id, commenter_id, text_body } = req.body;
     console.log(post_id, commenter_id, text_body);
     const params = [post_id, commenter_id, text_body];
@@ -58,7 +58,7 @@ module.exports = (db, updateComments) => {
           .status(200)
           .json({
             status: "success",
-            message: `Comment modified with ID: ${id}`,
+            message: `Comment modified`,
           })
           .catch((err) => {
             console.log("bad juju on comments DB", err);
