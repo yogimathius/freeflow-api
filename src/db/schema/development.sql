@@ -581,21 +581,21 @@ values
 -- ************************************************************
 -- user_profiles table
 -- ************************************************************
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (1, '11/7/1999', 'Fajã de Cima', false, true, 'https://robohash.org/rerumipsafugiat.bmp?size=50x50&set=set1', true, 'Mathius', 'Johnson');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (2, '5/8/1998', 'Vukovar', true, true, 'https://robohash.org/nequenemonostrum.jpg?size=50x50&set=set1', true, 'Derril', 'Sleaford');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (3, '3/23/1962', 'Voyutychi', false, true, 'https://robohash.org/reprehenderitquiasimilique.jpg?size=50x50&set=set1', true, 'Rollie', 'Frisel');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (4, '2/25/1963', 'Dajin', false, true, 'https://robohash.org/eteiustenetur.png?size=50x50&set=set1', true, 'Sara-ann', 'Kidston');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (5, '7/16/1996', 'Putou', true, false, 'https://robohash.org/nobissaepecorrupti.bmp?size=50x50&set=set1', true, 'Jennilee', 'Zoppo');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (6, '11/15/1965', 'Khisarya', true, false, 'https://robohash.org/velitsedvoluptatem.bmp?size=50x50&set=set1', true, 'Casey', 'Raubenheimer');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (7, '1/8/1987', 'Iksan', true, false, 'https://robohash.org/voluptatemnostrumomnis.bmp?size=50x50&set=set1', true, 'Katharyn', 'Rosenbush');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (8, '1/3/1992', 'Kryevidh', true, true, 'https://robohash.org/doloremvoluptatemconsequatur.jpg?size=50x50&set=set1', true, 'Charleen', 'James');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (9, '4/5/1974', 'Gaoming', true, true, 'https://robohash.org/suscipitnisiet.jpg?size=50x50&set=set1', true, 'Raimund', 'Baum');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (10, '9/22/1994', 'Kruty', false, false, 'https://robohash.org/possimusillout.bmp?size=50x50&set=set1', true, 'Tremayne', 'Snarie');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (11, '3/14/1998', 'Maracás', false, true, 'https://robohash.org/aliquamcommodiquisquam.png?size=50x50&set=set1', true, 'Emilio', 'Le Fleming');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (12, '1/9/1983', 'Roshal’', false, false, 'https://robohash.org/autetatque.png?size=50x50&set=set1', true, 'Lyman', 'Lyfield');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (13, '4/27/1974', 'Xinchengpu', false, false, 'https://robohash.org/sedautfacilis.bmp?size=50x50&set=set1', true, 'Nelia', 'Inworth');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (14, '2/19/1972', 'La Sierpe', true, false, 'https://robohash.org/vitaeseddoloremque.png?size=50x50&set=set1', true, 'Cello', 'Snufflebottom');
-insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name) values (15, '4/18/1998', 'Chocianów', false, true, 'https://robohash.org/dignissimossequimolestias.png?size=50x50&set=set1', true, 'Lem', 'Measor');
+insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar, active, first_name, last_name, profession, tagline) values (1, '11/7/1999', 'Fajã de Cima', false, true, 'https://robohash.org/rerumipsafugiat.bmp?size=50x50&set=set1', true, 'Mathius', 'Johnson', 'Web Developer', 'This web app is going to be awesome when its complete!' ),
+(2, '5/8/1998', 'Vukovar', true, true, 'https://robohash.org/nequenemonostrum.jpg?size=50x50&set=set1', true, 'Derril', 'Sleaford', 'Tinker', 'Let me build something for you.'),
+(3, '3/23/1962', 'Voyutychi', false, true, 'https://robohash.org/reprehenderitquiasimilique.jpg?size=50x50&set=set1', true, 'Rollie', 'Frisel', 'Cook', 'Fresh!'),
+(4, '2/25/1963', 'Dajin', false, true, 'https://robohash.org/eteiustenetur.png?size=50x50&set=set1', true, 'Sara-ann', 'Kidston', 'Medic', 'Anybody need a medic?'),
+(5, '7/16/1996', 'Putou', true, false, 'https://robohash.org/nobissaepecorrupti.bmp?size=50x50&set=set1', true, 'Jennilee', 'Zoppo', 'Helicopter Pilot', 'Prepare for takeoff!'),
+(6, '11/15/1965', 'Khisarya', true, false, 'https://robohash.org/velitsedvoluptatem.bmp?size=50x50&set=set1', true, 'Casey', 'Raubenheimer', 'Carpenter', 'If you build it, they will come.'),
+(7, '1/8/1987', 'Iksan', true, false, 'https://robohash.org/voluptatemnostrumomnis.bmp?size=50x50&set=set1', true, 'Katharyn', 'Rosenbush', 'Cheesemaker', 'Did somebody cut the cheese?'),
+(8, '1/3/1992', 'Kryevidh', true, true, 'https://robohash.org/doloremvoluptatemconsequatur.jpg?size=50x50&set=set1', true, 'Charleen', 'James', 'Resume Writer', 'Let me see your CV'),
+(9, '4/5/1974', 'Gaoming', true, true, 'https://robohash.org/suscipitnisiet.jpg?size=50x50&set=set1', true, 'Raimund', 'Baum', 'Electrician', 'Need a light?'),
+(10, '9/22/1994', 'Kruty', false, false, 'https://robohash.org/possimusillout.bmp?size=50x50&set=set1', true, 'Tremayne', 'Snarie', 'Paladin', 'My divine intervention is on cooldown, but I can still heal you up!'),
+(11, '3/14/1998', 'Maracás', false, true, 'https://robohash.org/aliquamcommodiquisquam.png?size=50x50&set=set1', true, 'Emilio', 'Le Fleming', 'Traffic Patrol', 'Stop!'),
+(12, '1/9/1983', 'Roshal’', false, false, 'https://robohash.org/autetatque.png?size=50x50&set=set1', true, 'Lyman', 'Lyfield', 'Web Designer', 'I make things look nice'),
+(13, '4/27/1974', 'Xinchengpu', false, false, 'https://robohash.org/sedautfacilis.bmp?size=50x50&set=set1', true, 'Nelia', 'Inworth', 'Ship Builder', 'I have built many ships, but never crossed the ocean :('),
+(14, '2/19/1972', 'La Sierpe', true, false, 'https://robohash.org/vitaeseddoloremque.png?size=50x50&set=set1', true, 'Cello', 'Snufflebottom', 'Guru', 'Do or do not. There is no try.'),
+(15, '4/18/1998', 'Chocianów', false, true, 'https://robohash.org/dignissimossequimolestias.png?size=50x50&set=set1', true, 'Lem', 'Measor', 'Driver', 'Get in, now we go!');
 
 
 -- ************************************************************

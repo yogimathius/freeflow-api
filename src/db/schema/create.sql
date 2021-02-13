@@ -102,7 +102,9 @@ CREATE TABLE user_profiles
   avatar VARCHAR(255),
   active BOOLEAN DEFAULT TRUE,
   first_name VARCHAR(255) NOT NULL,
-  last_name VARCHAR(255) NOT NULL
+  last_name VARCHAR(255) NOT NULL,
+  profession VARCHAR(255),
+  tagline VARCHAR(255)
 );
 -- ************************************************************
 -- experiences table

@@ -4,7 +4,7 @@ module.exports = (db) => {
   router.get("/users", (req, res) => {
     db.query(
       `
-      SELECT users.id, users.first_name, users.last_name, avatar, location, is_helper, is_helped, users.username, SUM(helpers.helper_rating) as helperRating, SUM(helped.helped_rating) as helpedRating, users.active
+      SELECT users.id, users.first_name, users.last_name, location, users.username, COUNT(helpers.helper_id) as helperRating, COUNT(helped.helped_id) as helpedRating, users.active, profession, tagline
       FROM users 
       LEFT JOIN experiences as helpers ON users.id = helpers.helper_id 
       LEFT JOIN experiences as helped ON users.id = helped.helped_id 
