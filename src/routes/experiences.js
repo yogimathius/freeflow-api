@@ -172,8 +172,8 @@ module.exports = (db) => {
       RETURNING *;
     `, [experienceId])
       .then(data => {
-        console.log("success in delete experience: ", data.rows[0]);
-        res.json(data.rows[0]);
+        console.log("success in delete experience: ", data.rows);
+        res.json(data.rows);
       })
   });
 
