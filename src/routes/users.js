@@ -9,7 +9,7 @@ module.exports = (db) => {
       LEFT JOIN experiences as helpers ON users.id = helpers.helper_id 
       LEFT JOIN experiences as helped ON users.id = helped.helped_id 
       JOIN user_profiles ON user_profiles.id = users.id
-      GROUP BY username, avatar, location, users.id, is_helper, is_helped
+      GROUP BY username, avatar, location, users.id, is_helper, is_helped, profession, tagline
       ORDER BY users.id, location, username;
     `
     ).then((data) => {
