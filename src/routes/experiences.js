@@ -163,7 +163,7 @@ module.exports = (db) => {
 
   router.delete('/experiences/delete', (req, res) => {
 
-    const experienceId = req.body;
+    const { experienceId } = req.body;
     // console.log(tutorExperienceID);
 
     db.query(`
