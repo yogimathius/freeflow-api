@@ -162,7 +162,7 @@ module.exports = (db) => {
 
 
   router.delete('/experiences/delete', (req, res) => {
-    console.log("req.body in delete: ". req.body);
+    console.log("req.body in delete: ". req);
     const { experienceId } = req.body;
     console.log("experience id in delete: ", experienceId);
 
