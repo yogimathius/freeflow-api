@@ -57,22 +57,6 @@ module.exports = (db) => {
       })
   });
 
-  router.put('/experiences/delete', (req, res) => {
-
-    const experienceId = req.body;
-    // console.log(tutorExperienceID);
-
-    db.query(`
-      DELETE FROM experiences
-      WHERE id = $1
-      RETURNING *;
-    `, [experienceId])
-      .then(data => {
-        console.log("success in delete experience: ", data.rows[0]);
-        res.json(data.rows[0]);
-      })
-  });
-
   router.put('/experiences/complete', (req, res) => {
 
     const { tutorSessionID, ishelper, rating, comments } = req.body;
@@ -176,6 +160,22 @@ module.exports = (db) => {
 
   })
 
+
+  router.delete('/experiences/delete', (req, res) => {
+
+    const experienceId = req.body;
+    // console.log(tutorExperienceID);
+
+    db.query(`
+      DELETE FROM experiences
+      WHERE id = $1
+      RETURNING *;
+    `, [experienceId])
+      .then(data => {
+        console.log("success in delete experience: ", data.rows[0]);
+        res.json(data.rows[0]);
+      })
+  });
 
   return router;
 };
