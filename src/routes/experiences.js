@@ -41,7 +41,7 @@ module.exports = (db) => {
 
     const experienceId = req.body.experienceId;
     const dateNow = new Date().toISOString();
-    console.log('datanow', dateNow)
+    console.log('datenow', dateNow)
 
     // console.log(experienceId);
 

@@ -123,7 +123,8 @@ CREATE TABLE experiences
   date_initiated TIMESTAMP,
   date_accepted TIMESTAMP,
   date_completed TIMESTAMP,
-  receiver_seen BOOLEAN NOT NULL DEFAULT FALSE
+  receiver_seen BOOLEAN NOT NULL DEFAULT FALSE,
+  submit_completion BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 -- ************************************************************
