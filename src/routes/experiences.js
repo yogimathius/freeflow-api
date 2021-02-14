@@ -59,39 +59,32 @@ module.exports = (db) => {
 
   router.put('/experiences/complete', (req, res) => {
 
-    const { experienceId, ishelper, rating, comments } = req.body;
+    const { experienceId, ishelper, comments } = req.body;
     const dateNow = new Date().toISOString();
-    console.log('datEnow', dateNow)
+    console.log('datenow', dateNow)
     console.log(experienceId);
     console.log(ishelper);
-    console.log(rating);
     console.log(comments);
 
-    let helperRating, helperComments, helpedRating, helpedComments;
+    let helperComments, helpedRating, helpedComments;
 
     if (ishelper) {
-      helperRating = rating;
       helperComments = comments;
-      helpedRating = null;
       helpedComments = null;
     } else {
-      helperRating = null;
       helperComments = null;
-      helpedRating = rating;
       helpedComments = comments;
     }
 
     db.query(`
       UPDATE experiences
       SET date_completed = $2,
-        helper_rating = $3,
-        helper_comments = $4,
-        helped_rating = $5,
-        helped_comments = $6,
+        helper_comments = $3,
+        helped_comments = $4,
         status = 'completed'
       WHERE id = $1
       RETURNING *;
-    `, [experienceId, dateNow, helperRating, helperComments, helpedRating, helpedComments])
+    `, [experienceId, dateNow, helperComments, helpedComments])
       .then(data => {
         res.json(data.rows[0]);
       })
