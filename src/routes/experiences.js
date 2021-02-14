@@ -93,18 +93,17 @@ module.exports = (db) => {
 
   router.put('/experiences/complete-other', (req, res) => {
 
-    const { ishelperRating, rating, comments, experienceId } = req.body;
+    const { ishelperRating, comments, experienceId } = req.body;
     console.log(ishelperRating, rating, comments, experienceId);
 
     if (ishelperRating) {
 
       db.query(`
         UPDATE experiences
-        SET helper_rating = $2,
-          helper_comments = $3
+        SET helper_comments = $2
         WHERE id = $1
         RETURNING *;
-      `, [experienceId, rating, comments])
+      `, [experienceId, comments])
         .then(data => {
           res.json(data.rows[0]);
         })
@@ -112,11 +111,10 @@ module.exports = (db) => {
     } else {
       db.query(`
         UPDATE experiences
-        SET helped_rating = $2,
-          helped_comments = $3
+        SET helped_comments = $2
         WHERE id = $1
         RETURNING *;
-      `, [experienceId, rating, comments])
+      `, [experienceId, comments])
         .then(data => {
           res.json(data.rows[0]);
         })
