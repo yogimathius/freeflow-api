@@ -39,11 +39,11 @@ module.exports = (db) => {
 
   router.put('/experiences/accept', (req, res) => {
 
-    const tutorExperienceID = req.body.tutorSessionID;
+    const experienceId = req.body.experienceId;
     const dateNow = new Date().toISOString();
     console.log('datanow', dateNow)
 
-    // console.log(tutorExperienceID);
+    // console.log(experienceId);
 
     db.query(`
       UPDATE experiences
@@ -51,7 +51,7 @@ module.exports = (db) => {
         status = 'in-progress'
       WHERE id = $1
       RETURNING *;
-    `, [tutorExperienceID, dateNow])
+    `, [experienceId, dateNow])
       .then(data => {
         res.json(data.rows[0]);
       })
@@ -59,10 +59,10 @@ module.exports = (db) => {
 
   router.put('/experiences/complete', (req, res) => {
 
-    const { tutorSessionID, ishelper, rating, comments } = req.body;
+    const { experienceId, ishelper, rating, comments } = req.body;
     const dateNow = new Date().toISOString();
     console.log('datEnow', dateNow)
-    console.log(tutorSessionID);
+    console.log(experienceId);
     console.log(ishelper);
     console.log(rating);
     console.log(comments);
@@ -91,7 +91,7 @@ module.exports = (db) => {
         status = 'completed'
       WHERE id = $1
       RETURNING *;
-    `, [tutorSessionID, dateNow, helperRating, helperComments, helpedRating, helpedComments])
+    `, [experienceId, dateNow, helperRating, helperComments, helpedRating, helpedComments])
       .then(data => {
         res.json(data.rows[0]);
       })
@@ -100,8 +100,8 @@ module.exports = (db) => {
 
   router.put('/experiences/complete-other', (req, res) => {
 
-    const { ishelperRating, rating, comments, tutorSessionID } = req.body;
-    console.log(ishelperRating, rating, comments, tutorSessionID);
+    const { ishelperRating, rating, comments, experienceId } = req.body;
+    console.log(ishelperRating, rating, comments, experienceId);
 
     if (ishelperRating) {
 
@@ -111,7 +111,7 @@ module.exports = (db) => {
           helper_comments = $3
         WHERE id = $1
         RETURNING *;
-      `, [tutorSessionID, rating, comments])
+      `, [experienceId, rating, comments])
         .then(data => {
           res.json(data.rows[0]);
         })
@@ -123,7 +123,7 @@ module.exports = (db) => {
           helped_comments = $3
         WHERE id = $1
         RETURNING *;
-      `, [tutorSessionID, rating, comments])
+      `, [experienceId, rating, comments])
         .then(data => {
           res.json(data.rows[0]);
         })
