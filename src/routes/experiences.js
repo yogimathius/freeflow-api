@@ -79,7 +79,7 @@ module.exports = (db) => {
       UPDATE experiences
       SET helper_comments = $2,
         helped_comments = $3,
-        submit_completion = $4
+        submit_completion = $4,
         status = 'completed'
       WHERE id = $1
       RETURNING *;
