@@ -80,8 +80,8 @@ module.exports = (db) => {
       SET helper_comments = $2,
         helped_comments = $3,
         submit_completion = $4,
-        status = 'completed'
-      WHERE id = $1
+        status = 'submitted'
+        WHERE id = $1
       RETURNING *;
     `, [experienceId, helperComments, helpedComments, submit_completion])
       .then(data => {
@@ -103,7 +103,8 @@ module.exports = (db) => {
       db.query(`
         UPDATE experiences
         SET helper_comments = $2,
-        date_completed = $3
+        date_completed = $3,
+        status = 'completed'
         WHERE id = $1
         RETURNING *;
       `, [experienceId, comments, dateNow])
