@@ -59,10 +59,11 @@ module.exports = (db) => {
 
   router.put('/experiences/complete', (req, res) => {
 
-    const { experienceId, ishelper, comments } = req.body;
+    const { experienceId, ishelper, comments, submit_completion } = req.body;
     console.log(experienceId);
     console.log(ishelper);
     console.log(comments);
+    console.log("should be true: ", submit_completion);
 
     let helperComments, helpedComments;
 
@@ -78,11 +79,13 @@ module.exports = (db) => {
       UPDATE experiences
       SET helper_comments = $2,
         helped_comments = $3,
+        submit_completion = $4
         status = 'completed'
       WHERE id = $1
       RETURNING *;
-    `, [experienceId, helperComments, helpedComments])
+    `, [experienceId, helperComments, helpedComments, submit_completion])
       .then(data => {
+        console.log("success in complete experience route!", data.rows[0]);
         res.json(data.rows[0]);
       })
   });
