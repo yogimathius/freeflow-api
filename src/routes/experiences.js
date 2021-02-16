@@ -60,13 +60,12 @@ module.exports = (db) => {
   router.put('/experiences/complete', (req, res) => {
 
     const { experienceId, ishelper, comments } = req.body;
-    const dateNow = new Date().toISOString();
     console.log('datenow', dateNow)
     console.log(experienceId);
     console.log(ishelper);
     console.log(comments);
 
-    let helperComments, helpedRating, helpedComments;
+    let helperComments, helpedComments;
 
     if (ishelper) {
       helperComments = comments;
@@ -78,9 +77,8 @@ module.exports = (db) => {
 
     db.query(`
       UPDATE experiences
-      SET date_completed = $2,
-        helper_comments = $3,
-        helped_comments = $4,
+      SET helper_comments = $2,
+        helped_comments = $3,
         status = 'completed'
       WHERE id = $1
       RETURNING *;
@@ -94,16 +92,19 @@ module.exports = (db) => {
   router.put('/experiences/complete-other', (req, res) => {
 
     const { ishelperRating, comments, experienceId } = req.body;
+    const dateNow = new Date().toISOString();
+
     console.log(ishelperRating, rating, comments, experienceId);
 
     if (ishelperRating) {
 
       db.query(`
         UPDATE experiences
-        SET helper_comments = $2
+        SET helper_comments = $2,
+        date_completed = $3
         WHERE id = $1
         RETURNING *;
-      `, [experienceId, comments])
+      `, [experienceId, comments, dateNow])
         .then(data => {
           res.json(data.rows[0]);
         })
