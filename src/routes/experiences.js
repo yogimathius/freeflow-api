@@ -90,12 +90,12 @@ module.exports = (db) => {
 
   router.put('/experiences/complete-other', (req, res) => {
 
-    const { ishelperRating, comments, experienceId } = req.body;
+    const { ishelper, comments, experienceId} = req.body;
     const dateNow = new Date().toISOString();
 
-    console.log(ishelperRating, rating, comments, experienceId);
+    console.log(ishelper, rating, comments, experienceId);
 
-    if (ishelperRating) {
+    if (ishelper) {
 
       db.query(`
         UPDATE experiences
@@ -105,6 +105,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [experienceId, comments, dateNow])
         .then(data => {
+          console.log("success in complete other experience route!", data.rows[0]);
           res.json(data.rows[0]);
         })
 
@@ -116,6 +117,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [experienceId, comments])
         .then(data => {
+          console.log("success in complete other experience route!", data.rows[0]);
           res.json(data.rows[0]);
         })
     }
