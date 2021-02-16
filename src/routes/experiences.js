@@ -96,7 +96,7 @@ module.exports = (db) => {
     const { ishelper, comments, experienceId} = req.body;
     const dateNow = new Date().toISOString();
 
-    console.log(ishelper, rating, comments, experienceId);
+    console.log(ishelper, comments, experienceId);
 
     if (ishelper) {
 
