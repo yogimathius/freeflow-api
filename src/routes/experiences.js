@@ -60,7 +60,6 @@ module.exports = (db) => {
   router.put('/experiences/complete', (req, res) => {
 
     const { experienceId, ishelper, comments } = req.body;
-    console.log('datenow', dateNow)
     console.log(experienceId);
     console.log(ishelper);
     console.log(comments);
@@ -82,7 +81,7 @@ module.exports = (db) => {
         status = 'completed'
       WHERE id = $1
       RETURNING *;
-    `, [experienceId, dateNow, helperComments, helpedComments])
+    `, [experienceId, helperComments, helpedComments])
       .then(data => {
         res.json(data.rows[0]);
       })
