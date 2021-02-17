@@ -22,7 +22,8 @@ module.exports = (db, updateComments) => {
 
   router.post("/comments", (req, res) => {
     console.log(req.body);
-    const { post_id, commenter_id, text_body, time_posted } = req.body;
+    const { post_id, commenter_id, text_body } = req.body;
+    const time_posted = new Date().toISOString();
     const param = [post_id, commenter_id, text_body, time_posted];
     db.query(
       `INSERT INTO comments (post_id, commenter_id, text_body, time_posted) VALUES ($1, $2, $3, $4)

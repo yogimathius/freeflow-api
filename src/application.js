@@ -41,9 +41,7 @@ function read(file) {
 }
 
 module.exports = function application(
-  ENV,
-  actions = { updateComments: () => {}, deleteComments: () => {} }
-) {
+  ENV) {
   
   app.use(function (req, res, next) {
 
