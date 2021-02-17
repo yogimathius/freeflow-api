@@ -51,7 +51,7 @@ module.exports = (db, updateComments) => {
       "UPDATE comments SET text_body = $3 WHERE post_id = $1 AND commenter_id = $2",
       params)
       .then((data) => {
-        console.log("success in update comments! ", data.rows);
+        console.log("success in update comments! ", data);
         res.json(data.rows)
       })
       .catch((err) => {
