@@ -69,7 +69,7 @@ module.exports = function application(
 
   // parse requests of content-type - application/x-www-form-urlencoded
   app.use(bodyparser.urlencoded({ extended: true }));
-  app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
+  app.use("/api", comments(db));
   app.use("/api", likes(db));
   app.use("/api", userSkills(db));
   app.use("/api", messages(db));
