@@ -16,26 +16,26 @@ wss.on("connection", (socket) => {
   };
 });
 
-// function updateComments(post_id, commenter_id, text_body) {
-//   console.log(
-//     "updateComments function index api: ",
-//     post_id,
-//     commenter_id,
-//     text_body
-//   );
-//   wss.clients.forEach(function eachClient(client) {
-//     if (client.readyState === WebSocket.OPEN) {
-//       client.send(
-//         JSON.stringify({
-//           type: "ADD_COMMENT",
-//           post_id,
-//           commenter_id,
-//           text_body,
-//         })
-//       );
-//     }
-//   });
-// }
+function updateComments(post_id, commenter_id, text_body) {
+  console.log(
+    "updateComments function index api: ",
+    post_id,
+    commenter_id,
+    text_body
+  );
+  wss.clients.forEach(function eachClient(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(
+        JSON.stringify({
+          type: "ADD_COMMENT",
+          post_id,
+          commenter_id,
+          text_body,
+        })
+      );
+    }
+  });
+}
 
 function deleteComments(post_id, commenter_id) {
   wss.clients.forEach(function eachClient(client) {
