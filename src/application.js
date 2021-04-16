@@ -16,6 +16,7 @@ const comments = require("./routes/comments");
 const likes = require("./routes/likes");
 const userSkills = require("./routes/user_skills");
 const messages = require("./routes/messages");
+const userMessages = require("./routes/messages");
 const posts = require("./routes/posts");
 const postsSkills = require("./routes/posts_skills");
 const dbSkills = require("./routes/db_skills");

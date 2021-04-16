@@ -1,15 +1,15 @@
 const router = require('express').Router();
 
 module.exports = db => {
-  // router.get('/messages', (req, res) => {
-  //   db.query(`SELECT * FROM messages;`)
-  //     .then((data) => {
-  //       res.json(data.rows)
-  //     });
-  // });
+  router.get('/messages', (req, res) => {
+    db.query(`SELECT * FROM messages;`)
+      .then((data) => {
+        res.json(data.rows)
+      });
+  });
 
-  router.post('/messages/:id', (req, res) => {
-    console.log(req.params)
+  router.get('/messages/:id', (req, res) => {
+
     const userId = Number(req.body.userID);
 
     db.query(`
