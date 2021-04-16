@@ -8,8 +8,8 @@ module.exports = db => {
   //     });
   // });
 
-  router.post('/messages', (req, res) => {
-
+  router.post('/messages/:id', (req, res) => {
+    console.log(req.params)
     const userId = Number(req.body.userID);
 
     db.query(`
