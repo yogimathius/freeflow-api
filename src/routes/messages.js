@@ -25,7 +25,7 @@ module.exports = db => {
       WHERE receiver_id = $1 OR sender_id = $1;
     `, [userId])
       .then(data => {
-        res.json({ userId, data: data.rows });
+        res.json(data.rows);
       });
   })
 
