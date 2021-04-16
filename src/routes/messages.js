@@ -14,6 +14,7 @@ module.exports = db => {
 
     db.query(`
       SELECT
+        messages.id as id,
         u1.id AS senderID,
         u1.username AS sender,
         u2.id AS receiverID,
