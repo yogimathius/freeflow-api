@@ -3,21 +3,21 @@
 -- users table
 -- ************************************************************
 
-insert into users (username, first_name, last_name, email, password, active) values ('mjachievem', 'Mathius', 'Johnson', 'cstilldale0@blogger.com', '123', true);
-insert into users (username, first_name, last_name, email, password, active) values ('dsleaford1', 'Derril', 'Sleaford', 'dsleaford1@nyu.edu', '4lGhIyW', false);
-insert into users (username, first_name, last_name, email, password, active) values ('rfrisel2', 'Rollie', 'Frisel', 'rfrisel2@epa.gov', 'wyGUjG9', false);
-insert into users (username, first_name, last_name, email, password, active) values ('skidston3', 'Sara-ann', 'Kidston', 'skidston3@npr.org', 'wHAbRX', true);
-insert into users (username, first_name, last_name, email, password, active) values ('jzoppo4', 'Jennilee', 'Zoppo', 'jzoppo4@phpbb.com', 'HToZ8p', true);
-insert into users (username, first_name, last_name, email, password, active) values ('craubenheimer5', 'Casey', 'Raubenheimer', 'craubenheimer5@marriott.com', 'kqXoj7wzgd', false);
-insert into users (username, first_name, last_name, email, password, active) values ('krosenbush6', 'Katharyn', 'Rosenbush', 'krosenbush6@xrea.com', 'iFDsDpu', false);
-insert into users (username, first_name, last_name, email, password, active) values ('cjames7', 'Charleen', 'James', 'cjames7@miibeian.gov.cn', 'O0dgA3', false);
-insert into users (username, first_name, last_name, email, password, active) values ('rbaum8', 'Raimund', 'Baum', 'rbaum8@disqus.com', 'h5ZkJvfvVHoe', false);
-insert into users (username, first_name, last_name, email, password, active) values ('tsnarie9', 'Tremayne', 'Snarie', 'tsnarie9@wunderground.com', 'g42ajp2U', false);
-insert into users (username, first_name, last_name, email, password, active) values ('elefleminga', 'Emilio', 'Le Fleming', 'elefleminga@goo.gl', '0cdLfNgHnx9', false);
-insert into users (username, first_name, last_name, email, password, active) values ('llyfieldb', 'Lyman', 'Lyfield', 'llyfieldb@shop-pro.jp', 'HoDw6F5W1C5', false);
-insert into users (username, first_name, last_name, email, password, active) values ('ninworthc', 'Nelia', 'Inworth', 'ninworthc@fda.gov', 'St6WukH', true);
-insert into users (username, first_name, last_name, email, password, active) values ('csnufflebottomd', 'Cello', 'Snufflebottom', 'csnufflebottomd@bluehost.com', 'GANtItn', true);
-insert into users (username, first_name, last_name, email, password, active) values ('lmeasore', 'Lem', 'Measor', 'lmeasore@liveinternet.ru', 'QLz5fo', true);
+insert into users (username, first_name, last_name, email, password, active) values ('mjachievem', 'Mathius', 'Johnson', 'cstilldale0@blogger.com', '123', true),
+('dsleaford1', 'Derril', 'Sleaford', 'dsleaford1@nyu.edu', '4lGhIyW', false),
+('rfrisel2', 'Rollie', 'Frisel', 'rfrisel2@epa.gov', 'wyGUjG9', false),
+('skidston3', 'Sara-ann', 'Kidston', 'skidston3@npr.org', 'wHAbRX', true),
+('jzoppo4', 'Jennilee', 'Zoppo', 'jzoppo4@phpbb.com', 'HToZ8p', true),
+('craubenheimer5', 'Casey', 'Raubenheimer', 'craubenheimer5@marriott.com', 'kqXoj7wzgd', false),
+('krosenbush6', 'Katharyn', 'Rosenbush', 'krosenbush6@xrea.com', 'iFDsDpu', false),
+('cjames7', 'Charleen', 'James', 'cjames7@miibeian.gov.cn', 'O0dgA3', false),
+('rbaum8', 'Raimund', 'Baum', 'rbaum8@disqus.com', 'h5ZkJvfvVHoe', false),
+('tsnarie9', 'Tremayne', 'Snarie', 'tsnarie9@wunderground.com', 'g42ajp2U', false),
+('elefleminga', 'Emilio', 'Le Fleming', 'elefleminga@goo.gl', '0cdLfNgHnx9', false),
+('llyfieldb', 'Lyman', 'Lyfield', 'llyfieldb@shop-pro.jp', 'HoDw6F5W1C5', false),
+('ninworthc', 'Nelia', 'Inworth', 'ninworthc@fda.gov', 'St6WukH', true),
+('csnufflebottomd', 'Cello', 'Snufflebottom', 'csnufflebottomd@bluehost.com', 'GANtItn', true),
+('lmeasore', 'Lem', 'Measor', 'lmeasore@liveinternet.ru', 'QLz5fo', true);
 
 
 
@@ -605,80 +605,78 @@ insert into user_profiles (user_id, dob, location, is_helper, is_helped, avatar,
 insert into experiences
   (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
 values
-  (8, 1, 1, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 1, 8, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 8, 1, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 8, 8, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 4, 4, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 8, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 1, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 6, 1, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 7, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 3, 3, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 7, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (10, 8, 10, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null);
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (8, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
-insert into experiences
-  (helper_id, helped_id, creator_id, helper_rating, helped_rating, helper_comments, helped_comments, status, date_initiated, date_accepted, date_completed)
-values
-  (1, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
+  (8, 1, 1, 3, 3, 'Integer tincidunt ante vel ipsum.', 'Nulla justo.', 'completed', '2020-05-07 16:42:23', '2020-06-03 18:29:05', '2020-07-27 17:04:36'),
+  (8, 1, 8, null, null, null, null, 'in-progress', '2020-05-29 00:29:14', '2020-06-12 22:16:06', null),
+  (1, 8, 1, null, null, null, null, 'pending', '2020-05-29 17:56:32', null, null),
+  (1, 8, 8, null, null, null, null, 'pending', '2020-05-02 21:43:41', null, null),
+  (8, 4, 4, null, null, null, null, 'in-progress', '2020-05-07 04:58:30', '2020-06-12 22:16:06', null),
+  (2, 8, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (2, 1, 2, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null),
+  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (1, 6, 1, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null),
+  (8, 7, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (1, 3, 3, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null),
+  (1, 7, 1, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (10, 8, 10, null, null, null, null, 'pending', '2020-05-21 05:51:10', null, null),
+  (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (3, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (4, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (5, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (6, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (7, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (8, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (10, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (11, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (14, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (15, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (3, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (4, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (5, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (6, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (7, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (5, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (6, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (7, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (8, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (10, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (11, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (14, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (15, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (14, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (15, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (2, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (2, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (9, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (3, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (3, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (3, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
 
+  (4, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (5, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (6, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (7, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (8, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (8, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (10, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (10, 5, 8, 3, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (11, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 8, 8, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 1, 2, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (12, 8, 9, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (15, 5, 5, 4, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56'),
+  (1, 6, 1, 7, 5, 'hello', 'goodbye', 'completed', '2020-05-12 07:51:11', '2020-06-03 15:26:43', '2020-07-09 00:02:56');
 -- ************************************************************
 -- user_skills table
 -- ************************************************************
