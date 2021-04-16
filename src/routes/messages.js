@@ -9,8 +9,8 @@ module.exports = db => {
   });
 
   router.get('/messages/:id', (req, res) => {
-
-    const userId = Number(req.body.userID);
+    console.log(req.params.id);
+    const userId = req.params.id;
 
     db.query(`
       SELECT
