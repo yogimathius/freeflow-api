@@ -6,7 +6,7 @@ module.exports = db => {
 
     db.query(`
       SELECT 
-        (ROW_NUMBER() OVER(ORDER BY u1.id) as INT) AS id,
+        CAST(ROW_NUMBER() OVER(ORDER BY u1.id) as INT) AS id,
         u1.id AS senderID,
         concat(u1.first_name, ' ', u1.last_name) AS sender,
         u2.id AS receiverID,
