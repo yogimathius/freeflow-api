@@ -31,6 +31,7 @@ module.exports = db => {
 
     db.query(`
       SELECT
+      ROW_NUMBER() OVER(ORDER BY u1.id) AS message_id,
         messages.id as id,
         u1.id AS senderID,
         u1.username AS sender,
