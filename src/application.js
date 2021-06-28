@@ -2,11 +2,29 @@ const fs = require("fs");
 const path = require("path");
 
 const express = require("express");
+const graphqlHTTP = require('express-graphql')
+const graphql = require('graphql')
 const bodyparser = require("body-parser");
 const helmet = require("helmet");
 const cors = require("cors");
 
+// const QueryRoot = new graphql.GraphQLObjectType({
+//   name: 'Query',
+//   fields: () => ({
+//     hello: {
+//       type: graphql.GraphQLString,
+//       resolve: () => "Hello world!"
+//     }
+//   })
+// })
+
+// const schema = new graphql.GraphQLSchema({ query: QueryRoot });
+
 const app = express();
+// app.use('/graphql', graphqlHTTP({
+//   schema: schema,
+//   graphiql: true,
+// }));
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
@@ -41,6 +59,9 @@ function read(file) {
   });
 }
 
+
+
+
 module.exports = function application(
   ENV,
   actions = { updateComments: () => {}, deleteComments: () => {} }
@@ -70,6 +91,7 @@ module.exports = function application(
 
   // parse requests of content-type - application/x-www-form-urlencoded
   app.use(bodyparser.urlencoded({ extended: true }));
+
   app.use("/api", comments(db, actions.updateComments, actions.deleteComments));
   app.use("/api", likes(db));
   app.use("/api", userSkills(db));
