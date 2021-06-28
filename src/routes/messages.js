@@ -6,6 +6,7 @@ module.exports = db => {
 
     db.query(`
       SELECT 
+        ROW_NUMBER() OVER(ORDER BY u1.id) AS convo_id,
         u1.id AS senderID,
         concat(u1.first_name, ' ', u1.last_name) AS sender,
         u2.id AS receiverID,
@@ -20,10 +21,6 @@ module.exports = db => {
         console.log('message gets hit: ', messages);
         res.json(
           messages
-          // messages.reduce(
-          //   (previous, current) => ({ ...previous, [current.id]: current }),
-          //   {}
-          // )
         )
       });
   });
