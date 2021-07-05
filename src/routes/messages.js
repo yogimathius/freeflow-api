@@ -52,10 +52,9 @@ module.exports = db => {
 
     const { receiverID, textInput, senderID } = req.body;
 
-    // console.log('receiver', receiverID);
-    // console.log('sender', senderID);
-    // console.log('textInput', textInput);
-    // const senderID = 2;
+    console.log('receiver', receiverID);
+    console.log('sender', senderID);
+    console.log('textInput', textInput);
 
     const dateNow = new Date().toISOString();
     console.log(dateNow);
