@@ -67,6 +67,7 @@ module.exports = db => {
       RETURNING *;
     `, [senderID, receiverID, textInput, dateNow])
       .then(data => {
+        console.log(data.rows);
         res.json({ data: data.rows });
       });
 
