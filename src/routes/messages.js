@@ -6,7 +6,7 @@ module.exports = db => {
 
     db.query(`
       SELECT 
-        CAST(ROW_NUMBER() OVER(ORDER BY u1.id) as INT) AS id,
+        messages.id AS id,
         u1.id AS senderID,
         concat(u1.first_name, ' ', u1.last_name) AS sender,
         u2.id AS receiverID,
@@ -51,7 +51,7 @@ module.exports = db => {
   router.post('/messages/new', (req, res) => {
 
     const { receiverID, textInput, senderID } = req.body;
-
+    
     console.log('receiver', receiverID);
     console.log('sender', senderID);
     console.log('textInput', textInput);
