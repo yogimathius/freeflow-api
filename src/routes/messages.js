@@ -31,7 +31,6 @@ module.exports = db => {
 
     db.query(`
       SELECT
-      ROW_NUMBER() OVER(ORDER BY u1.id) AS id,
         messages.id as id,
         u1.id AS sender_id,
         concat(u1.first_name, ' ', u1.last_name) AS sender,
