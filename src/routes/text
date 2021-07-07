@@ -1,6 +1,15 @@
-SELECT posts.id as id, owner_id, text_body, users.first_name, users.last_name, time_posted, status_field, posts.active, users.active, ARRAY_AGG(posts_skills.db_skills_id)
-FROM posts
-JOIN user_profiles ON user_profiles.id = owner_id
-JOIN users on users.id = owner_id
-JOIN posts_skills ON posts_skills.post_id = posts.id
-GROUP BY posts.id, user_profiles.id, users.id ORDER BY time_posted DESC;
+      INSERT INTO messages
+        (sender_id, receiver_id, text_body, time_sent, active)
+      VALUES
+        (2, 4, "test", "2020-08-31T20:08:12.000Z", true);
+      SELECT 
+        messages.id AS id,
+        u1.id AS senderID,
+        concat(u1.first_name, ' ', u1.last_name) AS sender,
+        u2.id AS receiverID,
+        concat(u2.first_name, ' ', u2.last_name) AS receiver
+      FROM messages
+        JOIN users u1 ON u1.id = sender_id
+        JOIN users u2 ON u2.id = receiver_id
+      WHERE receiver_id = 4 AND sender_id = 2
+      GROUP BY u1.id, u2.id, sender, receiver, messages.id;
