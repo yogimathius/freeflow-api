@@ -70,7 +70,7 @@ module.exports = db => {
         JOIN users u1 ON u1.id = sender_id
         JOIN users u2 ON u2.id = receiver_id
       WHERE receiver_id = $2 AND sender_id = $1
-      GROUP BY u1.id, u2.id, sender, receiver;;
+      GROUP BY u1.id, u2.id, sender, receiver;
     `, [senderID, receiverID, textInput, dateNow])
       .then((data) => {
         console.log(data.rows);
