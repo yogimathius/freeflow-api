@@ -108,5 +108,27 @@ module.exports = db => {
 
   })
 
+  router.delete("/messages", (req, res) => {
+    console.log("req.body", req.body, req.query);
+
+    const { messageId } = req.query;
+
+    db.query(
+      `
+      DELETE FROM messages 
+      WHERE id = $1;
+      `,
+      [messageId]
+    )
+      .then((data) => {
+        console.log("data rows in delete message: ", data);
+        res.json(data.rows); // jeremy sez: why return the whole array?
+      })
+      .catch((err) => {
+        console.log("bad juju on delete message DB", err);
+        res.status(500).send("bad juju on delete message DB");
+      });
+  });
+
   return router;
 }
