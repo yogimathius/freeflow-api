@@ -66,7 +66,7 @@ module.exports = db => {
     `, [senderID, receiverID, textInput, dateNow])
       .then((data) => {
         console.log(data.rows);
-        res.json({...data.rows, sender, receiver});
+        res.json({...data.rows[0], sender, receiver});
       });
 
 
