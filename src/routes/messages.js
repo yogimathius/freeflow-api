@@ -7,9 +7,9 @@ module.exports = db => {
     db.query(`
       SELECT 
         messages.id AS id,
-        u1.id AS senderID,
+        u1.id AS sender_id,
         concat(u1.first_name, ' ', u1.last_name) AS sender,
-        u2.id AS receiverID,
+        u2.id AS receiver_id,
         concat(u2.first_name, ' ', u2.last_name) AS receiver
       FROM messages
         JOIN users u1 ON u1.id = sender_id
@@ -33,9 +33,9 @@ module.exports = db => {
       SELECT
       ROW_NUMBER() OVER(ORDER BY u1.id) AS id,
         messages.id as id,
-        u1.id AS senderID,
+        u1.id AS sender_id,
         concat(u1.first_name, ' ', u1.last_name) AS sender,
-        u2.id AS receiverID,
+        u2.id AS receiver_id,
         concat(u2.first_name, ' ', u2.last_name) AS receiver,
         text_body, time_sent, messages.active, messages.receiver_read
       FROM messages
