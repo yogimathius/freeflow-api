@@ -6,19 +6,18 @@ module.exports = db => {
 
     db.query(`
       SELECT 
-        messages.id AS id,
-        u1.id AS sender_id,
-        concat(u1.first_name, ' ', u1.last_name) AS sender,
-        u2.id AS receiver_id,
-        concat(u2.first_name, ' ', u2.last_name) AS receiver
+          DISTINCT u1.id AS sender_id,
+          concat(u1.first_name, ' ', u1.last_name) AS sender,
+          u2.id AS receiver_id,
+          concat(u2.first_name, ' ', u2.last_name) AS receiver
       FROM messages
-        JOIN users u1 ON u1.id = sender_id
-        JOIN users u2 ON u2.id = receiver_id
+          JOIN users u1 ON u1.id = sender_id
+          JOIN users u2 ON u2.id = receiver_id
       WHERE receiver_id = $1 OR sender_id = $1
-      GROUP BY u1.id, u2.id, sender, receiver;
+      GROUP BY u1.id, u2.id;
       `, [userId])
       .then(({rows: messages}) => {
-        console.log('message gets hit: ', messages);
+        console.log('user conversations gets hit: ', messages);
         res.json(
           messages
         )
