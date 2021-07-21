@@ -138,7 +138,7 @@ module.exports = db => {
 
   })
 
-  router.delete("/messages", (req, res) => {
+  router.delete("/messages/:id", (req, res) => {
     console.log("req.body", req.body, req.query);
 
     const { messageId } = req.query;
