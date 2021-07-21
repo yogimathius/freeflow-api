@@ -63,7 +63,7 @@ module.exports = (db) => {
     console.log(experienceId);
     console.log(ishelper);
     console.log(comments);
-    console.log("should be true: ", submit_completion);
+    console.log("only one should be true: ", helped_submit_completion, helper_submit_completion);
 
     if (helped_submit_completion !== '') {
       db.query(`
