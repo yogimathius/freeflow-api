@@ -25,6 +25,7 @@ const app = express();
 //   schema: schema,
 //   graphiql: true,
 // }));
+app.user(cors())
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
