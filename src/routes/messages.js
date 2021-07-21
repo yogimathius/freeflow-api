@@ -6,7 +6,8 @@ module.exports = db => {
 
     db.query(`
       SELECT 
-          DISTINCT u1.id AS sender_id,
+          DISTINCT messages.id as id,
+          u1.id AS sender_id,
           concat(u1.first_name, ' ', u1.last_name) AS sender,
           u2.id AS receiver_id,
           concat(u2.first_name, ' ', u2.last_name) AS receiver,
@@ -16,21 +17,20 @@ module.exports = db => {
           JOIN users u1 ON u1.id = sender_id
           JOIN users u2 ON u2.id = receiver_id
       WHERE receiver_id = $1 OR sender_id = $1
-      GROUP BY u1.id, u2.id, time_sent, text_body
+      GROUP BY u1.id, u2.id, time_sent, text_body, messages.id
       ORDER BY time_sent;
       `, [userId])
       .then(({rows: messages}) => {
+        console.log('messages: ', messages);
         const messageMap = {
           messagers: [],
           messages: {}
         }
-        let id = 1;
         messages.map(message => {
           const senderid = message.sender_id
           const receiverid = message.receiver_id
           const senderName = message.sender
           const receiverName = message.receiver
-          message.id = id
           if (senderid !== userId && !messageMap.messages[senderName]) {
             const messager = { name: senderName, userId: senderid }
             messageMap.messagers.push(messager)
@@ -51,7 +51,6 @@ module.exports = db => {
           if (receiverid !== userId && messageMap.messages[receiverName]) {
             messageMap.messages[receiverName].push(message)
           }
-          id++
         })
         res.json(
           messageMap
