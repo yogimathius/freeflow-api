@@ -144,7 +144,7 @@ module.exports = db => {
     console.log("req.body", req.body, req.query, req.params);
 
     const { messageId } = req.query;
-    console.log('message Id in query, and req: ', messageId, req);
+    console.log('message Id in query, and req: ', messageId);
     db.query(
       `
       DELETE FROM messages 
@@ -153,7 +153,7 @@ module.exports = db => {
       [messageId]
     )
       .then((data) => {
-        console.log("data rows in delete message: ", data);
+        console.log("data rows in delete message: ", data.rows);
         res.json(data.rows); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
