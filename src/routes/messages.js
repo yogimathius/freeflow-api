@@ -142,7 +142,7 @@ module.exports = db => {
     console.log("req.body", req.body, req.query);
 
     const { messageId } = req.query;
-
+    console.log('message Id in query, and req: ', messageId, req);
     db.query(
       `
       DELETE FROM messages 
