@@ -24,11 +24,13 @@ module.exports = db => {
           messagers: [],
           messages: {}
         }
+        let id = 1;
         messages.map(message => {
           const senderid = message.sender_id
           const receiverid = message.receiver_id
           const senderName = message.sender
           const receiverName = message.receiver
+          message.id = id
           if (senderid !== userId && !messageMap.messages[senderName]) {
             const messager = { name: senderName, userId: senderid }
             messageMap.messagers.push(messager)
@@ -49,6 +51,7 @@ module.exports = db => {
           if (receiverid !== userId && messageMap.messages[receiverName]) {
             messageMap.messages[receiverName].push(message)
           }
+          id++
         })
         res.json(
           messageMap
