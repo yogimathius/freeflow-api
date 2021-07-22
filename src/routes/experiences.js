@@ -59,7 +59,6 @@ module.exports = (db) => {
 
   router.put('/experiences/complete', (req, res) => {
 
-    const { ,  } = req.body;
     console.log(experienceId);
 
       db.query(`
