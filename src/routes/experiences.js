@@ -58,16 +58,19 @@ module.exports = (db) => {
   });
 
   router.put('/experiences/complete', (req, res) => {
+    const { experienceId } = req.body
+    const dateNow = new Date().toISOString();
 
     console.log(experienceId);
 
       db.query(`
         UPDATE experiences
         SET 
-          status = 'completed'
+          status = 'completed',
+          date_completed = $2
           WHERE id = $1
         RETURNING *;
-      `, [experienceId])
+      `, [experienceId, dateNow])
         .then(data => {
           console.log("success in complete experience route!", data.rows[0]);
           res.json(data.rows[0]);
