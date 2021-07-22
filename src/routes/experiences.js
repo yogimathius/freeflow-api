@@ -59,39 +59,20 @@ module.exports = (db) => {
 
   router.put('/experiences/complete', (req, res) => {
 
-    const { experienceId, ishelper, comments, helped_submit_completion, helper_submit_completion } = req.body;
+    const { ,  } = req.body;
     console.log(experienceId);
-    console.log(ishelper);
-    console.log(comments);
-    console.log("only one should be true: ", helped_submit_completion, helper_submit_completion);
 
-    if (helped_submit_completion !== '') {
       db.query(`
         UPDATE experiences
-        SET helped_submit_completion = $2,
-          status = 'submitted'
+        SET 
+          status = 'completed'
           WHERE id = $1
         RETURNING *;
-      `, [experienceId, helped_submit_completion])
+      `, [experienceId])
         .then(data => {
           console.log("success in complete experience route!", data.rows[0]);
           res.json(data.rows[0]);
         })
-    }
-
-    if (helper_submit_completion !== '') {
-      db.query(`
-        UPDATE experiences
-        SET helper_submit_completion = $2,
-          status = 'submitted'
-          WHERE id = $1
-        RETURNING *;
-      `, [experienceId, helper_submit_completion])
-        .then(data => {
-          console.log("success in complete experience route!", data.rows[0]);
-          res.json(data.rows[0]);
-        })
-    }
   });
 
 
