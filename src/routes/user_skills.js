@@ -27,6 +27,7 @@ module.exports = (db) => {
   router.delete("/user_skills", (req, res) => {
     const { user_id, name } = req.query;
 
+    console.log(user_id, name);
     const params = [user_id, name];
 
     db.query(
@@ -37,6 +38,7 @@ module.exports = (db) => {
       `,
       params
     ).then((data) => {
+      console.log('success in delete user skill! ', data.rows);
       res.json(data.rows[0]);
     });
   });
@@ -46,8 +48,8 @@ module.exports = (db) => {
     const queryParams = [4];
     db.query(
       `SELECT *
-    FROM user_skills 
-    where user_id = $1`,
+      FROM user_skills 
+      where user_id = $1`,
       queryParams
     ).then((data) => {
       res.json(data.rows);
