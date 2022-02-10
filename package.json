@@ -8,7 +8,8 @@
   "license": "ISC",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "reset": "psql -U sprinter -d sprint < ./src/db/schema/create.sql && psql -U sprinter -d sprint < ./src/db/schema/development.sql"
+    "reset": "psql -U sprinter -d sprint < ./src/db/schema/create.sql && psql -U sprinter -d sprint < ./src/db/schema/development.sql",
+    "test": "react-scripts test"
   },
   "dependencies": {
     "axios": "^0.20.0",
