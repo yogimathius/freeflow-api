@@ -80,9 +80,11 @@ module.exports = (db) => {
       `
       DELETE FROM posts
       WHERE id = $1
+      RETURNING *
       `,
       [post_id]
     ).then((data) => {
+      console.log(data.rows);
       res.json(data.rows[0]);
     });
   });
