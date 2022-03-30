@@ -41,10 +41,10 @@ module.exports = db => {
     `,
 			[usernameInput, firstnameInput, lastnameInput, emailInput, passwordInput]
 		).then(data => {
-			console.log(data.rows[0]);
+			console.debug(data.rows[0]);
 			const user_id = data.rows[0].id;
 			res.json({ user_id });
-			console.log('attempting to create user profile with user id', user_id);
+			console.debug('attempting to create user profile with user id', user_id);
 
 			db.query(
 				`
@@ -56,7 +56,7 @@ module.exports = db => {
         `,
 				[user_id, firstnameInput, lastnameInput, avatarSrc]
 			).then(data => {
-				console.log('set up user profile', data.rows);
+				console.debug('set up user profile', data.rows);
 			});
 		});
 	});

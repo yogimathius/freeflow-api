@@ -21,7 +21,7 @@ module.exports = db => {
       ORDER BY time_sent;
       `, [userId])
       .then(({rows: messages}) => {
-        console.log('messages: ', messages);
+        console.debug('messages: ', messages);
         const messageMap = {
           messagers: [],
           messages: {}
@@ -59,7 +59,7 @@ module.exports = db => {
   });
 
   router.get('/messages/:id', (req, res) => {
-    console.log(req.params.id);
+    console.debug(req.params.id);
     const userId = req.params.id;
 
     db.query(`
@@ -87,7 +87,7 @@ module.exports = db => {
 
 
     const dateNow = new Date().toISOString();
-    console.log(dateNow);
+    console.debug(dateNow);
 
     db.query(`
       INSERT INTO messages
@@ -97,7 +97,7 @@ module.exports = db => {
       RETURNING *;
     `, [senderID, receiverID, textInput, dateNow])
       .then((data) => {
-        console.log(data.rows);
+        console.debug(data.rows);
         res.json({...data.rows[0], sender, receiver});
       });
 
@@ -108,8 +108,8 @@ module.exports = db => {
 
     const { currentUserID, otherUserID } = req.body;
 
-    console.log(currentUserID);
-    console.log(otherUserID);
+    console.debug(currentUserID);
+    console.debug(otherUserID);
 
     db.query(`
       UPDATE messages
@@ -127,7 +127,7 @@ module.exports = db => {
 
     const { userID } = req.body;
 
-    console.log('userID oh yeah', userID)
+    console.debug('userID oh yeah', userID)
 
     db.query(`
       SELECT COUNT(*)
@@ -141,10 +141,10 @@ module.exports = db => {
   })
 
   router.delete("/messages/:id", (req, res) => {
-    console.log("req.body", req.body, req.query, req.params);
+    console.debug("req.body", req.body, req.query, req.params);
 
     const { messageId } = req.query;
-    console.log('message Id in query, and req: ', messageId);
+    console.debug('message Id in query, and req: ', messageId);
     db.query(
       `
       DELETE FROM messages 
@@ -153,11 +153,11 @@ module.exports = db => {
       [messageId]
     )
       .then((data) => {
-        console.log("data rows in delete message: ", data.rows);
+        console.debug("data rows in delete message: ", data.rows);
         res.json(data.rows); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
-        console.log("bad juju on delete message DB", err);
+        console.error("bad juju on delete message DB", err);
         res.status(500).send("bad juju on delete message DB");
       });
   });

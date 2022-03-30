@@ -11,10 +11,10 @@ module.exports = (db) => {
   });
 
   router.post("/likes", (req, res) => {
-    console.log("req.body", req.body);
+    console.debug("req.body", req.body);
     const { post_id, liker_id } = req.body;
     const param = [post_id, liker_id];
-    console.log("params in like post: ", param);
+    console.debug("params in like post: ", param);
 
     db.query(
       `
@@ -25,23 +25,23 @@ module.exports = (db) => {
       param
     )
       .then((data) => {
-        console.log("data rows in like post: ", data.rows);
+        console.debug("data rows in like post: ", data.rows);
         res.json(data.rows[0]); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
-        console.log("bad juju on likes DB", err);
+        console.error("bad juju on likes DB", err);
         res.status(500).send("bad juju on likes DB");
       });
   });
 
   router.delete("/likes", (req, res) => {
-    console.log("query: ", req.query, "params: ", req.params, "body: ", req.body);
+    console.debug("query: ", req.query, "params: ", req.params, "body: ", req.body);
     const query = JSON.parse(req.query.removeLike);
-    console.log("req.body remove like", req.body);
+    console.debug("req.body remove like", req.body);
 
     const { post_id, liker_id } = query;
     const params = [post_id, liker_id];
-    console.log("params in remove like post: ", params);
+    console.debug("params in remove like post: ", params);
 
     db.query(
       `
@@ -52,11 +52,11 @@ module.exports = (db) => {
       params
     )
       .then((data) => {
-        console.log("data rows in remove like post: ", data);
+        console.debug("data rows in remove like post: ", data);
         res.json(data.rows[0]); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
-        console.log("bad juju on likes DB", err);
+        console.error("bad juju on likes DB", err);
         res.status(500).send("bad juju on likes DB");
       });
   });

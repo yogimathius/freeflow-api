@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 module.exports = db => {
 	router.post('/login', (req, res) => {
-		console.log('this is request body', req.body);
+		console.debug('this is request body', req.body);
 
 		const userID = Number(req.body.userID);
 
@@ -17,14 +17,14 @@ module.exports = db => {
         res.json(data.rows);
       })
       .catch(err => {
-        console.log(err);
+        console.error("bad juju in login post: ", err);
       })
 
   });
 
   router.post('/login-real', (req, res) => {
 
-    console.log(req.body);
+    console.debug(req.body);
 
     const username = req.body.username;
     const password = req.body.password;

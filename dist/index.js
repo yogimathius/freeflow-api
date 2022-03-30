@@ -13,6 +13,6 @@ app.get("/", (req, res) => {
 // start the Express server
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${port}`);
+    console.info(`server started at http://localhost:${port}`);
 });
 //# sourceMappingURL=index.js.map

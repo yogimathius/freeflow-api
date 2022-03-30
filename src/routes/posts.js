@@ -24,7 +24,7 @@ module.exports = (db) => {
       active,
       skill_ids
     } = req.body;
-    console.log(owner_id);
+    console.debug(owner_id);
 
     const param = [
       owner_id,
@@ -37,7 +37,7 @@ module.exports = (db) => {
       skill_ids
     ];
 
-    console.log("data to be posted in posts: ", param);
+    console.debug("data to be posted in posts: ", param);
     db.query(
       `INSERT INTO posts
     (owner_id, text_body, time_posted, is_helper, is_helped, status_field, active, skill_ids)
@@ -46,17 +46,17 @@ module.exports = (db) => {
     RETURNING *;`,
       param
     ).then((data) => {
-      console.log(data.rows[0]);
+      console.debug(data.rows[0]);
       res.json(data.rows[0]);
     })
     // .catch((err) => {
-    //   console.log("what the heck", err);
+    //   console.debug("what the heck", err);
     //   res.status(500).send("bad juju on the DB I guess");
     // })
   });
 
   router.put("/posts", (req, res) => {
-    console.log("editing post", req.body);
+    console.debug("editing post", req.body);
     const { text_body, post_id } = req.body;
     const params = [text_body, post_id];
     db.query(
@@ -73,7 +73,7 @@ module.exports = (db) => {
   });
 
   router.delete("/posts", (req, res) => {
-    console.log("query in delete", req.query);
+    console.debug("query in delete", req.query);
     const { post_id } = req.query;
 
     db.query(
@@ -84,7 +84,7 @@ module.exports = (db) => {
       `,
       [post_id]
     ).then((data) => {
-      console.log(data.rows);
+      console.debug(data.rows);
       res.json(data.rows[0]);
     });
   });

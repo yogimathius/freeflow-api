@@ -18,7 +18,7 @@ module.exports = (db) => {
   });
 
   router.put("/users/edit", (req, res) => {
-    console.log("from update users", req.body);
+    console.debug("from update users", req.body);
     const { id, username } = req.body;
     const params = [id, username];
     db.query(

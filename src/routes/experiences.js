@@ -20,7 +20,7 @@ module.exports = (db) => {
     const { helper_id, helped_id, creator_id, helper, helped } = req.body;
     const dateNow = new Date().toISOString();
     const status = 'pending';
-    console.log(dateNow);
+    console.debug(dateNow);
 
     db.query(`
       INSERT INTO experiences
@@ -30,7 +30,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [helper_id, helped_id, creator_id, dateNow, status])
       .then(data => {
-        console.log("success in add new experience: ", data.rows);
+        console.debug("success in add new experience: ", data.rows);
         data.rows[0].helper = helper;
         data.rows[0].helped = helped;
         res.json(data.rows[0]);
@@ -41,9 +41,9 @@ module.exports = (db) => {
 
     const experienceId = req.body.experienceId;
     const dateNow = new Date().toISOString();
-    console.log('datenow', dateNow)
+    console.debug('datenow', dateNow)
 
-    // console.log(experienceId);
+    // console.debug(experienceId);
 
     db.query(`
       UPDATE experiences
@@ -61,7 +61,7 @@ module.exports = (db) => {
     const { experienceId } = req.body
     const dateNow = new Date().toISOString();
 
-    console.log(experienceId);
+    console.debug(experienceId);
 
       db.query(`
         UPDATE experiences
@@ -72,7 +72,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [experienceId, dateNow])
         .then(data => {
-          console.log("success in complete experience route!", data.rows[0]);
+          console.debug("success in complete experience route!", data.rows[0]);
           res.json(data.rows[0]);
         })
   });
@@ -83,7 +83,7 @@ module.exports = (db) => {
     const { ishelper, comments, experienceId} = req.body;
     const dateNow = new Date().toISOString();
 
-    console.log(ishelper, comments, experienceId);
+    console.debug(ishelper, comments, experienceId);
 
     if (ishelper) {
 
@@ -96,7 +96,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [experienceId, comments, dateNow])
         .then(data => {
-          console.log("success in complete other experience route!", data.rows[0]);
+          console.debug("success in complete other experience route!", data.rows[0]);
           res.json(data.rows[0]);
         })
 
@@ -108,7 +108,7 @@ module.exports = (db) => {
         RETURNING *;
       `, [experienceId, comments])
         .then(data => {
-          console.log("success in complete other experience route!", data.rows[0]);
+          console.debug("success in complete other experience route!", data.rows[0]);
           res.json(data.rows[0]);
         })
     }
@@ -146,9 +146,9 @@ module.exports = (db) => {
 
 
   router.delete('/experiences/delete', (req, res) => {
-    console.log("req.body in delete: ". req);
+    console.debug("req.body in delete: ". req);
     const { experienceId } = req.query;
-    console.log("experience id in delete: ", experienceId);
+    console.debug("experience id in delete: ", experienceId);
 
     db.query(`
       DELETE FROM experiences
@@ -156,7 +156,7 @@ module.exports = (db) => {
       RETURNING *;
     `, [experienceId])
       .then(data => {
-        console.log("success in delete experience: ", data.rows);
+        console.debug("success in delete experience: ", data.rows);
         res.json(data.rows);
       })
   });

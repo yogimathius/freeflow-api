@@ -15,13 +15,13 @@ module.exports = (db, updateComments) => {
         res.json(data.rows);
       })
       .catch((err) => {
-        // console.log("bad juju on comments DB", err);
+        console.error("bad juju on comments DB", err);
         res.status(500).send("bad juju on comments DB");
       });
   });
 
   router.post("/comments", (req, res) => {
-    console.log(req.body);
+    console.debug(req.body);
     const { post_id, commenter_id, text_body, time_posted } = req.body;
     const param = [post_id, commenter_id, text_body, time_posted];
     db.query(
@@ -30,43 +30,43 @@ module.exports = (db, updateComments) => {
       param
     )
       .then((data) => {
-        console.log("data in route: ", data.rows[0]);
+        console.debug("data in route: ", data.rows[0]);
         res.json(data.rows[0]);
         setTimeout(() => {
           updateComments(Number(post_id), Number(commenter_id), text_body);
         }, 1000);
       })
       .catch((err) => {
-        console.log("bad juju on comments DB", err);
+        console.error("bad juju on comments DB", err);
         res.status(500).send("bad juju on comments DB");
       });
   });
 
   router.put("/comments", (req, res) => {
-    console.log("req.body: ", req.body);
+    console.debug("req.body: ", req.body);
     const { post_id, commenter_id, text_body } = req.body;
-    console.log(post_id, commenter_id, text_body);
+    console.debug(post_id, commenter_id, text_body);
     const params = [post_id, commenter_id, text_body];
     db.query(
       "UPDATE comments SET text_body = $3 WHERE post_id = $1 AND commenter_id = $2",
       params)
       .then((data) => {
-        console.log("success in update comments! ", data);
+        console.debug("success in update comments! ", data);
         res.json(data.rows)
       })
       .catch((err) => {
-        console.log("bad juju on update comments DB", err);
+        console.error("bad juju on update comments DB", err);
         res.status(500).send("bad juju on update comments DB");
       });
   });
 
   router.delete("/comments", (req, res) => {
-    console.log("req.body", req.body, req.query);
+    console.debug("req.body", req.body, req.query);
     const query = JSON.parse(req.query.removeComment);
 
     const { post_id, commenter_id, id } = query;
     const params = [post_id, commenter_id, id];
-    console.log("params in delete comment post: ", params);
+    console.debug("params in delete comment post: ", params);
 
     db.query(
       `
@@ -76,11 +76,11 @@ module.exports = (db, updateComments) => {
       params
     )
       .then((data) => {
-        console.log("data rows in comment post: ", data);
+        console.debug("data rows in comment post: ", data);
         res.json(data.rows); // jeremy sez: why return the whole array?
       })
       .catch((err) => {
-        console.log("bad juju on comments DB", err);
+        console.error("bad juju on comments DB", err);
         res.status(500).send("bad juju on comments DB");
       });
   });

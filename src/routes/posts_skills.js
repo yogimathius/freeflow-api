@@ -14,9 +14,9 @@ module.exports = (db) => {
 
   router.post("/posts_skills", (req, res) => {
     const { post_id, db_skills_id } = req.body;
-    console.log(req.body);
+    console.debug(req.body);
     const params = [post_id, db_skills_id ];
-    console.log("params in posts skills: ", params);
+    console.debug("params in posts skills: ", params);
     db.query(
       `
       insert into posts_skills
@@ -26,10 +26,10 @@ module.exports = (db) => {
       `,
       params
     ).then((data) => {
-      console.log("success in post skills post request!!");
+      console.debug("success in post skills post request!!");
       res.json(data.rows);
     }).catch((err) => {
-      console.log("bad juju on post skills DB", err);
+      console.error("bad juju on post skills DB", err);
       res.status(500).send("bad juju on pst skills DB", err);
 
     });
