@@ -1,5 +1,4 @@
 const pg = require("pg");
-postgresql://postgres:bE0CNwDh18NoXvlETe3u@containers-us-west-22.railway.app:6413/railway
 const client = new pg.Client({
   user: "postgres",
   password: "bE0CNwDh18NoXvlETe3u",
