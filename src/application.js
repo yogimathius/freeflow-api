@@ -25,10 +25,7 @@ const app = express();
 //   schema: schema,
 //   graphiql: true,
 // }));
-app.use(cors({
-  origin: 'https://freeflow-network.netlify.app'
-}));
-
+app.use(cors())
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
