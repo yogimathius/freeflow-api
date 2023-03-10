@@ -21,12 +21,10 @@ const cors = require("cors");
 // const schema = new graphql.GraphQLSchema({ query: QueryRoot });
 
 const app = express();
-// app.use('/graphql', graphqlHTTP({
-//   schema: schema,
-//   graphiql: true,
-// }));
+
 app.use(cors({
-  origin: ['https://freeflow-network.netlify.app', 'http://localhost:3000']
+  origin: ['https://freeflow-network.netlify.app', 'http://localhost:3000'],
+  credentials: true, 
 }));
 
 const cookieParser = require("cookie-parser");
