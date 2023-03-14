@@ -22,17 +22,18 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors({
-  origin: ['https://freeflow-network.netlify.app', 'http://localhost:3000'],
-  credentials: true, 
-}));
-app.use(function (req, res, next) {
-  //Enabling CORS
-  res.header("Access-Control-Allow-Origin", ["https://freeflow-network.netlify.app"]);
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-    next();
-});
+const whitelist = ['http://localhost:3000', 'https://freeflow-network.netlify.app'];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
