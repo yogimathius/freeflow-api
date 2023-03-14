@@ -2,23 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 const express = require("express");
-const graphqlHTTP = require('express-graphql')
-const graphql = require('graphql')
 const bodyparser = require("body-parser");
 const helmet = require("helmet");
 const cors = require("cors");
-
-// const QueryRoot = new graphql.GraphQLObjectType({
-//   name: 'Query',
-//   fields: () => ({
-//     hello: {
-//       type: graphql.GraphQLString,
-//       resolve: () => "Hello world!"
-//     }
-//   })
-// })
-
-// const schema = new graphql.GraphQLSchema({ query: QueryRoot });
 
 const app = express();
 
@@ -34,6 +20,40 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://freeflow-network.netlify.app/'],
+      scriptSrc: ["'self'", "'unsafe-inline'", 'https://freeflow-network.netlify.app/'],
+      imgSrc: ["'self'", 'https://freeflow-network.netlify.app/'],
+      objectSrc: ["'none'"],
+      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+      connectSrc: ["'self'", 'https://freeflow-api-production.up.railway.app/'],
+    },
+  })
+);
+
+app.use(function (req, res, next) {
+
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  // Pass to next layer of middleware
+  next();
+});
+
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
@@ -68,34 +88,14 @@ function read(file) {
   });
 }
 
-
-
-
 module.exports = function application(
   ENV,
   actions = { updateComments: () => {}, deleteComments: () => {} }
 ) {
-  
-  app.use(function (req, res, next) {
 
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
- 
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
- 
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
- 
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
- 
-    // Pass to next layer of middleware
-    next();
- });
+    
+
      
-  app.use(helmet());
   app.use(bodyparser.json());
 
   // parse requests of content-type - application/x-www-form-urlencoded
