@@ -42,7 +42,12 @@ function deleteComments(post_id, commenter_id) {
     }
   });
 }
-
-server.listen(PORT, () => {
-  console.info(`Listening on port ${PORT} in ${ENV} mode.`);
-});
+if (process.env.NODE_ENV === 'production') {
+  server.listen(PORT, 'freeflow-network.com', () => {
+    console.info(`Listening on port ${PORT} in ${ENV} mode.`);
+  });
+} else {
+  server.listen(PORT, () => {
+    console.info(`Listening on port ${PORT} in ${ENV} mode.`);
+  });
+}
